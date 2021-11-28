@@ -1,11 +1,11 @@
 ## Practicalli Emacs Doom
 
-Emacs Doom is an Open Source configuration for Emacs
+Doom Emacs is an Open Source configuration for Emacs
 
 
 
 
-Practicalli Emacs Doom is a guide to Clojure REPL Driven Development with Emacs Doom configuration and Practicalli customization.
+Practicalli Doom Emacs is a guide to Clojure REPL Driven Development with Doom Emacs configuration and Practicalli customization.
 
 ![Emacs Doom](https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png)
 

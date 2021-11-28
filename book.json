@@ -66,7 +66,7 @@
                 {
                     "label": "GitHub",
                     "icon": "fa fa-github",
-                    "url": "https://github.com/practicalli/emacs-doom/issues"
+                    "url": "https://github.com/practicalli/doom-emacs/issues"
                 }
             ]
         }
@@ -77,14 +77,14 @@
         }
     },
     "variables": {
-        "website": "https://practical.li/emacs-doom",
+        "website": "https://practical.li/doom-emacs",
         "P9IDeveloperGuides": "https://github.com/practicalli-john/developer-guides/",
         "P9IClojureDepsEdn": "https://github.com/practicalli/clojure-deps-edn",
         "P9IClojureDepsEdnInstall": "https://practical.li/clojure/clojure-tools/install/community-tools.md",
         "P9IFourClojure": "https://github.com/practicalli/four-clojure",
         "P9IClojureThroughCode": "https://github.com/practicalli/clojure-through-code",
-        "P9IIssuesUrl": "https://github.com/practicalli/emacs-doom/issues",
-        "P9IPullRequestsUrl": "https://github.com/practicalli/emacs-doom/pulls",
+        "P9IIssuesUrl": "https://github.com/practicalli/doom-emacs/issues",
+        "P9IPullRequestsUrl": "https://github.com/practicalli/doom-emacs/pulls",
         "Leiningen": "https://leiningen.org/",
         "KeyCtrl": "<kbd>Ctrl</kbd>",
         "KeyEnter": "<kbd>Enter</kbd>",

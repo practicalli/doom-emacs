@@ -1,19 +1,19 @@
 # Contributing to Practicalli Emacs Doom
 
-[practicalli/emacs-doom](https://github.com/practicalli/emacs-doom/) is written in markdown and uses GitBook to generate the website via a GitHub action.
+[practicalli/doom-emacs](https://github.com/practicalli/doom-emacs/) is written in markdown and uses GitBook to generate the website via a GitHub action.
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/emacs-doom/graphs/contributors).
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/doom-emacs/graphs/contributors).
 
 All content and interaction with any persons or systems must be done so with respect and within the Practicalli Code of Conduct.
 
 
 ## Book status
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/emacs-doom?style=for-the-badge) [![Content ideas and other issues](https://img.shields.io/github/issues/practicalli/emacs-doom?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/emacs-doom/issues) [![Pull requests](https://img.shields.io/github/issues-pr/practicalli/emacs-doom?style=for-the-badge)](https://github.com/practicalli/emacs-doom/pulls) [![GitHub Super-Linter](https://github.com/practicalli/emacs-doom/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter) [![GitBook publish](https://github.com/practicalli/emacs-doom/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/emacs-doom/actions/workflows/publish-website.yaml)
+[Omitted long matching line]
 
 
 ### Submit and issue or idea
 
-If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/emacs-doom/issues) explaining in as much detail as you can.
+If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/doom-emacs/issues) explaining in as much detail as you can.
 
 ### Considering a Pull request?
 
@@ -35,4 +35,4 @@ Thank you to everyone who sponsors the Practicalli websites and videos and for t
 
 Special thanks to [Bruce Durling](https://twitter.com/otfrom) for getting me into Cloure in the first place.
 
-![GitHub contributors](https://img.shields.io/github/contributors/practicalli/emacs-doom?style=for-the-badge&label=github%20contributors)
+![GitHub contributors](https://img.shields.io/github/contributors/practicalli/doom-emacs?style=for-the-badge&label=github%20contributors)

@@ -1,10 +1,10 @@
 # Introduction
 
-Source contend and generated static content for the Practicalli Emacs Doom book.
+Source contend and generated static content for the Practicalli Doom Emacs book.
 
-The Practicalli Emacs Doom provides practical guides to software development tasks, using predominantly the Clojure and ClojureScript languages.  Most of the editing techniques and tools are applicable to any editing tasks.
+The Practicalli Doom Emacs provides practical guides to software development tasks, using predominantly the Clojure and ClojureScript languages.  Most of the editing techniques and tools are applicable to any editing tasks.
 
-Emacs Doom is an open source project to provide configuration to add 150+ packages to Emacs, without having to writing a lot of common configuration code.
+Doom Emacs is an open source project to provide configuration to add 150+ packages to Emacs, without having to writing a lot of common configuration code.
 
 [![Discuss this guide on #practicalli channel of the Clojurians Slack community](images/practicalli-slack-channel.png)](https://clojurians.slack.com/messages/practicalli).
 
@@ -25,11 +25,11 @@ This workshop will cover the following topics:
 ## Contributing
 Issues and pull requests are most welcome.  Please detail issues as much as you can.  Pull requests are easier when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
 
-* [Kanban board of issues](https://github.com/practicalli/emacs-doom/projects/1)
-* [Current Issues](https://github.com/practicalli/emacs-doom/issues)
-* [Current pull requests](https://github.com/practicalli/emacs-doom/pulls)
+* [Kanban board of issues](https://github.com/practicalli/doom-emacs/projects/1)
+* [Current Issues](https://github.com/practicalli/doom-emacs/issues)
+* [Current pull requests](https://github.com/practicalli/doom-emacs/pulls)
 
-[practicalli/emacs-doom.d ](https://github.com/practicalli/emacs-doom.d/)GitHub repository contains the complete Spacemacs configuration used in this guide and issues and pull requests can also be made there.
+[practicalli/doom-emacs.d ](https://github.com/practicalli/doom-emacs.d/)GitHub repository contains the complete Spacemacs configuration used in this guide and issues and pull requests can also be made there.
 
 
 ---
