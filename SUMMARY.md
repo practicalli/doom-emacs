@@ -2,7 +2,7 @@
 
 * [Introduction](introduction.md)
     * [REPL Driven Development](introduction/repl-driven-development.md)
-    <!-- * [Why Emacs Doom](introduction/why-emacs-doom.md) -->
+    <!-- * [Why Doom](introduction/why-doom.md) -->
     <!-- * [Spacemacs or Doom](introduction/spacemacs-or-doom.md) -->
     <!-- * [Cheatsheet](introduction/spacemacs-mini-cheatsheet.md) -->
 * [Contributing](contributing.md)
