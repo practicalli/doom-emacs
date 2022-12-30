@@ -7,30 +7,30 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/install/" rel="canonical"/>
-<link href="../assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/doom-emacs/install/clojure-configuration/" rel="canonical"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Install Spacemacs - Practicalli Doom Emacs</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Clojure configuration - Practicalli Doom Emacs</title>
+<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Install Spacemacs - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Clojure configuration - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/install/index.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/install/clojure-configuration.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/install/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/install/clojure-configuration/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Install Spacemacs - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Clojure configuration - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/install/index.png" name="twitter:image"/>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/doom-emacs/assets/images/social/install/clojure-configuration.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -41,14 +41,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="orange" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#install-spacemacs">
+<a class="md-skip" href="#clojure-configuration">
           Skip to content
         </a>
 </div>
@@ -56,8 +56,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -72,7 +72,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Install Spacemacs
+              Clojure configuration
             
           </span>
 </div>
@@ -138,8 +138,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Doom Emacs
   </label>
@@ -157,7 +157,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Overview</a>
+<a href="../..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -169,27 +169,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/repl-workflow/">
+<a class="md-nav__link" href="../../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/why-doom-emacs/">
+<a class="md-nav__link" href="../../introduction/why-doom-emacs/">
         Why Doom Emacs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/spacemacs-or-doom/">
+<a class="md-nav__link" href="../../introduction/spacemacs-or-doom/">
         Spacemacs Or Doom
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/contributing/">
+<a class="md-nav__link" href="../../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/writing-tips/">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -197,14 +197,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="pre-install/">
+<a class="md-nav__link" href="../pre-install/">
         Pre-install
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Install</a>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -216,14 +216,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="doom-configuration/">
+<a class="md-nav__link" href="../doom-configuration/">
         Doom Config
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="clojure-configuration/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Clojure configuration
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Clojure configuration
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clojure-cli">
+    Clojure CLI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clojure-lsp">
+    Clojure LSP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -231,7 +259,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../basics/">Doom Basics</a>
+<a href="../../basics/">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -243,12 +271,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/projects/">
+<a class="md-nav__link" href="../../basics/projects/">
         Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/snippets/">
+<a class="md-nav__link" href="../../basics/snippets/">
         Snippets
       </a>
 </li>
@@ -270,43 +298,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#clone-doom-emacs">
-    Clone Doom Emacs
+<a class="md-nav__link" href="#clojure-cli">
+    Clojure CLI
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#post-install">
-    Post install
+<a class="md-nav__link" href="#clojure-lsp">
+    Clojure LSP
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#add-doom-command-to-path">
-    Add Doom command to path
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-emacs">
-    Run Emacs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#clone-practicalli-doom-configuration">
-    Clone Practicalli Doom configuration
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#install-fira-code-font">
-    Install Fira Code font
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#all-the-icon-fonts">
-    All The Icon Fonts
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#spacemacs-is-ready-for-action">
-    Spacemacs is ready for action
+<a class="md-nav__link" href="#references">
+    References
   </a>
 </li>
 </ul>
@@ -316,128 +319,74 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/doom-emacs/edit/main/docs/install/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/practicalli/doom-emacs/edit/main/docs/install/clojure-configuration.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="install-spacemacs">Install Spacemacs<a class="headerlink" href="#install-spacemacs" title="Permanent link">λ︎</a></h1>
-<p><a class="md-button" href="pre-install/">Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools </a></p>
-<ol>
-<li><a href="#clojure-doom-emacs">Clone Doom Emacs</a> to <code>~/.config/emacs</code></li>
-<li><a href="#clone-practicalli-doom-emacs-configuration">Clone practicalli/doom-emacs-config configuration</a> to add common layers for Clojure development.  Or start Emacs and use the Spacemacs install wizard for basic config, follow the <a href="manual-configuration/">manual configuration section</a> for additional features.</li>
-<li>[optional] <a href="#install-fira-code-font">Install Fira Code font</a> (change <code>dotspacemacs-default-font</code> to a name of a font on your operating system in <code>.spacemacs.d/init.el</code> in step 4)</li>
-<li><a href="#all-the-icon-fonts">Install All The Icons fonts for doom modeline theme</a></li>
-</ol>
-<h2 id="clone-doom-emacs">Clone Doom Emacs<a class="headerlink" href="#clone-doom-emacs" title="Permanent link">λ︎</a></h2>
-<p>Use your favourite git client or the following command in a terminal window to clone Spacemacs and then run the Doom Emacs install script</p>
-<details class="hint">
-<summary>Use Practicalli Doom Emacs config rather than install</summary>
-</details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Free Desktop XDG config</label><label for="__tabbed_1_2">Classic config</label></div>
+<h1 id="clojure-configuration">Clojure configuration<a class="headerlink" href="#clojure-configuration" title="Permanent link">λ︎</a></h1>
+<p>Enable the Clojure module with LSP support in the <code>~/.config/doom/init.el</code> configuration file</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">lsp</span><span class="w"></span>
+</code></pre></div>
+<p>Use the doom command to load the modules</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>doom sync
+</code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Restart Doom Emacs after larger changes</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> to restart Doom Emacs when significant changes are made or something is not working correctly</p>
+</div>
+<h2 id="clojure-cli">Clojure CLI<a class="headerlink" href="#clojure-cli" title="Permanent link">λ︎</a></h2>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/install/" target="_blank">Practicalli Clojure install guide</a></p>
+<p><a href="https://clojure.org/guides/deps_and_cli" target="_blank">Clojure CLI</a> provides a way to run Clojure code, packaged Clojure (jar) and of course run a Clojure REPL.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/" target="_blank">Practicalli Clojure install guide</a> details prerequisites, Clojure install options and supporting tools for an enhanced developer workflow.  Or visit the <a href="https://clojure.org/guides/getting_started" target="_blank">Clojure Getting Started guide</a> for just the Clojure CLI.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn provides a wide range of community tools</a> that can easily be added to the development environment and used across all projects.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aliases are required for many command examples</p>
+<p>Without <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">installing practicalli/clojure-deps-edn</a> many commands provided in this book will not work, unless the same alias configuration is added to a either a project or user level <code>deps.edn</code> configuration.</p>
+</div>
+<h2 id="clojure-lsp">Clojure LSP<a class="headerlink" href="#clojure-lsp" title="Permanent link">λ︎</a></h2>
+<p><a class="md-button" href="https://clojure-lsp.io/" target="_blank">Clojure LSP installation guide</a>
+<a class="md-button" href="http://github.com/practicalli/clojure-lsp-config" target="_blank">Practicalli Clojure LSP configuration</a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-language-server.png"><img alt="Clojure Language Server Protocol LSP" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-language-server.png"/></a></p>
+<p>Clojure LSP provides a <a href="https://emacs-lsp.github.io/lsp-mode/" target="_blank">standard set of features</a> for editing and manipulating source code, e.g. autocompletion, code navigation, refactor code, inline syntax errors and idiom warnings.</p>
+<div class="admonition info">
+<p class="admonition-title">LSP and the REPL</p>
+<p>The REPL is used to design Clojure effectively by providing instant feedback on code expressions as they are written and evaluated.  A REPL based workflow supports the most effective approach to development of Clojure apps and services.
+Clojure LSP supports the editing activities to write Clojure code effectively, providing a static analysis of the code base that drives advance editing, navigation and refactor tasks.</p>
+</div>
+<p><a href="https://clojure-lsp.io/" target="_blank">Install the Clojure LSP command line tool</a> and configure <code>~./config/clojure-lsp/config.edn</code> or use <a href="http://github.com/practicalli/clojure-lsp-config" target="_blank">Practicalli Clojure LSP configuration</a> which provides a complete configuration for clojure-lsp (<code>config.edn</code>), including a wide range of snippets and less restrictive formatting rules (<code>cljfmt.edn</code>).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Free Desktop XDG Config</label><label for="__tabbed_1_2">Classic Config</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git clone https://github.com/hlissner/doom-emacs ~/.config/emacs
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>~/.config/emacs/bin/doom install
-</code></pre></div>
-<p><code>~/.config/doom</code> directory will be created by the install and contain the default configuration.</p>
+<p>Clone via SSH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
+</code></pre></div></p>
+<p>Clone via HTTPS
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>~/.emacs.d/bin/doom install
-</code></pre></div>
+<p>Clone via SSH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
+</code></pre></div></p>
+<p>Clone via HTTPS
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
+</code></pre></div></p>
 </div>
 </div>
 </input></input></div>
-<h2 id="post-install">Post install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h2>
-<p>Doom Emacs outputs the following message at the end of the install</p>
-<ol>
-<li>Don't forget to run 'doom sync', then restart Emacs, after modifying
-   ~/.doom.d/init.el or ~/.doom.d/packages.el.</li>
-</ol>
-<p>This command ensures needed packages are installed, orphaned packages are
-   removed, and your autoloads/cache files are up to date. When in doubt, run
-   'doom sync'!</p>
-<ol>
-<li>
-<p>If something goes wrong, run <code>doom doctor</code>. It diagnoses common issues with
-   your environment and setup, and may offer clues about what is wrong.</p>
-</li>
-<li>
-<p>Use 'doom upgrade' to update Doom. Doing it any other way will require
-   additional steps. Run 'doom help upgrade' to understand those extra steps.</p>
-</li>
-<li>
-<p>Access Doom's documentation from within Emacs via 'SPC h d h' or 'C-h d h'
-   (or 'M-x doom/help')</p>
-</li>
-</ol>
-<h2 id="add-doom-command-to-path">Add Doom command to path<a class="headerlink" href="#add-doom-command-to-path" title="Permanent link">λ︎</a></h2>
-<p>Add <code>.config/emacs/bin</code> to </p>
-<p>Or create a symbolic link</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">cd</span> .local/bin
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>ln -s ~/.config/emacs/bin/doom doom
+<p>Run the clojure-lsp command in a terminal to ensure the install was successful.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>clojure-lsp -v
 </code></pre></div>
-<h2 id="run-emacs">Run Emacs<a class="headerlink" href="#run-emacs" title="Permanent link">λ︎</a></h2>
-<p>The packages have been downloaded as part of the Doom Emacs install process.</p>
-<p>Run emacs from a desktop launcher or on the command line:
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>emacs
-</code></pre></div></p>
-<div class="admonition warning">
-<p class="admonition-title">Native compliation initial high cpu use</p>
-<p>On first running Emacs after Doom install added packages, the elisp code will be compiled to native binaries.  The compilation will use a lot of CPU resources</p>
-</div>
-<h2 id="clone-practicalli-doom-configuration">Clone Practicalli Doom configuration<a class="headerlink" href="#clone-practicalli-doom-configuration" title="Permanent link">λ︎</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Not started yet</p>
-</div>
-<p>Clone <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> or first create a fork and clone that fork</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Free Desktop XDG config</label><label for="__tabbed_2_2">Classic config</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git clone git@github.com:practicalli/doom-emacs-config.git ~/.config/doom
-</code></pre></div></p>
-<p>Using HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git clone https://github.com/practicalli/doom-emacs-config ~/.config/doom
-</code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git clone git@github.com:practicalli/doom-emacs-config.git ~/.config/doom
-</code></pre></div></p>
-<p>Using HTTP
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git clone https://github.com/practicalli/doom-emacs-config ~/.config/doom
-</code></pre></div></p>
-<p><code>~/.spacemacs.d/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
-</div>
-</div>
-</input></input></div>
 <details class="info">
-<summary>Emacs custom settings</summary>
-<p><code>.spacemacs.d/init.el</code> configuration separates Emacs custom settings into a <code>emacs-custom-setting</code> file.  <code>emacs-custom-setting</code> should be added to version control if the Emacs <code>customize</code> menu has been used to define settings.
-<code>emacs-custom-file</code> is defined in the <code>dotspacemacs/user-init</code> of the Spacemacs configuration
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">custom-file</span><span class="w"> </span><span class="p">(</span><span class="nv">file-truename</span><span class="w"> </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="nv">dotspacemacs-directory</span><span class="w"> </span><span class="s">"emacs-custom-settings.el"</span><span class="p">)))</span><span class="w"></span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="p">(</span><span class="nf">load</span><span class="w"> </span><span class="nv">custom-file</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-A specific path could also be used to define the location of the custom file: <code>(setq custom-file "~/.emacs.d/.cache/custom-settings")</code></p>
+<summary>Clojure LSP and clj-kondo</summary>
+<p>Clojure LSP includes clj-kondo to provide <a href="https://clojure-lsp.io/" target="_blank">an implementation of the Language Server Protocol for the Clojure Language</a>. clj-kondo provides static analysis of source code files, providing subtle warnings as Clojure code is written to help the developer follow idioms and avoid syntatic errors.</p>
 </details>
-<h2 id="install-fira-code-font">Install Fira Code font<a class="headerlink" href="#install-fira-code-font" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://github.com/tonsky/FiraCode/wiki/Installing" target="_blank">Install Fira Code</a></p>
-<p><a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> uses Fira Code, a mono-spaced font designed for source code and includes <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">ligatures</a> and <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">many other features</a>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"><img alt="Fira Code font - ligatures for Emacs and Clojure code" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"/></a></p>
-<div class="admonition tip">
-<p class="admonition-title">Use a different font with practicalli/spacemacs.d</p>
-<p>To use a different font when using the <a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a>, edit <code>.spacemacs.d/init.el</code> and update the value for <code>dotspacemacs-default-font</code> to a name of a font on your system.</p>
-</div>
-<h2 id="all-the-icon-fonts">All The Icon Fonts<a class="headerlink" href="#all-the-icon-fonts" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.</p>
-<p><code>SPC SPC all-the-icons-install-fonts</code> once Spacemacs is running will install the fonts.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> to restart Spacemacs and see the finished results</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"><img alt="Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"/></a></p>
-<h2 id="spacemacs-is-ready-for-action">Spacemacs is ready for action<a class="headerlink" href="#spacemacs-is-ready-for-action" title="Permanent link">λ︎</a></h2>
-<p>Spacemacs is now up and running and ready to take on the world.</p>
-<p>If you already know how to use Spacemacs, jump to the <a href="/spacemacs/clojure-projects/">Clojure Projects section</a>, otherwise look through the <a href="/spacemacs/spacemacs-basics/">Spacemacs Basics section</a> to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="https://emacs-lsp.github.io/lsp-mode/tutorials/clojure-guide/">Configure Emacs as a Clojure IDE guide</a></li>
+<li><a href="https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/">A guide on disabling/enabling lsp-mode features</a></li>
+<li><a href="https://emacs-lsp.github.io/lsp-ui/">Emacs LSP UI website</a> and <a href="https://github.com/emacs-lsp/lsp-ui">emacs-lsp/lsp-ui repository</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -457,7 +406,7 @@ A specific path could also be used to define the location of the custom file: <c
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Pre-install" class="md-footer__link md-footer__link--prev" href="pre-install/" rel="prev">
+<a aria-label="Previous: Doom Config" class="md-footer__link md-footer__link--prev" href="../doom-configuration/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -466,17 +415,17 @@ A specific path could also be used to define the location of the custom file: <c
 <span class="md-footer__direction">
                 Previous
               </span>
-              Pre-install
+              Doom Config
             </div>
 </div>
 </a>
-<a aria-label="Next: Doom Config" class="md-footer__link md-footer__link--next" href="doom-configuration/" rel="next">
+<a aria-label="Next: Basic usage" class="md-footer__link md-footer__link--next" href="../../basics/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Doom Config
+              Basic usage
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -521,7 +470,7 @@ A specific path could also be used to define the location of the custom file: <c
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

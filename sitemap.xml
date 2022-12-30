@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/doom-emacs/install/clojure-configuration/</loc>
+         <lastmod>2022-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/doom-emacs/install/doom-configuration/</loc>
          <lastmod>2022-12-30</lastmod>
          <changefreq>daily</changefreq>
