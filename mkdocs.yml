@@ -25,9 +25,6 @@ nav:
   - Install:
       - install/index.md
       - Doom Config: install/doom-configuration.md
-      # - Shell: install/shell.md
-      # - Update Doom: install/update.md
-      # - Troubleshoot: install/troubleshooting.md
       - install/clojure-configuration.md
   - Doom Basics:
       - basics/index.md
