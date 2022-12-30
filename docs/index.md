@@ -45,7 +45,7 @@ As we work through code we will discuss the concepts behind Clojure, including f
 
 ## Discussions and feedback
 
-[Contributions are welcome via GitHub issues and pull requests](contributing.md), or discuss the book on the Clojurians Slack community.
+[Contributions are welcome via GitHub issues and pull requests](introduction/contributing.md), or discuss the book on the Clojurians Slack community.
 
 [![Join the conversation on Clojurians Slack](images/practicalli-slack-channel.png)](https://clojurians.slack.com/messages/practicalli)
 
