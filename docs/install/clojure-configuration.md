@@ -46,6 +46,7 @@ Clojure LSP provides a [standard set of features](https://emacs-lsp.github.io/ls
 
 [Install the Clojure LSP command line tool](https://clojure-lsp.io/){target=_blank} and configure `~./config/clojure-lsp/config.edn` or use [Practicalli Clojure LSP configuration](http://github.com/practicalli/clojure-lsp-config){target=_blank} which provides a complete configuration for clojure-lsp (`config.edn`), including a wide range of snippets and less restrictive formatting rules (`cljfmt.edn`).
 
+
 === "Free Desktop XDG Config"
 
     Clone via SSH
