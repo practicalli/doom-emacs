@@ -16,11 +16,11 @@ remote_branch: gh-pages # deployment branch
 nav:
   - Overview:
       - index.md
-      - REPL Workflow: repl-workflow.md
-      - Why Doom Emacs: why-doom-emacs.md
+      - REPL Workflow: introduction/repl-workflow.md
+      - Why Doom Emacs: introduction/why-doom-emacs.md
       - Spacemacs Or Doom: introduction/spacemacs-or-doom.md
-      - Contributing: contributing.md
-      - Writing Tips: writing-tips.md
+      - Contributing: introduction/contributing.md
+      - Writing Tips: introduction/writing-tips.md
   - Pre-install: install/pre-install.md
   - Install:
       - install/index.md
