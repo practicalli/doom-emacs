@@ -18,20 +18,22 @@ nav:
       - index.md
       - REPL Workflow: repl-workflow.md
       - Why Doom Emacs: why-doom-emacs.md
+      - Spacemacs Or Doom: introduction/spacemacs-or-doom.md
       - Contributing: contributing.md
       - Writing Tips: writing-tips.md
   - Pre-install: install/pre-install.md
   - Install:
       - install/index.md
-      - Clojure Layer: install/clojure.md
-      - Clojure LSP: install/clojure-lsp.md
-      - Font: install/change-font.md
-      - Full Screen: install/maximised-full-screen.md
-      - Themes: install/themes.md
-      - Line Numbers: install/line-numbers.md
-      - Shell: install/shell.md
-      - Update Doom Emacs: install/update.md
-      - Troubleshoot: install/troubleshooting.md
+      - Doom Config: install/doom-configuration.md
+      - Clojure: install/clojure.md
+      # - Shell: install/shell.md
+      # - Update Doom: install/update.md
+      # - Troubleshoot: install/troubleshooting.md
+  - Doom Basics:
+      - basics/index.md
+      - Projects: basics/projects.md
+      - Snippets: basics/snippets.md
+
 
 # Theme and styling
 theme:
