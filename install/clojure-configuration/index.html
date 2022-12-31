@@ -236,6 +236,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#cider-configuration">
+    Cider configuration
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#clojure-cli">
     Clojure CLI
   </a>
@@ -298,6 +303,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#cider-configuration">
+    Cider configuration
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#clojure-cli">
     Clojure CLI
   </a>
@@ -330,6 +340,39 @@
 <p>Use the doom command to load the modules</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>doom sync
 </code></pre></div>
+<h2 id="cider-configuration">Cider configuration<a class="headerlink" href="#cider-configuration" title="Permanent link">λ︎</a></h2>
+<p>Define variables to configure CIDER</p>
+<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="nv">use-package!</span><span class="w"> </span><span class="nv">cider</span><span class="w"></span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="ss">:after</span><span class="w"> </span><span class="nv">clojure-mode</span><span class="w"></span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="ss">:config</span><span class="w"></span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">cider-show-error-buffer</span><span class="w"> </span><span class="no">t</span><span class="w">               </span><span class="c1">;'only-in-repl</span><span class="w"></span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="nv">cider-font-lock-dynamically</span><span class="w"> </span><span class="no">nil</span><span class="w">         </span><span class="c1">; use lsp semantic tokens</span><span class="w"></span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="nv">cider-eldoc-display-for-symbol-at-point</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="c1">; use lsp</span><span class="w"></span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nv">cider-prompt-for-symbol</span><span class="w"> </span><span class="no">nil</span><span class="w"></span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nv">cider-use-xref</span><span class="w"> </span><span class="no">nil</span><span class="w">                      </span><span class="c1">; use lsp</span><span class="w"></span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="nv">cider-repl-pop-to-buffer-on-connect</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="c1">; REPL buffer shown at starup</span><span class="w"></span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nv">clojure-enable-kaocha-runner</span><span class="w"> </span><span class="no">t</span><span class="w">          </span><span class="c1">; enable Kaocha test runner</span><span class="w"></span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="nv">cider-repl-display-help-banner</span><span class="w"> </span><span class="no">nil</span><span class="w">      </span><span class="c1">; disable help banner</span><span class="w"></span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="nv">cider-print-fn</span><span class="w"> </span><span class="ss">'puget</span><span class="w">                   </span><span class="c1">; pretty printing with sorted keys / set values</span><span class="w"></span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">        </span><span class="nv">cider-result-overlay-position</span><span class="w"> </span><span class="ss">'at-point</span><span class="w"> </span><span class="c1">; results shown right after expression</span><span class="w"></span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="nv">cider-overlays-use-font-lock</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="nv">cider-repl-buffer-size-limit</span><span class="w"> </span><span class="mi">100</span><span class="w">        </span><span class="c1">; limit lines shown in REPL buffer</span><span class="w"></span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="nv">cider-repl-history-size</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="p">(</span><span class="nv">set-lookup-handlers!</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="nv">cider-mode</span><span class="w"> </span><span class="nv">cider-repl-mode</span><span class="p">)</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">; use lsp</span><span class="w"></span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">  </span><span class="p">(</span><span class="nv">set-popup-rule!</span><span class="w"> </span><span class="s">"*cider-test-report*"</span><span class="w"> </span><span class="ss">:side</span><span class="w"> </span><span class="ss">'right</span><span class="w"> </span><span class="ss">:width</span><span class="w"> </span><span class="mf">0.4</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">  </span><span class="p">(</span><span class="nv">set-popup-rule!</span><span class="w"> </span><span class="s">"^\\*cider-repl"</span><span class="w"> </span><span class="ss">:side</span><span class="w"> </span><span class="ss">'bottom</span><span class="w"> </span><span class="ss">:quit</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">  </span><span class="c1">;; use lsp completion</span><span class="w"></span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">  </span><span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="ss">'cider-mode-hook</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="nv">remove-hook</span><span class="w"> </span><span class="ss">'completion-at-point-functions</span><span class="w"> </span><span class="nf">#'</span><span class="nv">cider-complete-at-point</span><span class="p">))))</span><span class="w"></span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">(</span><span class="nv">use-package!</span><span class="w"> </span><span class="nv">clojure-mode</span><span class="w"></span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">  </span><span class="ss">:config</span><span class="w"></span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">clojure-indent-style</span><span class="w"> </span><span class="ss">'align-arguments</span><span class="w"></span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">        </span><span class="nv">clojure-align-forms-automatically</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="nv">clojure-toplevel-inside-comment-form</span><span class="w"> </span><span class="no">t</span><span class="w">  </span><span class="c1">;; evaluate expressions in comment as top level</span><span class="w"></span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="p">))</span><span class="w"></span>
+</code></pre></div>
 <div class="admonition hint">
 <p class="admonition-title">Restart Doom Emacs after larger changes</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> to restart Doom Emacs when significant changes are made or something is not working correctly</p>
@@ -358,24 +401,24 @@ Clojure LSP supports the editing activities to write Clojure code effectively, p
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Clone via SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
 </code></pre></div></p>
 <p>Clone via HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$XDG_CONFIG_HOME</span>/clojure-lsp
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>Clone via SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
 </code></pre></div></p>
 <p>Clone via HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git <span class="nv">$HOME</span>/.clojure-lsp
 </code></pre></div></p>
 </div>
 </div>
 </input></input></div>
 <p>Run the clojure-lsp command in a terminal to ensure the install was successful.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>clojure-lsp -v
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>clojure-lsp -v
 </code></pre></div>
 <details class="info">
 <summary>Clojure LSP and clj-kondo</summary>
@@ -392,7 +435,7 @@ Clojure LSP supports the editing activities to write Clojure code effectively, p
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 31, 2022</span>
 </small>
 </div>
 </article>
