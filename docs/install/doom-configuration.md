@@ -38,6 +38,12 @@ Doom curates a large number of modules, a module being one or more Emacs package
 > TODO: is there a setting to open Doom Emacs in full screen
 
 
+Configure Emacs to always start maximized
+```lisp title="~/.config/doom/config.el"
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+```
+
+
 ## Theme
 
 ++spc++ ++"h"++ ++t++ opens a selection menu of all available themes.  Type a theme name or scroll with ++ctrl+"j"++ and ++ctrl+"k"++
