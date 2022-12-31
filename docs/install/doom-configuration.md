@@ -26,12 +26,6 @@ Doom curates a large number of modules, a module being one or more Emacs package
 ```
 
 
-## Windows
-
-++spc++ ++"w"++ and one of ++"h"++ ++"j"++ ++"k"++ ++"l"++ for vim-style navigation of windows
-
-++spc++ ++"w"++ ++"v"++ to create a new vertical window, ++spc++ ++"w"++ ++"h"++ for a new horizontal window
-
 
 ## Frames
 
