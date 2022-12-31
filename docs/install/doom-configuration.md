@@ -93,3 +93,23 @@ Is this in the autoformat module ?
 
 ++spc++ ++"c"++ ++W++ deletes whitespace at end of lines
 
+
+
+
+## Treemacs
+
+Preview files when navigating file names in treemacs
+
+```lisp title=".config/doom/config.el"
+;; Not currently used in practicalli/doom-emacs-config
+(map! :map treemacs-mode-map
+      "<down>" (lambda (&optional arg) (interactive)
+                 (next-line arg)
+                 (save-selected-window
+                   (treemacs-RET-action)))
+      "<up>" (lambda (&optional arg) (interactive)
+               (previous-line arg)
+               (save-selected-window
+                 (treemacs-RET-action))))
+```
+
