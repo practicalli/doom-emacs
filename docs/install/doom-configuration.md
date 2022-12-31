@@ -12,7 +12,10 @@ Doom curates a large number of modules, a module being one or more Emacs package
 ??? HINT "Check parens are balanced in config"
 `check-parens` command will check the current buffer for balanced parens (all open parens have a matching close paren)
 
-++spc++ ++"h"++ ++"d"++ ++"m"++ to see the built-in documentation for a Doom module (NOTE: documentation can be light or non-existant) 
+
+## Doom modules
+
+++spc++ ++"h"++ ++"d"++ ++"m"++ to see the built-in documentation for a Doom module (NOTE: documentation can be light or non-existant)
 
 
 ## Line Numbers
