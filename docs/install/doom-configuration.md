@@ -9,7 +9,8 @@ Doom curates a large number of modules, a module being one or more Emacs package
 * packages.el - manage specific packages, adding to or overriding packages in the Doom modules
 
 
-## Doom modules 
+??? HINT "Check parens are balanced in config"
+`check-parens` command will check the current buffer for balanced parens (all open parens have a matching close paren)
 
 ++spc++ ++"h"++ ++"d"++ ++"m"++ to see the built-in documentation for a Doom module (NOTE: documentation can be light or non-existant) 
 
