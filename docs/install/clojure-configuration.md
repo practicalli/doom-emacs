@@ -13,6 +13,44 @@ Use the doom command to load the modules
 doom sync
 ```
 
+## Cider configuration
+
+Define variables to configure CIDER
+
+```lisp title="~/.config/doom/config.el"
+(use-package! cider
+  :after clojure-mode
+  :config
+  (setq cider-show-error-buffer t               ;'only-in-repl
+        cider-font-lock-dynamically nil         ; use lsp semantic tokens
+        cider-eldoc-display-for-symbol-at-point nil ; use lsp
+        cider-prompt-for-symbol nil
+        cider-use-xref nil                      ; use lsp
+
+        cider-repl-pop-to-buffer-on-connect nil ; REPL buffer shown at starup
+        clojure-enable-kaocha-runner t          ; enable Kaocha test runner
+        cider-repl-display-help-banner nil      ; disable help banner
+        cider-print-fn 'puget                   ; pretty printing with sorted keys / set values
+        cider-result-overlay-position 'at-point ; results shown right after expression
+        cider-overlays-use-font-lock t
+        cider-repl-buffer-size-limit 100        ; limit lines shown in REPL buffer
+        cider-repl-history-size 42
+        )
+  (set-lookup-handlers! '(cider-mode cider-repl-mode) nil) ; use lsp
+  (set-popup-rule! "*cider-test-report*" :side 'right :width 0.4)
+  (set-popup-rule! "^\\*cider-repl" :side 'bottom :quit nil)
+  ;; use lsp completion
+  (add-hook 'cider-mode-hook (lambda () (remove-hook 'completion-at-point-functions #'cider-complete-at-point))))
+
+(use-package! clojure-mode
+  :config
+  (setq clojure-indent-style 'align-arguments
+        clojure-align-forms-automatically t
+        clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
+))
+```
+
+
 !!! Hint "Restart Doom Emacs after larger changes"
     ++spc++ ++"q"++ ++"r"++ to restart Doom Emacs when significant changes are made or something is not working correctly
 
