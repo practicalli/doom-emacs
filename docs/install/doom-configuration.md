@@ -113,3 +113,15 @@ Preview files when navigating file names in treemacs
                  (treemacs-RET-action))))
 ```
 
+
+## Version control
+
+
+Magit Forge encrypted developer token
+
+> TODO: add to XDG_CONFIG_HOME
+
+```lisp
+(setq auth-sources '("~/.authinfo.gpg")
+      auth-source-cache-expiry nil)      ; default is 7200 (2h)
+```
