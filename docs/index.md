@@ -19,13 +19,13 @@ Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more d
     ```bash
     git clone https://github.com/practicalli/doom-emacs-config.git $XDG_CONFIG_HOME/doom`
     ```
-    The above command creates `~/.config/doom/` that contains the configuration used in Practicalli Spacemacs book, all in one place.
+    The above command creates `~/.config/doom/` that contains the configuration used in Practicalli Doom Emacs book, all in one place.
 
 === "Classic Config"
     ```bash
     git clone https://github.com/practicalli/doom-emacs-config.git $HOME/.doom.d`
     ```
-    The above command creates the `~/.doom.d/` directory that contains the configuration used in Practicalli Spacemacs book, all in one place.
+    The above command creates the `~/.doom.d/` directory that contains the configuration used in Practicalli Doom Emacs book, all in one place.
 
 
 ![Emacs Doom](https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png)
