@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/doom-emacs/install/doom-configuration/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../clojure-configuration/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
 <title>Doom Config - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -236,6 +238,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#personal-information">
+    Personal information
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buffers">
+    buffers
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#line-numbers">
     Line Numbers
   </a>
@@ -256,11 +268,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#automatic-whitespace-removal">
-    Automatic Whitespace removal
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#treemacs">
     Treemacs
   </a>
@@ -268,6 +275,30 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#version-control">
     Version control
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#format-tools">
+    Format tools
+  </a>
+<nav aria-label="Format tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indent">
+    Indent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whitespace-cleanup">
+    Whitespace cleanup
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-support">
+    Docker support
   </a>
 </li>
 </ul>
@@ -328,6 +359,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#personal-information">
+    Personal information
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buffers">
+    buffers
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#line-numbers">
     Line Numbers
   </a>
@@ -348,11 +389,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#automatic-whitespace-removal">
-    Automatic Whitespace removal
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#treemacs">
     Treemacs
   </a>
@@ -362,6 +398,30 @@
     Version control
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#format-tools">
+    Format tools
+  </a>
+<nav aria-label="Format tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indent">
+    Indent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whitespace-cleanup">
+    Whitespace cleanup
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-support">
+    Docker support
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -369,9 +429,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/doom-emacs/edit/main/docs/install/doom-configuration.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="doom-emacs-configuration">Doom Emacs configuration<a class="headerlink" href="#doom-emacs-configuration" title="Permanent link">λ︎</a></h1>
 <p>Doom curates a large number of modules, a module being one or more Emacs packages with configuration.</p>
 <p><code>~/.config/doom/</code> contains three configuration files created by the install process.</p>
@@ -382,37 +439,76 @@
 </ul>
 <details class="hint">
 <summary>Check parens are balanced in config</summary>
-</details>
 <p><code>check-parens</code> command will check the current buffer for balanced parens (all open parens have a matching close paren)</p>
+</details>
 <h2 id="doom-modules">Doom modules<a class="headerlink" href="#doom-modules" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>m</kbd></span> to see the built-in documentation for a Doom module (NOTE: documentation can be light or non-existant)</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>m</kbd></span> to list the built-in Doom module documentation  (NOTE: documentation for some modules can be light or non-existant)</p>
+<p>Edit <code>.config/doom/init.el</code> to select modules to be included.</p>
+<p><a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> has a curated set of modules</p>
+<p>The most useful modules include:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(clojure +lsp)</td>
+<td>Cider and Clojure Mode</td>
+</tr>
+<tr>
+<td>lsp</td>
+<td>language server support UI</td>
+</tr>
+<tr>
+<td>(magit +forge)</td>
+<td>Rich Git Client with Forge Issue &amp; PR support</td>
+</tr>
+<tr>
+<td>(docker +lsp)</td>
+<td>editing in many places at once</td>
+</tr>
+<tr>
+<td>multiple-cursors</td>
+<td>editing in many places at once</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal-information">Personal information<a class="headerlink" href="#personal-information" title="Permanent link">λ︎</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="s">"~/.authinfo.gpg"</span><span class="p">)</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">      </span><span class="nv">auth-source-cache-expiry</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">; default is 7200 (2h)</span>
+</code></pre></div>
+<h2 id="buffers">buffers<a class="headerlink" href="#buffers" title="Permanent link">λ︎</a></h2>
+<p>Set new buffers to open in org-mode rather than fundamntal-mode</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="k">setq-default</span><span class="w"> </span><span class="nv">major-mode</span><span class="w"> </span><span class="ss">'org-mode</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="line-numbers">Line Numbers<a class="headerlink" href="#line-numbers" title="Permanent link">λ︎</a></h2>
-<p><code>display-line-numbers-type</code> configures the type of line numbers</p>
+<p><code>display-line-numbers-type</code> defines the type of line numbers.</p>
 <ul>
 <li><code>nil</code> consecutive line numbering, 1,2,3,...</li>
 <li><code>relative</code> relative numbers to current line for vim navigation, e.g. <code>24 j</code> to jump down 24 lines.</li>
 </ul>
-<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">display-line-numbers-type</span><span class="w"> </span><span class="ss">'relative</span><span class="p">)</span><span class="w"></span>
+<p>Set to relative for Vim-style relative numbers, to support jumping lines, e.g. <span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd class="key-j">J</kbd></span></p>
+<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">display-line-numbers-type</span><span class="w"> </span><span class="ss">'relative</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="frames">Frames<a class="headerlink" href="#frames" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd class="key-f">F</kbd></span> toggles the current frame to be full screen</p>
-<blockquote>
-<p>TODO: is there a setting to open Doom Emacs in full screen</p>
-</blockquote>
-<p>Configure Emacs to always start maximized
-<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="ss">'default-frame-alist</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="nv">fullscreen</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">maximized</span><span class="p">))</span><span class="w"></span>
-</code></pre></div></p>
+<p>Configure Emacs to always start maximized</p>
+<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="ss">'default-frame-alist</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="nv">fullscreen</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">maximized</span><span class="p">))</span>
+</code></pre></div>
 <h2 id="theme">Theme<a class="headerlink" href="#theme" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd class="key-t">T</kbd></span> opens a selection menu of all available themes.  Type a theme name or scroll with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>j</kbd></span> and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>k</kbd></span></p>
 <p><span class="keys"><kbd class="key-enter">Enter</kbd></span> to select the theme.</p>
 <p>doom-gruvbox theme is configured in <a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a></p>
-<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-theme</span><span class="w"> </span><span class="ss">'doom-gruvbox</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-theme</span><span class="w"> </span><span class="ss">'doom-gruvbox</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="font">Font<a class="headerlink" href="#font" title="Permanent link">λ︎</a></h2>
 <p>++ctrl+equals++ to increase font size, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span> to decrease fault size.</p>
 <p>Practicalli recommends Fira Code font which is a very clear font for source code and also supports ligatures. Fira Code  is configured in <a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"><img alt="Fira Code font programming ligatures for Clojure" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"/></a></p>
-<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-font</span><span class="w"> </span><span class="p">(</span><span class="nf">font-spec</span><span class="w"> </span><span class="nb">:family</span><span class="w"> </span><span class="s">"Fira Code"</span><span class="w"> </span><span class="nb">:size</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="nb">:weight</span><span class="w"> </span><span class="ss">'semi-light</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><span class="filename">~/.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-font</span><span class="w"> </span><span class="p">(</span><span class="nf">font-spec</span><span class="w"> </span><span class="nb">:family</span><span class="w"> </span><span class="s">"Fira Code"</span><span class="w"> </span><span class="nb">:size</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="nb">:weight</span><span class="w"> </span><span class="ss">'semi-light</span><span class="p">))</span>
 </code></pre></div>
 <p>TODO: set font for big mode <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd>b</kbd></span></p>
 <details class="info">
@@ -427,38 +523,71 @@
 </ul>
 <p>'C-h v doom-font' for documentation and more examples of what they accept. For example:</p>
 </details>
-<h2 id="automatic-whitespace-removal">Automatic Whitespace removal<a class="headerlink" href="#automatic-whitespace-removal" title="Permanent link">λ︎</a></h2>
-<p>Is this in the autoformat module ?</p>
-<p>``
-<span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>w</kbd></span> deletes whitespace at end of lines</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> ++W++ deletes whitespace at end of lines</p>
 <h2 id="treemacs">Treemacs<a class="headerlink" href="#treemacs" title="Permanent link">λ︎</a></h2>
 <p>Preview files when navigating file names in treemacs</p>
-<div class="highlight"><span class="filename">.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">;; Not currently used in practicalli/doom-emacs-config</span><span class="w"></span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="ss">:map</span><span class="w"> </span><span class="nv">treemacs-mode-map</span><span class="w"></span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">      </span><span class="s">"&lt;down&gt;"</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="k">&amp;optional</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nv">interactive</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">                 </span><span class="p">(</span><span class="nv">next-line</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">                 </span><span class="p">(</span><span class="nv">save-selected-window</span><span class="w"></span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">                   </span><span class="p">(</span><span class="nv">treemacs-RET-action</span><span class="p">)))</span><span class="w"></span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">      </span><span class="s">"&lt;up&gt;"</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="k">&amp;optional</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nv">interactive</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">               </span><span class="p">(</span><span class="nv">previous-line</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">               </span><span class="p">(</span><span class="nv">save-selected-window</span><span class="w"></span>
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">                 </span><span class="p">(</span><span class="nv">treemacs-RET-action</span><span class="p">))))</span><span class="w"></span>
+<blockquote>
+<p>Not used by practicalli/doom-emacs-config</p>
+</blockquote>
+<div class="highlight"><span class="filename">.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">;; Not currently used in practicalli/doom-emacs-config</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:map</span><span class="w"> </span><span class="nv">treemacs-mode-map</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">      </span><span class="s">"&lt;down&gt;"</span><span class="w"> </span><span class="p">(</span><span class="nb">lambda</span><span class="w"> </span><span class="p">(</span><span class="kp">&amp;optional</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">interactive</span><span class="p">)</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">                 </span><span class="p">(</span><span class="nv">next-line</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">                 </span><span class="p">(</span><span class="nb">save-selected-window</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">                   </span><span class="p">(</span><span class="nv">treemacs-RET-action</span><span class="p">)))</span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">      </span><span class="s">"&lt;up&gt;"</span><span class="w"> </span><span class="p">(</span><span class="nb">lambda</span><span class="w"> </span><span class="p">(</span><span class="kp">&amp;optional</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">interactive</span><span class="p">)</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">               </span><span class="p">(</span><span class="nv">previous-line</span><span class="w"> </span><span class="nv">arg</span><span class="p">)</span>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">               </span><span class="p">(</span><span class="nb">save-selected-window</span>
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">                 </span><span class="p">(</span><span class="nv">treemacs-RET-action</span><span class="p">))))</span>
 </code></pre></div>
 <h2 id="version-control">Version control<a class="headerlink" href="#version-control" title="Permanent link">λ︎</a></h2>
-<p>Magit Forge encrypted developer token</p>
-<blockquote>
-<p>TODO: add to XDG_CONFIG_HOME</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="s">"~/.authinfo.gpg"</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">      </span><span class="nv">auth-source-cache-expiry</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w">      </span><span class="c1">; default is 7200 (2h)</span><span class="w"></span>
+<p>Magit Forge will use encrypted developer tokens stored in authinfo.gpg to access GitHub / GitLab API, to manage issues and pull requests.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="p">(</span><span class="nf">list</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">                    </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="p">(</span><span class="nv">getenv</span><span class="w"> </span><span class="s">"XDG_CONFIG_HOME"</span><span class="p">)</span><span class="w"> </span><span class="s">"/authinfo.gpg"</span><span class="p">)</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">                    </span><span class="s">"~/.authinfo.gpg"</span><span class="p">))</span>
 </code></pre></div>
+<h2 id="format-tools">Format tools<a class="headerlink" href="#format-tools" title="Permanent link">λ︎</a></h2>
+<p>Markdown</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-colon">:</kbd></span> <code>+format/buffer</code></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>markdownlint
+</code></pre></div>
+<h3 id="indent">Indent<a class="headerlink" href="#indent" title="Permanent link">λ︎</a></h3>
+<p>TAB with cursor at start of a line will indent the line, any other position on the line it will try to insert a tab</p>
+<p>Configure TAB to always indent the line, no matter the column position</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">tab-always-indent</span><span class="w"> </span><span class="ss">'complete</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="whitespace-cleanup">Whitespace cleanup<a class="headerlink" href="#whitespace-cleanup" title="Permanent link">λ︎</a></h3>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>w</kbd></span> deletes whitespace at end of lines</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> ++W++ deletes whitespace at end of lines</p>
+<p>Automating whitespace cleanup seems very limited and requires external format tools which may also use a number of format rules that may or may not be of value.</p>
+<details class="warning">
+<summary>Format module requires format tools</summary>
+<p>Doom does not have the capability to remove whitespace by itself</p>
+<p>Enable the <code>format</code> module with the <code>+onsave</code> option to call the respective format tool</p>
+<div class="highlight"><span class="filename">.config/doom/init.el</span><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="nf">format</span><span class="w"> </span><span class="nv">+onsave</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Install the format Command Line tools</p>
+<ul>
+<li>Prettier - Markdown and others...</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>prettier
+</code></pre></div>
+<details class="warning">
+<summary>Prettier has very limited Markdown rule configuration</summary>
+<p>Prettier only has one configuration option, whether to wrap lines.  It is not possible to configure any rules as with MarkdownLint.</p>
+</details>
+<h2 id="docker-support">Docker support<a class="headerlink" href="#docker-support" title="Permanent link">λ︎</a></h2>
+<p><code>(docker +lsp)</code> for Docker module with LSP support, providing Dockerfile lint and syntax support</p>
+<p>LSP server binary provided by <code>dockerfile-language-server-nodejs</code> package</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>dockerfile-language-server-nodejs
+</code></pre></div>
+<p>This module assumes <code>docker</code>, <code>docker-compose</code> and =docker-machine= binaries are installed and accessible from your PATH.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 31, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 2, 2023</span>
 </small>
 </div>
 </article>
@@ -471,34 +600,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Install Spacemacs" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Install Spacemacs
-            </div>
-</div>
-</a>
-<a aria-label="Next: Clojure configuration" class="md-footer__link md-footer__link--next" href="../clojure-configuration/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Clojure configuration
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -536,7 +637,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

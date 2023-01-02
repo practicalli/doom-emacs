@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/doom-emacs/basics/" rel="canonical"/>
+<link href="../install/clojure-configuration/" rel="prev"/>
+<link href="projects/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
 <title>Basic usage - Practicalli Doom Emacs</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -275,23 +277,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#enable-features">
-    Enable features
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#personal-information">
-    Personal information
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#buffers">
-    buffers
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#spacemacs-to-doom-emacs">
     Spacemacs to Doom Emacs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rename-files">
+    Rename files
   </a>
 </li>
 <li class="md-nav__item">
@@ -300,8 +292,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rename-files">
-    Rename files
+<a class="md-nav__link" href="#format-tools">
+    Format tools
   </a>
 </li>
 </ul>
@@ -311,71 +303,45 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/doom-emacs/edit/main/docs/basics/index.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">λ︎</a></h1>
 <h2 id="line-numbers">Line numbers<a class="headerlink" href="#line-numbers" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd>l</kbd></span> toggles consecutive line numbers </p>
-<p><code>display-line-numbers-type</code> set to relative for Vim-style relative numbers, to support jumping lines, e.g. <span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd class="key-j">J</kbd></span>
-Enable relative line numbers
-<div class="highlight"><span class="filename">.config/doom/config.el</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">display-line-numbers-type</span><span class="w"> </span><span class="ss">'relative</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></p>
-<h2 id="enable-features">Enable features<a class="headerlink" href="#enable-features" title="Permanent link">λ︎</a></h2>
-<p><code>.config/doom/init.el</code> updated in <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a></p>
-<table>
-<thead>
-<tr>
-<th>feature</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>word-wrap</td>
-<td>soft wrapping with language-aware indent</td>
-</tr>
-<tr>
-<td>multiple-cursors</td>
-<td>editing in many places at once</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="personal-information">Personal information<a class="headerlink" href="#personal-information" title="Permanent link">λ︎</a></h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="s">"~/.authinfo.gpg"</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">      </span><span class="nv">auth-source-cache-expiry</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">; default is 7200 (2h)</span><span class="w"></span>
-</code></pre></div>
-<h2 id="buffers">buffers<a class="headerlink" href="#buffers" title="Permanent link">λ︎</a></h2>
-<p>new buffers in org-mode than fundamntal-mode, hence</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="k">setq-default</span><span class="w"> </span><span class="nv">major-mode</span><span class="w"> </span><span class="ss">'org-mode</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd>l</kbd></span> toggles consecutive line numbers</p>
 <h2 id="spacemacs-to-doom-emacs">Spacemacs to Doom Emacs<a class="headerlink" href="#spacemacs-to-doom-emacs" title="Permanent link">λ︎</a></h2>
 <p>Layouts -&gt; workspaces</p>
 <p>Adding a project seems to add a workspace</p>
 <p><code>SPC TAB .</code> to switch between workspaces</p>
-<h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
-<blockquote>
-<p>TODO: define key bindings for multiple cursors </p>
-</blockquote>
-<ul>
-<li>mc/edit-lines  - create a cursor on every line in the visual selection region - <code>g r I</code> in Spacemacs  </li>
-<li>mc/keyboard-quit - cancel multiple cursors - <code>C-g</code></li>
-</ul>
 <h2 id="rename-files">Rename files<a class="headerlink" href="#rename-files" title="Permanent link">λ︎</a></h2>
-<p><code>SPC f f</code> </p>
+<p><code>SPC f f</code></p>
 <blockquote>
 <p>add a space to the end of the name to ensure Emacs creates a new file rather than selecting the existing name... TODO: is this to be expected</p>
+</blockquote>
+<h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> menu for mutliple cursor menu</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>z</kbd></span> toggle new (frozen) cursors at point. Frozen cursors stay in position until mirroring switched on or switching to insert mode</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>t</kbd></span> toggle mirroring on and off</p>
+<p>With visual select:</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> to create curors at start of visual selection region</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> to create curors at start of visual selection region</p>
+<p>Remove multiple cursors:</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>q</kbd></span> to cancel all cursors</p>
+<h2 id="format-tools">Format tools<a class="headerlink" href="#format-tools" title="Permanent link">λ︎</a></h2>
+<p>NOTE: rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.</p>
+<p>Install markdownlint package for local format tool, although this tool is not used by Doom Emacs (as far as I can tell)</p>
+<h1 id="begin_src-shell">+begin_src shell<a class="headerlink" href="#begin_src-shell" title="Permanent link">λ︎</a></h1>
+<p>sudo npm install markdownlint</p>
+<h1 id="end_src">+end_src<a class="headerlink" href="#end_src" title="Permanent link">λ︎</a></h1>
+<p>Prettier.io was evaluated but does not allow for customisation of the linting rules, so was not adopted.</p>
+<h2 id="whitespace-cleanup">Whitespace cleanup<a class="headerlink" href="#whitespace-cleanup" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> ++"w" to remove whitespace from end of lines and additional blank lines from the end of the file.</p>
+<blockquote>
+<p>TODO: automate white space clean up (may require external format or LSP tooling)</p>
 </blockquote>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 2, 2023</span>
 </small>
 </div>
 </article>
@@ -388,34 +354,6 @@ Enable relative line numbers
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Clojure configuration" class="md-footer__link md-footer__link--prev" href="../install/clojure-configuration/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Clojure configuration
-            </div>
-</div>
-</a>
-<a aria-label="Next: Projects" class="md-footer__link md-footer__link--next" href="projects/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Projects
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -453,7 +391,7 @@ Enable relative line numbers
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
