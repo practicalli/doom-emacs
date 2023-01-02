@@ -10,7 +10,7 @@ Doom curates a large number of modules, a module being one or more Emacs package
 
 
 ??? HINT "Check parens are balanced in config"
-`check-parens` command will check the current buffer for balanced parens (all open parens have a matching close paren)
+    `check-parens` command will check the current buffer for balanced parens (all open parens have a matching close paren)
 
 
 ## Doom modules
@@ -39,7 +39,8 @@ Doom curates a large number of modules, a module being one or more Emacs package
 
 
 Configure Emacs to always start maximized
-```lisp title="~/.config/doom/config.el"
+
+```emacs title="~/.config/doom/config.el"
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 ```
 

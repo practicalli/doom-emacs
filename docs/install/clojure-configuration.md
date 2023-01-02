@@ -17,7 +17,7 @@ doom sync
 
 Define variables to configure CIDER
 
-```lisp title="~/.config/doom/config.el"
+```emacs title="~/.config/doom/config.el"
 (use-package! cider
   :after clojure-mode
   :config
@@ -49,7 +49,6 @@ Define variables to configure CIDER
         clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
 ))
 ```
-
 
 !!! Hint "Restart Doom Emacs after larger changes"
     ++spc++ ++"q"++ ++"r"++ to restart Doom Emacs when significant changes are made or something is not working correctly
@@ -121,6 +120,6 @@ clojure-lsp -v
 
 ## References
 
-* [Configure Emacs as a Clojure IDE guide](https://emacs-lsp.github.io/lsp-mode/tutorials/clojure-guide/)
-* [A guide on disabling/enabling lsp-mode features](https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/)
-* [Emacs LSP UI website](https://emacs-lsp.github.io/lsp-ui/) and [emacs-lsp/lsp-ui repository](https://github.com/emacs-lsp/lsp-ui)
+- [Configure Emacs as a Clojure IDE guide](https://emacs-lsp.github.io/lsp-mode/tutorials/clojure-guide/)
+- [A guide on disabling/enabling lsp-mode features](https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/)
+- [Emacs LSP UI website](https://emacs-lsp.github.io/lsp-ui/) and [emacs-lsp/lsp-ui repository](https://github.com/emacs-lsp/lsp-ui)

@@ -4,8 +4,7 @@ Yasnippets is provided by the `snippets` module
 
 Add snippets to the `.config/doom/snippets` directory, under a directory named after the major mode in which the snippet should be available, e.g. clojure snippets should be saved in the `.config/doom/clojure-mode/` directory.
 
-
-## Creating snippets 
+## Creating snippets
 
 ++ctrl+"c"++ ++ctrl+"n"++ to create a new snippet in the current major mode (although that can be changed when saving the snippet)
 
@@ -30,8 +29,7 @@ lsp
 
 Clojure LSP contains its own snippets.
 
-[practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) containes a range of snippets designed by Practicalli and used regularly.  Add this configuration to `.config/clojure-lsp` or copy specific snippets to your clojure LSP configuration in the `:additionaal-snippets` key.
-
+[practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) containes a range of snippets designed by Practicalli and used regularly. Add this configuration to `.config/clojure-lsp` or copy specific snippets to your clojure LSP configuration in the `:additionaal-snippets` key.
 
 ### Adding custom snippets
 
@@ -46,6 +44,6 @@ The `:additional-snippets` key has a collection of hash-maps, with each hash-map
 
 `$0` is a special tab-stop that denotes the end of the tab-stops, ending the snippet interaction.
 
-`${n:placeholder text}` allows text to be placed at the tab-stop to give an indication as to the value to be completed.  The placeholder text is automatically highlighted when tabbing into the tab-stop, so typing a new value replaces the placeholder text.
+`${n:placeholder text}` allows text to be placed at the tab-stop to give an indication as to the value to be completed. The placeholder text is automatically highlighted when tabbing into the tab-stop, so typing a new value replaces the placeholder text.
 
 Highlighting and replacing the text does not work for the `$0` tab-stop, so placeholder text should not be used with this specific tab-stop.
