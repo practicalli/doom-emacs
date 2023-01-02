@@ -1,48 +1,11 @@
 # Basic usage
 
-
 ## Line numbers
 
-++spc++ ++"t"++ ++"l"++ toggles consecutive line numbers 
-
-`display-line-numbers-type` set to relative for Vim-style relative numbers, to support jumping lines, e.g. ++2++ ++4++ ++j++
-Enable relative line numbers
-```emacs title=".config/doom/config.el"
-(setq display-line-numbers-type 'relative)
-```
-
-## Enable features
-
-`.config/doom/init.el` updated in [practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config)
-
-| feature          | Description                              |
-|------------------|------------------------------------------|
-| word-wrap        | soft wrapping with language-aware indent |
-| multiple-cursors | editing in many places at once           |
-|                  |                                          |
-
-
-
-## Personal information
-
-
-```emacs
-(setq auth-sources '("~/.authinfo.gpg")
-      auth-source-cache-expiry nil) ; default is 7200 (2h)
-```
-
-
-## buffers
-
-new buffers in org-mode than fundamntal-mode, hence
-
-```emacs
-(setq-default major-mode 'org-mode)
-```
+++spc++ ++"t"++ ++"l"++ toggles consecutive line numbers
 
 
 ## Spacemacs to Doom Emacs
-
 
 Layouts -> workspaces
 
@@ -51,16 +14,48 @@ Adding a project seems to add a workspace
 `SPC TAB .` to switch between workspaces
 
 
-## Multiple cursors
-
-> TODO: define key bindings for multiple cursors 
-
-- mc/edit-lines  - create a cursor on every line in the visual selection region - `g r I` in Spacemacs  
-- mc/keyboard-quit - cancel multiple cursors - `C-g`
-
-
 ## Rename files
 
-`SPC f f` 
+`SPC f f`
 
 > add a space to the end of the name to ensure Emacs creates a new file rather than selecting the existing name... TODO: is this to be expected
+
+
+## Multiple cursors
+
+++"g"++ ++"z"++ menu for mutliple cursor menu
+
+++"g"++ ++"z"++ ++"z"++ toggle new (frozen) cursors at point. Frozen cursors stay in position until mirroring switched on or switching to insert mode
+
+++"g"++ ++"z"++ ++"t"++ toggle mirroring on and off
+
+With visual select:
+
+++"g"++ ++"z"++ ++i++ to create curors at start of visual selection region
+
+++"g"++ ++"z"++ ++a++ to create curors at start of visual selection region
+
+Remove multiple cursors:
+
+++"g"++ ++"z"++ ++"q"++ to cancel all cursors
+
+
+## Format tools
+
+NOTE: rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.
+
+Install markdownlint package for local format tool, although this tool is not used by Doom Emacs (as far as I can tell)
+
+#+begin_src shell
+sudo npm install markdownlint
+#+end_src
+
+Prettier.io was evaluated but does not allow for customisation of the linting rules, so was not adopted.
+
+
+## Whitespace cleanup
+
+++spc++ ++"c"++ ++"w" to remove whitespace from end of lines and additional blank lines from the end of the file.
+
+> TODO: automate white space clean up (may require external format or LSP tooling)
+
