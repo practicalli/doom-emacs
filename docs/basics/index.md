@@ -67,3 +67,9 @@ Prettier.io was evaluated but does not allow for customisation of the linting ru
 
 > TODO: automate white space clean up (may require external format or LSP tooling)
 
+
+
+## references
+
+* [Keybind reference sheet](https://discourse.doomemacs.org/t/keybind-reference-sheet/49) - doom discourse
+* [Doom Getting Started Guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org)
