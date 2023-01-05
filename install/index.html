@@ -12,7 +12,7 @@
 <link href="doom-configuration/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>Install Spacemacs - Practicalli Doom Emacs</title>
+<title>Install Doom Emacs - Practicalli Doom Emacs</title>
 <link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <link href="../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Install Spacemacs - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Install Doom Emacs - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
 <meta content="https://practical.li/doom-emacs/assets/images/social/install/index.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
@@ -29,7 +29,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="https://practical.li/doom-emacs/install/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Install Spacemacs - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Install Doom Emacs - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
 <meta content="https://practical.li/doom-emacs/assets/images/social/install/index.png" name="twitter:image"/>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -50,7 +50,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#install-spacemacs">
+<a class="md-skip" href="#install-doom-emacs">
           Skip to content
         </a>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Install Spacemacs
+              Install Doom Emacs
             
           </span>
 </div>
@@ -280,25 +280,24 @@
 <a class="md-nav__link" href="#clone-doom-emacs">
     Clone Doom Emacs
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#post-install">
-    Post install
-  </a>
-</li>
+<nav aria-label="Clone Doom Emacs" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#add-doom-command-to-path">
     Add Doom command to path
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-emacs">
-    Run Emacs
-  </a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#clone-practicalli-doom-configuration">
     Clone Practicalli Doom configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-update-doom-emacs">
+    Check &amp; Update Doom Emacs
   </a>
 </li>
 <li class="md-nav__item">
@@ -307,13 +306,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#all-the-icon-fonts">
-    All The Icon Fonts
+<a class="md-nav__link" href="#language-servers">
+    Language Servers
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spacemacs-is-ready-for-action">
-    Spacemacs is ready for action
+<a class="md-nav__link" href="#doom-emacs-ready">
+    Doom Emacs ready
   </a>
 </li>
 </ul>
@@ -323,19 +322,16 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="install-spacemacs">Install Spacemacs<a class="headerlink" href="#install-spacemacs" title="Permanent link">λ︎</a></h1>
+<h1 id="install-doom-emacs">Install Doom Emacs<a class="headerlink" href="#install-doom-emacs" title="Permanent link">λ︎</a></h1>
 <p><a class="md-button" href="pre-install/">Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools </a></p>
 <ol>
 <li><a href="#clojure-doom-emacs">Clone Doom Emacs</a> to <code>~/.config/emacs</code></li>
-<li><a href="#clone-practicalli-doom-emacs-configuration">Clone practicalli/doom-emacs-config configuration</a> to add common layers for Clojure development.  Or start Emacs and use the Spacemacs install wizard for basic config, follow the <a href="manual-configuration/">manual configuration section</a> for additional features.</li>
-<li>[optional] <a href="#install-fira-code-font">Install Fira Code font</a> (change <code>dotspacemacs-default-font</code> to a name of a font on your operating system in <code>.spacemacs.d/init.el</code> in step 4)</li>
-<li><a href="#all-the-icon-fonts">Install All The Icons fonts for doom modeline theme</a></li>
+<li><a href="#clone-practicalli-doom-emacs-configuration">Clone practicalli/doom-emacs-config configuration</a> to add common modules for Clojure development and related languages.  Or edit <code>~/.config/doom/init.el</code> and define the Doom modules required. Follow the <a href="doom-configuration/">Doom configuration section</a> for details.</li>
+<li>[optional] <a href="#install-fira-code-font">Install Fira Code font</a> (change <code>dotspacemacs-default-font</code> to a name of a font on your operating system in <code>.spacemacs.d/init.el</code> in step 4)
+4.</li>
 </ol>
 <h2 id="clone-doom-emacs">Clone Doom Emacs<a class="headerlink" href="#clone-doom-emacs" title="Permanent link">λ︎</a></h2>
 <p>Use your favourite git client or the following command in a terminal window to clone Spacemacs and then run the Doom Emacs install script</p>
-<details class="hint">
-<summary>Use Practicalli Doom Emacs config rather than install</summary>
-</details>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Free Desktop XDG config</label><label for="__tabbed_1_2">Classic config</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -353,101 +349,112 @@
 </div>
 </div>
 </input></input></div>
-<h2 id="post-install">Post install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h2>
-<p>Doom Emacs outputs the following message at the end of the install</p>
-<ol>
-<li>Don't forget to run 'doom sync', then restart Emacs, after modifying
-   ~/.doom.d/init.el or ~/.doom.d/packages.el.</li>
-</ol>
-<p>This command ensures needed packages are installed, orphaned packages are
-   removed, and your autoloads/cache files are up to date. When in doubt, run
-   'doom sync'!</p>
-<ol>
-<li>
-<p>If something goes wrong, run <code>doom doctor</code>. It diagnoses common issues with
-   your environment and setup, and may offer clues about what is wrong.</p>
-</li>
-<li>
-<p>Use 'doom upgrade' to update Doom. Doing it any other way will require
-   additional steps. Run 'doom help upgrade' to understand those extra steps.</p>
-</li>
-<li>
-<p>Access Doom's documentation from within Emacs via 'SPC h d h' or 'C-h d h'
-   (or 'M-x doom/help')</p>
-</li>
-</ol>
-<h2 id="add-doom-command-to-path">Add Doom command to path<a class="headerlink" href="#add-doom-command-to-path" title="Permanent link">λ︎</a></h2>
-<p>Add <code>.config/emacs/bin</code> to </p>
-<p>Or create a symbolic link</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>.local/bin
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.config/emacs/bin/doom<span class="w"> </span>doom
-</code></pre></div>
-<h2 id="run-emacs">Run Emacs<a class="headerlink" href="#run-emacs" title="Permanent link">λ︎</a></h2>
-<p>The packages have been downloaded as part of the Doom Emacs install process.</p>
-<p>Run emacs from a desktop launcher or on the command line:
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>emacs
-</code></pre></div></p>
-<div class="admonition warning">
-<p class="admonition-title">Native compliation initial high cpu use</p>
-<p>On first running Emacs after Doom install added packages, the elisp code will be compiled to native binaries.  The compilation will use a lot of CPU resources</p>
-</div>
-<h2 id="clone-practicalli-doom-configuration">Clone Practicalli Doom configuration<a class="headerlink" href="#clone-practicalli-doom-configuration" title="Permanent link">λ︎</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Not started yet</p>
-</div>
-<p>Clone <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> or first create a fork and clone that fork</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Free Desktop XDG config</label><label for="__tabbed_2_2">Classic config</label></div>
+<h3 id="add-doom-command-to-path">Add Doom command to path<a class="headerlink" href="#add-doom-command-to-path" title="Permanent link">λ︎</a></h3>
+<p>Doom provides tools to check the user configuration, <code>doom doctor</code>, and to update modules, <code>`Either add</code>.config/emacs/bin` to the system path</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Symbolic link</label><label for="__tabbed_2_2">Export PATH</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/doom-emacs-config.git<span class="w"> </span>~/.config/doom
-</code></pre></div></p>
-<p>Using HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config<span class="w"> </span>~/.config/doom
+<p>Create a symbolic link called doom from the local user bin directory to the Doom Emacs installation bin/doom file
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.config/emacs/bin/doom<span class="w"> </span>.local/bin/doom
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/doom-emacs-config.git<span class="w"> </span>~/.config/doom
+<p>In the user shell configuration file (<code>~/.bashrc</code>, <code>~/.zshenv</code>), export the PATH environment variable and include the path to the Doom Emacs install bin directory
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.config/emacs/bin
 </code></pre></div></p>
-<p>Using HTTP
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config<span class="w"> </span>~/.config/doom
-</code></pre></div></p>
-<p><code>~/.spacemacs.d/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
 </div>
 </div>
 </input></input></div>
-<details class="info">
-<summary>Emacs custom settings</summary>
-<p><code>.spacemacs.d/init.el</code> configuration separates Emacs custom settings into a <code>emacs-custom-setting</code> file.  <code>emacs-custom-setting</code> should be added to version control if the Emacs <code>customize</code> menu has been used to define settings.
-<code>emacs-custom-file</code> is defined in the <code>dotspacemacs/user-init</code> of the Spacemacs configuration
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">custom-file</span><span class="w"> </span><span class="p">(</span><span class="nv">file-truename</span><span class="w"> </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="nv">dotspacemacs-directory</span><span class="w"> </span><span class="s">"emacs-custom-settings.el"</span><span class="p">)))</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="p">(</span><span class="nf">load</span><span class="w"> </span><span class="nv">custom-file</span><span class="p">)</span>
+<h2 id="clone-practicalli-doom-configuration">Clone Practicalli Doom configuration<a class="headerlink" href="#clone-practicalli-doom-configuration" title="Permanent link">λ︎</a></h2>
+<p>Remove the autogenerated configuration from the Doom install</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>mv<span class="w"> </span>~/.config/doom<span class="w"> </span>~/.config/doom-backup
 </code></pre></div>
-A specific path could also be used to define the location of the custom file: <code>(setq custom-file "~/.emacs.d/.cache/custom-settings")</code></p>
+<p>Clone <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> or first create a fork and clone that fork</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Free Desktop XDG config</label><label for="__tabbed_3_2">Classic config</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using SSH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/doom-emacs-config.git<span class="w"> </span>~/.config/doom
+</code></pre></div></p>
+<p>Using HTTPS
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config<span class="w"> </span>~/.config/doom
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Using SSH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/doom-emacs-config.git<span class="w"> </span>~/.config/doom
+</code></pre></div></p>
+<p>Using HTTP
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config<span class="w"> </span>~/.config/doom
+</code></pre></div></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="check-update-doom-emacs">Check &amp; Update Doom Emacs<a class="headerlink" href="#check-update-doom-emacs" title="Permanent link">λ︎</a></h2>
+<p><code>doom doctor</code> diagnoses common issues with your environment and setup, and may offer clues about what is wrong.</p>
+<p><code>doom sync</code> ensures Emacs packages are installed, orphaned packages are removed and autoloads/cache files are up to date. </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w"> </span>doom<span class="w"> </span>doctor<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>doom<span class="w"> </span>sync
+</code></pre></div>
+<details class="hint">
+<summary>doom doctor - successful output example</summary>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/doom-emacs/doom-doctor-output-green.png"><img alt="Doom doctor - successful output" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/doom-emacs/doom-doctor-output-green.png"/></a></p>
 </details>
 <h2 id="install-fira-code-font">Install Fira Code font<a class="headerlink" href="#install-fira-code-font" title="Permanent link">λ︎</a></h2>
 <p><a class="md-button" href="https://github.com/tonsky/FiraCode/wiki/Installing" target="_blank">Install Fira Code</a></p>
-<p><a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> uses Fira Code, a mono-spaced font designed for source code and includes <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">ligatures</a> and <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">many other features</a>.</p>
+<p><a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> uses Fira Code, a mono-spaced font designed for source code and includes <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">ligatures</a> and <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">many other features</a>.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"><img alt="Fira Code font - ligatures for Emacs and Clojure code" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"/></a></p>
 <div class="admonition tip">
-<p class="admonition-title">Use a different font with practicalli/spacemacs.d</p>
-<p>To use a different font when using the <a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a>, edit <code>.spacemacs.d/init.el</code> and update the value for <code>dotspacemacs-default-font</code> to a name of a font on your system.</p>
+<p class="admonition-title">Use a different font with practicalli/doom-emacs-config</p>
+<p>To use a different font when using the <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a>, edit <code>.config/doom/config.el</code> and update the value for <code>doom-font</code> and any variations of fonts required
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-font</span><span class="w"> </span><span class="p">(</span><span class="nf">font-spec</span><span class="w"> </span><span class="nb">:family</span><span class="w"> </span><span class="s">"Fira Code"</span><span class="w"> </span><span class="nb">:size</span><span class="w"> </span><span class="mi">14</span><span class="p">)</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">      </span><span class="nv">doom-big-font</span><span class="w"> </span><span class="p">(</span><span class="nf">font-spec</span><span class="w"> </span><span class="nb">:family</span><span class="w"> </span><span class="s">"Fira Code"</span><span class="w"> </span><span class="nb">:size</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">      </span><span class="nv">doom-variable-pitch-font</span><span class="w"> </span><span class="p">(</span><span class="nf">font-spec</span><span class="w"> </span><span class="nb">:family</span><span class="w"> </span><span class="s">"Ubuntu"</span><span class="w"> </span><span class="nb">:size</span><span class="w"> </span><span class="mi">16</span><span class="p">))</span>
+</code></pre></div></p>
 </div>
-<h2 id="all-the-icon-fonts">All The Icon Fonts<a class="headerlink" href="#all-the-icon-fonts" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.</p>
-<p><code>SPC SPC all-the-icons-install-fonts</code> once Spacemacs is running will install the fonts.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> to restart Spacemacs and see the finished results</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"><img alt="Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"/></a></p>
-<h2 id="spacemacs-is-ready-for-action">Spacemacs is ready for action<a class="headerlink" href="#spacemacs-is-ready-for-action" title="Permanent link">λ︎</a></h2>
-<p>Spacemacs is now up and running and ready to take on the world.</p>
-<p>If you already know how to use Spacemacs, jump to the <a href="/spacemacs/clojure-projects/">Clojure Projects section</a>, otherwise look through the <a href="/spacemacs/spacemacs-basics/">Spacemacs Basics section</a> to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.</p>
+<h2 id="language-servers">Language Servers<a class="headerlink" href="#language-servers" title="Permanent link">λ︎</a></h2>
+<p>Some languages support Language Server Protocol to provide static analysis of code structure and provide live linting and other features.  Each language will require installation of its own language server, most often as a nodejs package.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo npm install --global vscode-json-languageserver dockerfile-language-server-nodejs vscode-html-languageservice vscode-css-languageservice yaml-language-server
+</code></pre></div>
+<p>Or install a language server for the specific language</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">JSON</label><label for="__tabbed_4_2">Docker</label><label for="__tabbed_4_3">Web</label><label for="__tabbed_4_4">YAML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Add <code>(json +lsp)</code> doom module in <code>.config/doom/init.el</code> and install the JSON language server
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo npm install --global yaml-language-server
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Add <code>(docker +lsp)</code> doom module in <code>.config/doom/init.el</code> and install the Dockerfile language server
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>sudo npm install --global dockerfile-language-server-nodejs
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Add <code>(web +lsp)</code> doom module in <code>.config/doom/init.el</code> and install the HTML and CSS language servers
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo npm install --global vscode-html-languageservice vscode-css-languageservice
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Add <code>(yaml +lsp)</code> doom module in <code>.config/doom/init.el</code> and install the YAML language server
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>sudo npm install --global yaml-language-server
+</code></pre></div></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="doom-emacs-ready">Doom Emacs ready<a class="headerlink" href="#doom-emacs-ready" title="Permanent link">λ︎</a></h2>
+<p>Doom Emacs is and ready to help you take on the world. Run emacs from a desktop launcher or on the command line:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>emacs
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Native compliation initial high cpu use</p>
+<p>On first running Emacs after Doom install added packages, the elisp code will be compiled to native binaries.  The compilation will use considerable CPU resources.</p>
+</div>
+<p>If you already know how to use Doom Emacs, jump to the <a href="/doom-emacs/clojure-development/">Clojure Projects section</a>, otherwise look through the <a href="/doom-emacs/basics/">Doom Basics</a> to learn how to use Vim style editing and work with files, buffers and windows.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
 </small>
 </div>
 </article>
