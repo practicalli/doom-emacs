@@ -29,8 +29,12 @@ nav:
   - Doom Basics:
       - basics/index.md
       - Projects: basics/projects.md
-      - Snippets: basics/snippets.md
       - Workspaces: basics/workspaces.md
+      - Evil Editing: basics/evil-editing.md
+      - Speaking Evil: basics/speaking-evil.md
+      - Evil Reference: basics/vim-quick-reference.md
+      - Evil Tools: basics/evil-tools.md
+      - Snippets: basics/snippets.md
 
 # Theme and styling
 theme:
