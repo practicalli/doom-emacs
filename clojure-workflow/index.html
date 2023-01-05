@@ -7,32 +7,31 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/basics/projects/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../workspaces/" rel="next"/>
-<link href="../../assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/doom-emacs/clojure-workflow/" rel="canonical"/>
+<link href="../basics/snippets/" rel="prev"/>
+<link href="../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>Projects - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Clojure Developmement Workflow - Practicalli Doom Emacs</title>
+<link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Projects - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Clojure Developmement Workflow - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/projects.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/clojure-workflow/index.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/basics/projects/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/clojure-workflow/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Projects - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Clojure Developmement Workflow - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/projects.png" name="twitter:image"/>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/doom-emacs/assets/images/social/clojure-workflow/index.png" name="twitter:image"/>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -43,14 +42,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="orange" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#working-with-projects">
+<a class="md-skip" href="#clojure-developmement-workflow">
           Skip to content
         </a>
 </div>
@@ -58,8 +57,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
-<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
+<img alt="logo" src="../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -74,7 +73,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Projects
+              Clojure Developmement Workflow
             
           </span>
 </div>
@@ -140,8 +139,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
-<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
+<img alt="logo" src="../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Doom Emacs
   </label>
@@ -159,7 +158,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Overview</a>
+<a href="..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -171,27 +170,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/repl-workflow/">
+<a class="md-nav__link" href="../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/why-doom-emacs/">
+<a class="md-nav__link" href="../introduction/why-doom-emacs/">
         Why Doom Emacs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/spacemacs-or-doom.md">
+<a class="md-nav__link" href="../introduction/spacemacs-or-doom.md">
         Spacemacs Or Doom
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/contributing/">
+<a class="md-nav__link" href="../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/writing-tips/">
+<a class="md-nav__link" href="../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -199,14 +198,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/pre-install/">
+<a class="md-nav__link" href="../install/pre-install/">
         Pre-install
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../install/">Install</a>
+<a href="../install/">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -218,22 +217,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/doom-configuration/">
+<a class="md-nav__link" href="../install/doom-configuration/">
         Doom Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/clojure-configuration/">
+<a class="md-nav__link" href="../install/clojure-configuration/">
         Clojure
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Doom Basics</a>
+<a href="../basics/">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -244,76 +243,48 @@
           Doom Basics
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Projects
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../basics/projects/">
         Projects
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#discover-projects">
-    Discover projects
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#files">
-    Files
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#windows">
-    Windows
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../workspaces/">
+<a class="md-nav__link" href="../basics/workspaces/">
         Workspaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evil-editing/">
+<a class="md-nav__link" href="../basics/evil-editing/">
         Evil Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../speaking-evil/">
+<a class="md-nav__link" href="../basics/speaking-evil/">
         Speaking Evil
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../vim-quick-reference/">
+<a class="md-nav__link" href="../basics/vim-quick-reference/">
         Evil Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evil-tools/">
+<a class="md-nav__link" href="../basics/evil-tools/">
         Evil Tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/">
+<a class="md-nav__link" href="../basics/snippets/">
         Snippets
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../clojure-workflow/">Clojure Workflow</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Clojure Workflow</a>
 </div>
 <nav aria-label="Clojure Workflow" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -339,18 +310,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#discover-projects">
-    Discover projects
+<a class="md-nav__link" href="#start-clojure-repl">
+    Start Clojure REPL
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#files">
-    Files
+<a class="md-nav__link" href="#evaluate-code">
+    Evaluate code
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#windows">
-    Windows
+<a class="md-nav__link" href="#snippets">
+    Snippets
   </a>
 </li>
 </ul>
@@ -360,50 +331,41 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="working-with-projects">Working with Projects<a class="headerlink" href="#working-with-projects" title="Permanent link">λ︎</a></h1>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>a</kbd></span> to add a new project to Doom, selecting the directory path for the root of the project.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>p</kbd></span> to switch to a project other than the current, list shows all other projects except current project. </p>
-<p>A project is automatically assigned a <a href="../workspaces/">workspace</a> when opened. <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> <span class="keys"><kbd>r</kbd></span> to rename the workspace</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> to list all current workspaces and select a different workspace.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> ++back-tick++ to switch to previous buffer</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> ++back-tick++ to switch to previous workspace</p>
-<blockquote>
-<p>TODO: paste kill ring cycle - paste transient state in spacemacs</p>
-</blockquote>
-<h2 id="discover-projects">Discover projects<a class="headerlink" href="#discover-projects" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> to discover projects withing the directories specified in <code>projectile-project-search-path</code></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">projectile-project-search-path</span><span class="w"> </span><span class="o">'</span><span class="p">((</span><span class="s">"~/projects"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s">"~/.config"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">1</span><span class="p">)))</span>
-</code></pre></div>
-<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> to open or create a new file. If a file is open in the current buffer, its path is used as the starting point. To create a file (and intermediate directories), type any additional path and file name.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> to list all files in the current project / workspace. Use this when you know the name of the project but not the path or to avoid navigating to the correct path.</p>
-<details class="warning">
-<summary>Project Cache Outdated</summary>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>i</kbd></span> to udate the project cache moving directories and files, otherwise Doom will open a buffer for the old location</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> before a file command will also clear the cache and allow correct selection of files, e.g.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></p>
+<h1 id="clojure-developmement-workflow">Clojure Developmement Workflow<a class="headerlink" href="#clojure-developmement-workflow" title="Permanent link">λ︎</a></h1>
+<details class="info">
+<summary>Aliases used in examples are defined in practicalli/clojure-deps-edn</summary>
+<p><a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a> contains a wide range of aliases and community tools for Clojure CLI projects.</p>
+<p><code>:env/dev</code> adds <code>dev</code> directory to the class path, used to load <code>dev/user.clj</code> file and run development tools on REPL startup</p>
+<p><code>:env/test</code> adds <code>test</code> directory to include unit tests and common testing libraries</p>
+<p><code>:repl/rebel</code> runs a rich terminal UI and an nREPL server to allow connection from <a href="https://practical.li/clojure/clojure-editors/">Clojure aware editors</a></p>
 </details>
-<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> and one of <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>k</kbd></span> <span class="keys"><kbd>l</kbd></span> for vim-style navigation of windows</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>v</kbd></span> to create a new vertical window, <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>h</kbd></span> for a new horizontal window</p>
-<h1 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">λ︎</a></h1>
-<p>spc q s to save the current session, which should load when (re)starting Emacs</p>
-<h2 id="searching-across-a-project">Searching across a project<a class="headerlink" href="#searching-across-a-project" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-slash">/</kbd></span> to search across all files in a project, using ripgrep (if installed on OS execution path)</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>e</kbd></span> opens search results in a separate buffer for editing results.</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> or <span class="keys"><kbd class="key-z">Z</kbd></span> <span class="keys"><kbd class="key-z">Z</kbd></span> to commit changes</p>
-<div class="admonition hint">
-<p class="admonition-title">Narrow search results with Ripgrep switches</p>
-<p>Use ripgrep switches before or after a search pattern, E.g. #-t clojure -- test or #test -- -t clojure.</p>
-<p><code>rg --type-list</code> for comprehensive list of types supported by Ripgrep.  Types can represent one or more file extensions.</p>
-<p><code>#test -- -t clojure</code>  only search for Clojure files (<em>.clj, </em>.cljc, <em>.cljs, </em>.cljx file extension )</p>
-<p><code>#test -- -g*.tar.gz</code> - search any file that matches a glob, i.e. file extension .tar.gz</p>
-<p><code>#test#!cd</code> - search for test and filter results containing <code>cd</code> using consult sub-search feature</p>
-<p>Everything before the second # is filtered by ripgrep.</p>
-<p>Everything after the second # is filtered by Vertico using Orderless 23, where ! (negatation), = (literal), ~ (fuzzy), % (case insensitive) prefixes are supported.</p>
-<p><span class="keys"><kbd>#</kbd></span> delimiter can be replaced with any arbitrary character. E.g. %test%!cd or <em>test</em>!cd, useful when the search pattern starts with a <code>#</code> character</p>
+<h2 id="start-clojure-repl">Start Clojure REPL<a class="headerlink" href="#start-clojure-repl" title="Permanent link">λ︎</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Command Line</label><label for="__tabbed_1_2">Doom Emacs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Start a REPL in a terminal window with a rich REPL UI prompt, with auto-completion, syntax highlighting, multi-line editing and documentation.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>clojure<span class="w"> </span>-M:env/dev:env/test:repl/rebel
+</code></pre></div></p>
+<p>Or start a headless REPL if only using the REPL via the editor
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>clojure<span class="w"> </span>-M:env/dev:env/test:repl/headless
+</code></pre></div></p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>c</kbd></span> to connect to an existing Clojure REPL and follow the prompts to connect to <code>localhost</code></p>
 </div>
+<div class="tabbed-block">
+<p>Doom Emacs can launch a REPL process and connect to that process without leaving Emacs. External tools (Clojure CLI, Leiningen) are used to actually start the REPL process and CIDER manages the connection and communication with the REPL process from within Doom Emacs.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-single-quote">'</kbd></span> to start a Clojure REPL using <code>cider-jack-in</code></p>
+<p>Include a <code>.dir-locals.el</code> file in the root of the Clojure project to include Clojure CLI aliases
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">              </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">":env/dev:env/test"</span><span class="p">))))</span>
+</code></pre></div></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="evaluate-code">Evaluate code<a class="headerlink" href="#evaluate-code" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> opens the evaluation menu</p>
+<h2 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">λ︎</a></h2>
+<p>Snippets from Yasnippets appear when typing matches the name of the snippet defined in the major mode.</p>
+<p>Clojure also has snippets defined from Clojure LSP.</p>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -459,7 +421,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

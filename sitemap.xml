@@ -16,6 +16,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/doom-emacs/basics/evil-editing/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/doom-emacs/basics/evil-tools/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/doom-emacs/basics/projects/</loc>
          <lastmod>2023-01-05</lastmod>
          <changefreq>daily</changefreq>
@@ -26,7 +36,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/doom-emacs/basics/speaking-evil/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/doom-emacs/basics/vim-quick-reference/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/doom-emacs/basics/workspaces/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/doom-emacs/clojure-workflow/</loc>
          <lastmod>2023-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>

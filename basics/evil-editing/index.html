@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/basics/projects/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../workspaces/" rel="next"/>
+<link href="https://practical.li/doom-emacs/basics/evil-editing/" rel="canonical"/>
+<link href="../workspaces/" rel="prev"/>
+<link href="../speaking-evil/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>Projects - Practicalli Doom Emacs</title>
+<title>Evil Editing - Practicalli Doom Emacs</title>
 <link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,17 +21,17 @@
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Projects - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Evil Editing - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/projects.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/basics/evil-editing.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/basics/projects/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/basics/evil-editing/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Projects - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Evil Editing - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/projects.png" name="twitter:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/basics/evil-editing.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -50,7 +50,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#working-with-projects">
+<a class="md-skip" href="#evil-editing">
           Skip to content
         </a>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Projects
+              Evil Editing
             
           </span>
 </div>
@@ -244,14 +244,24 @@
           Doom Basics
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects/">
+        Projects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../workspaces/">
+        Workspaces
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Projects
+          Evil Editing
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Projects
+        Evil Editing
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -260,32 +270,41 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#discover-projects">
-    Discover projects
+<a class="md-nav__link" href="#normal-state">
+    Normal state
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#files">
-    Files
+<a class="md-nav__link" href="#insert-state">
+    Insert state
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#windows">
-    Windows
+<a class="md-nav__link" href="#visual-state">
+    Visual state
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evil-surround">
+    Evil surround
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learn-vim-style-editing">
+    Learn Vim-style editing
+  </a>
+<nav aria-label="Learn Vim-style editing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-resource-for-evil">
+    Learning resource for Evil
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../workspaces/">
-        Workspaces
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../evil-editing/">
-        Evil Editing
-      </a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../speaking-evil/">
@@ -339,19 +358,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#discover-projects">
-    Discover projects
+<a class="md-nav__link" href="#normal-state">
+    Normal state
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#files">
-    Files
+<a class="md-nav__link" href="#insert-state">
+    Insert state
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#windows">
-    Windows
+<a class="md-nav__link" href="#visual-state">
+    Visual state
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evil-surround">
+    Evil surround
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learn-vim-style-editing">
+    Learn Vim-style editing
+  </a>
+<nav aria-label="Learn Vim-style editing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-resource-for-evil">
+    Learning resource for Evil
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -360,50 +398,52 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="working-with-projects">Working with Projects<a class="headerlink" href="#working-with-projects" title="Permanent link">λ︎</a></h1>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>a</kbd></span> to add a new project to Doom, selecting the directory path for the root of the project.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>p</kbd></span> to switch to a project other than the current, list shows all other projects except current project. </p>
-<p>A project is automatically assigned a <a href="../workspaces/">workspace</a> when opened. <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> <span class="keys"><kbd>r</kbd></span> to rename the workspace</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> to list all current workspaces and select a different workspace.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> ++back-tick++ to switch to previous buffer</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> ++back-tick++ to switch to previous workspace</p>
-<blockquote>
-<p>TODO: paste kill ring cycle - paste transient state in spacemacs</p>
-</blockquote>
-<h2 id="discover-projects">Discover projects<a class="headerlink" href="#discover-projects" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> to discover projects withing the directories specified in <code>projectile-project-search-path</code></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">projectile-project-search-path</span><span class="w"> </span><span class="o">'</span><span class="p">((</span><span class="s">"~/projects"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s">"~/.config"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">1</span><span class="p">)))</span>
-</code></pre></div>
-<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> to open or create a new file. If a file is open in the current buffer, its path is used as the starting point. To create a file (and intermediate directories), type any additional path and file name.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> to list all files in the current project / workspace. Use this when you know the name of the project but not the path or to avoid navigating to the correct path.</p>
-<details class="warning">
-<summary>Project Cache Outdated</summary>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>i</kbd></span> to udate the project cache moving directories and files, otherwise Doom will open a buffer for the old location</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> before a file command will also clear the cache and allow correct selection of files, e.g.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></p>
-</details>
-<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> and one of <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>k</kbd></span> <span class="keys"><kbd>l</kbd></span> for vim-style navigation of windows</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>v</kbd></span> to create a new vertical window, <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>h</kbd></span> for a new horizontal window</p>
-<h1 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">λ︎</a></h1>
-<p>spc q s to save the current session, which should load when (re)starting Emacs</p>
-<h2 id="searching-across-a-project">Searching across a project<a class="headerlink" href="#searching-across-a-project" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-slash">/</kbd></span> to search across all files in a project, using ripgrep (if installed on OS execution path)</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>e</kbd></span> opens search results in a separate buffer for editing results.</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> or <span class="keys"><kbd class="key-z">Z</kbd></span> <span class="keys"><kbd class="key-z">Z</kbd></span> to commit changes</p>
+<h1 id="evil-editing">Evil Editing<a class="headerlink" href="#evil-editing" title="Permanent link">λ︎</a></h1>
+<p>Evil provides vim-style multiple editing states, greatly increasing key binding reuse and minimising the need for simultaneous key presses.</p>
+<p>Doom Emacs provides Evil editing states</p>
+<ul>
+<li><strong>normal</strong> - for manipulating and navigating existing text (default state)</li>
+<li><strong>insert</strong> - for writing new text</li>
+<li><strong>visual</strong> - for selecting blocks of text</li>
+</ul>
 <div class="admonition hint">
-<p class="admonition-title">Narrow search results with Ripgrep switches</p>
-<p>Use ripgrep switches before or after a search pattern, E.g. #-t clojure -- test or #test -- -t clojure.</p>
-<p><code>rg --type-list</code> for comprehensive list of types supported by Ripgrep.  Types can represent one or more file extensions.</p>
-<p><code>#test -- -t clojure</code>  only search for Clojure files (<em>.clj, </em>.cljc, <em>.cljs, </em>.cljx file extension )</p>
-<p><code>#test -- -g*.tar.gz</code> - search any file that matches a glob, i.e. file extension .tar.gz</p>
-<p><code>#test#!cd</code> - search for test and filter results containing <code>cd</code> using consult sub-search feature</p>
-<p>Everything before the second # is filtered by ripgrep.</p>
-<p>Everything after the second # is filtered by Vertico using Orderless 23, where ! (negatation), = (literal), ~ (fuzzy), % (case insensitive) prefixes are supported.</p>
-<p><span class="keys"><kbd>#</kbd></span> delimiter can be replaced with any arbitrary character. E.g. %test%!cd or <em>test</em>!cd, useful when the search pattern starts with a <code>#</code> character</p>
+<p class="admonition-title">Normal state by default</p>
+<p>Evil normal state should be used most of the time, unless writing lots of new code or text.</p>
 </div>
+<h2 id="normal-state">Normal state<a class="headerlink" href="#normal-state" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd>j</kbd></span>,<span class="keys"><kbd>k</kbd></span>,<span class="keys"><kbd>h</kbd></span>,<span class="keys"><kbd>l</kbd></span> to navigate text, use with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> to navigate menus, with <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> to navigate windows</p>
+<h2 id="insert-state">Insert state<a class="headerlink" href="#insert-state" title="Permanent link">λ︎</a></h2>
+<p>Insert new text (or <span class="keys"><kbd class="key-delete">Del</kbd></span>), e.g. when writing new code or documentation</p>
+<p>The most common keys to enter insert mode from normal mode are:</p>
+<p><span class="keys"><kbd>i</kbd></span> to insert before the cursor, <span class="keys"><kbd>a</kbd></span> to append after the cursor</p>
+<p><span class="keys"><kbd>o</kbd></span> to insert an new line below the cursor, <span class="keys"><kbd>O</kbd></span> to insert a new line after the cursor</p>
+<p><span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>d</kbd></span> or <span class="keys"><kbd class="key-escape">Esc</kbd></span> to leave insert mode and return to normal mode.</p>
+<h2 id="visual-state">Visual state<a class="headerlink" href="#visual-state" title="Permanent link">λ︎</a></h2>
+<p>Select characters, words, lines and regions with visual select.  The background changes color to visually indicate which text is selected</p>
+<p><span class="keys"><kbd>v</kbd></span> to visually select a region and run commands on the text in that region.  Selection can be done with the navigation keys or motions objects such as word <code>w</code> and locations such as end of line <code>$</code>.</p>
+<p><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd>v</kbd></span> to visually select by line.  <span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>g</kbd></span> to select from current position to top of file, <span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>G</kbd></span> to select from current point to end of file.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>v</kbd></span> to select a region using the <code>hjkl</code> navigation keys, e.g. to select table data.</p>
+<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>c</kbd></span> on a selected region will add comment characters to the start of each line in the region</p>
+<p><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd class="key-tilde">~</kbd></span> toggles the case of the selected text (upper/lower case)</p>
+<p><code>o</code> to toggle between the left and right side of selection</p>
+<h2 id="evil-surround">Evil surround<a class="headerlink" href="#evil-surround" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd>S</kbd></span> to surround the current character with the given character, i.e. ++double-quotes++</p>
+<p><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd class="key-s">S</kbd></span> followed by a character will surrond the visually selected text with that character.</p>
+<h2 id="learn-vim-style-editing">Learn Vim-style editing<a class="headerlink" href="#learn-vim-style-editing" title="Permanent link">λ︎</a></h2>
+<p>Vim-style editing is arguably the most effective way to work with text, supporting changes as much through text manipulation as editing text.  Once practised, vim-style editing is far faster than uni-mode editing.</p>
+<p>The recommended way to learn vim style editing is to practice and ideally use it for everything you do.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd class="key-t">T</kbd></span> <span class="keys"><kbd>v</kbd></span> starts the build in Vim tutorial.  This provides the basic movement of vim and provides an interactive way to practice your skills</p>
+<p>To help make Vim style editing become a sub-conscious act you should <a href="../vim-style/speaking-evil.md">learn to speak Evil</a></p>
+<p><a href="https://vim-adventures.com/" target="_blank">Vim Adventures</a> is a web-based game that is an alternative to practising Vim.</p>
+<h3 id="learning-resource-for-evil">Learning resource for Evil<a class="headerlink" href="#learning-resource-for-evil" title="Permanent link">λ︎</a></h3>
+<ul>
+<li><a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html" target="_blank">Graphical Cheatsheet Tutorial</a></li>
+<li><a href="http://vimhelp.appspot.com/quickref.txt.html" target="_blank">Vim quick reference guide</a></li>
+<li><a href="http://vimcasts.org/" target="_blank">Vim Casts</a></li>
+</ul>
+<p style="text-align:center">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/a6Q8Na575qc" title="YouTube video player" width="560"></iframe>
+</p>
 <hr/>
 <div class="md-source-file">
 <small>

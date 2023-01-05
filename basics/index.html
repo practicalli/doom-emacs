@@ -224,7 +224,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../install/clojure-configuration/">
-        Clojure configuration
+        Clojure
       </a>
 </li>
 </ul>
@@ -250,15 +250,49 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="snippets/">
-        Snippets
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="workspaces/">
         Workspaces
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="evil-editing/">
+        Evil Editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="speaking-evil/">
+        Speaking Evil
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="vim-quick-reference/">
+        Evil Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="evil-tools/">
+        Evil Tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="snippets/">
+        Snippets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../clojure-workflow/">Clojure Workflow</a>
+</div>
+<nav aria-label="Clojure Workflow" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Clojure Workflow
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
@@ -277,28 +311,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#command-menu">
+    Command Menu
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#line-numbers">
     Line numbers
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spacemacs-to-doom-emacs">
-    Spacemacs to Doom Emacs
+<a class="md-nav__link" href="#theme">
+    Theme
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rename-files">
-    Rename files
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multiple-cursors">
-    Multiple cursors
+<a class="md-nav__link" href="#files">
+    Files
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#format-tools">
     Format tools
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whitespace-cleanup">
+    Whitespace cleanup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    references
   </a>
 </li>
 </ul>
@@ -309,41 +353,39 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">λ︎</a></h1>
+<p><a class="md-button" href="projects/">Projects</a>
+<a class="md-button" href="workspaces/">Workspaces</a>
+<a class="md-button" href="evil-tools/">Evil Tools</a></p>
+<h2 id="command-menu">Command Menu<a class="headerlink" href="#command-menu" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> is the leader key that opens the main Doom Emacs command menu</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> is the localleader key that opens a context specific menu, with commands for the current major mode (clojure, markdown, yaml, etc.)</p>
 <h2 id="line-numbers">Line numbers<a class="headerlink" href="#line-numbers" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd>l</kbd></span> toggles consecutive line numbers</p>
-<h2 id="spacemacs-to-doom-emacs">Spacemacs to Doom Emacs<a class="headerlink" href="#spacemacs-to-doom-emacs" title="Permanent link">λ︎</a></h2>
-<p>Layouts -&gt; workspaces</p>
-<p>Adding a project seems to add a workspace</p>
-<p><code>SPC TAB .</code> to switch between workspaces</p>
-<h2 id="rename-files">Rename files<a class="headerlink" href="#rename-files" title="Permanent link">λ︎</a></h2>
-<p><code>SPC f f</code></p>
+<h2 id="theme">Theme<a class="headerlink" href="#theme" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>t</kbd></span> lists the theme names available, select a theme name to change the theme instantly.</p>
+<div class="admonition note">
+<p class="admonition-title">Confirm Theme should run elisp code</p>
+<p>Doom prompts to confirm if elisp should be run if included in a theme.  A theme can be marked as safe, so further confirmation is not required.</p>
+</div>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> to list files in current directory or create relative files and directories</p>
 <blockquote>
 <p>add a space to the end of the name to ensure Emacs creates a new file rather than selecting the existing name... TODO: is this to be expected</p>
 </blockquote>
-<h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
-<p>Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential. Changes are made to multiple lines or places in the text where the same editing opperation is desired.</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> menu for mutliple cursor menu</p>
-<p>When changes are vertically aligined, create multiple cursors with vim-style movements:</p>
-<p><span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> adds a cursor to the next 24 lines</p>
-<p>Changes in more random positions benefit from creating 'frozen' cursors in any position that only take key input once switched to mirroring or activated by Evil Insert mode</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>z</kbd></span> toggle new (frozen) cursors at point. Frozen cursors stay in position until mirroring switched on or switching to insert mode</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>t</kbd></span> toggle mirroring on and off</p>
-<p>With visual select:</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> to create curors at start of visual selection region</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> to create curors at end (append) of visual selection region</p>
-<p>Remove multiple cursors:</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>q</kbd></span> to cancel all cursors</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> to list files in current project, providing a quick way to open any file in the project by filtering the list</p>
 <h2 id="format-tools">Format tools<a class="headerlink" href="#format-tools" title="Permanent link">λ︎</a></h2>
-<p>NOTE: rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.</p>
+<div class="admonition info">
+<p class="admonition-title">Use LSP formatting where supported</p>
+<p>The Doom Emacs Format module is to be rewritten as it curr so using LSP servers for languages that support them should avoid rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.</p>
+</div>
 <p>Install markdownlint package for local format tool, although this tool is not used by Doom Emacs (as far as I can tell)</p>
-<h1 id="begin_src-shell">+begin_src shell<a class="headerlink" href="#begin_src-shell" title="Permanent link">λ︎</a></h1>
-<p>sudo npm install markdownlint</p>
-<h1 id="end_src">+end_src<a class="headerlink" href="#end_src" title="Permanent link">λ︎</a></h1>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>markdownlint
+</code></pre></div>
 <p>Prettier.io was evaluated but does not allow for customisation of the linting rules, so was not adopted.</p>
 <h2 id="whitespace-cleanup">Whitespace cleanup<a class="headerlink" href="#whitespace-cleanup" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> ++"w" to remove whitespace from end of lines and additional blank lines from the end of the file.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>w</kbd></span> to remove whitespace from end of lines and additional blank lines from the end of the file.</p>
 <blockquote>
-<p>TODO: automate white space clean up (may require external format or LSP tooling)</p>
+<p>NOTE: automating white space clean up may require external format or LSP tooling</p>
 </blockquote>
 <h2 id="references">references<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
 <ul>
@@ -355,7 +397,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
 </small>
 </div>
 </article>
