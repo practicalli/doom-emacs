@@ -2,13 +2,11 @@
 
 ++spc++ ++"p"++ ++"a"++ to add a new project to Doom, selecting the directory path for the root of the project.
 
-++spc++ ++"p"++ ++"p"++ to switch to a project other than the current, list shows all other projects except current project. A project is automatically assigned a workspace when opened. ++spc++ ++tab++ ++"r"++
+++spc++ ++"p"++ ++"p"++ to switch to a project other than the current, list shows all other projects except current project. 
 
-> TODO: How to delete a project
+A project is automatically assigned a [workspace](workspaces.md) when opened. ++spc++ ++tab++ ++"r"++ to rename the workspace
 
-Each project is automatically opened in a new workspace
-
-++spc++ ++tab++ ++full-stop++ to select a project workspace
+++spc++ ++"l"++ ++"l"++ to list all current workspaces and select a different workspace.
 
 ++spc++ ++back-tick++ to switch to previous buffer
 
