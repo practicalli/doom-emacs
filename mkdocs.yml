@@ -25,7 +25,7 @@ nav:
   - Install:
       - install/index.md
       - Doom Config: install/doom-configuration.md
-      - install/clojure-configuration.md
+      - Clojure: install/clojure-configuration.md
   - Doom Basics:
       - basics/index.md
       - Projects: basics/projects.md
