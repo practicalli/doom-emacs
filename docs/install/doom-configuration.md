@@ -203,3 +203,14 @@ sudo npm install --global dockerfile-language-server-nodejs
 ```
 
 This module assumes `docker`, `docker-compose` and =docker-machine= binaries are installed and accessible from your PATH.
+
+
+## Performance tweaks
+
+Configuration files for doom start with lexical binding which has performance advantages.
+
+```emacs title=".config/doom/+clojure.el"
+;;; +clojure.el -*- lexical-binding: t; -*-
+```
+
+* [Performance advantages of lexical scope](https://nullprogram.com/blog/2016/12/22/)
