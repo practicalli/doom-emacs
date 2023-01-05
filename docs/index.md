@@ -2,10 +2,10 @@
 
 Practicalli Doom Emacs is a guide to Clojure REPL Driven Development with Doom Emacs configuration and Practicalli customization.
 
-Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more depth).  There is limited official documentation, although there is a healthy community support. 
+Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more depth).  There is limited official documentation, although there is a healthy community support.
 
 ??? INFO "Looking for a batteries included approach?"
-    [Practicalli Spacemacs](https://practical.li/spacemacs) and [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) provide all the Emacs features needed for Clojure, with just two Git clone commands.  Spacemacs is a community configuration for Emacs with a very large community and very detailed documentation. 
+    [Practicalli Spacemacs](https://practical.li/spacemacs) and [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) provide all the Emacs features needed for Clojure, with just two Git clone commands.  Spacemacs is a community configuration for Emacs with a very large community and very detailed documentation.
 
 ??? WARNING "New Book - content published as learned"
     Practicalli Doom Emacs was started in December 2022 with little knowledge of Doom Emacs, so is mostly a journal of things that have been learned as Practicalli tries to create an effective development workflow, especially with Clojure.  Content will be added as new things are discovered to aid in the learning and effective use of Doom Emacs.
@@ -19,13 +19,13 @@ Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more d
     ```bash
     git clone https://github.com/practicalli/doom-emacs-config.git $XDG_CONFIG_HOME/doom`
     ```
-    The above command creates `~/.config/doom/` that contains the configuration used in Practicalli Doom Emacs book, all in one place.
+    The Practicalli configuration should replace the `~/.config/doom/` directory created by the `doom install` command.
 
 === "Classic Config"
     ```bash
     git clone https://github.com/practicalli/doom-emacs-config.git $HOME/.doom.d`
     ```
-    The above command creates the `~/.doom.d/` directory that contains the configuration used in Practicalli Doom Emacs book, all in one place.
+    The Practicalli configuration should replace the `~/.doom.d/` directory created by the `doom install` command.
 
 
 ![Emacs Doom](https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png)
