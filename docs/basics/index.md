@@ -1,72 +1,60 @@
 # Basic usage
 
+[Projects](projects.md){.md-button}
+[Workspaces](workspaces.md){.md-button}
+[Evil Tools](evil-tools.md){.md-button}
+
+
+## Command Menu
+
+++spc++ is the leader key that opens the main Doom Emacs command menu
+
+++comma++ is the localleader key that opens a context specific menu, with commands for the current major mode (clojure, markdown, yaml, etc.)
+
+
 ## Line numbers
 
 ++spc++ ++"t"++ ++"l"++ toggles consecutive line numbers
 
 
-## Spacemacs to Doom Emacs
+## Theme
 
-Layouts -> workspaces
+++spc++ ++"h"++ ++"t"++ lists the theme names available, select a theme name to change the theme instantly.
 
-Adding a project seems to add a workspace
+!!! NOTE "Confirm Theme should run elisp code"
+    Doom prompts to confirm if elisp should be run if included in a theme.  A theme can be marked as safe, so further confirmation is not required.
 
-`SPC TAB .` to switch between workspaces
 
 
-## Rename files
+## Files
 
-`SPC f f`
+++spc++ ++"f"++ ++"f"++ to list files in current directory or create relative files and directories
 
 > add a space to the end of the name to ensure Emacs creates a new file rather than selecting the existing name... TODO: is this to be expected
 
+++spc++ ++"p"++ ++"f"++ to list files in current project, providing a quick way to open any file in the project by filtering the list
 
-## Multiple cursors
-
-Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential. Changes are made to multiple lines or places in the text where the same editing opperation is desired.
-
-++"g"++ ++"z"++ menu for mutliple cursor menu
-
-When changes are vertically aligined, create multiple cursors with vim-style movements:
-
-++2++ ++4++ ++"g"++ ++"z"++ ++i++ adds a cursor to the next 24 lines
-
-Changes in more random positions benefit from creating 'frozen' cursors in any position that only take key input once switched to mirroring or activated by Evil Insert mode
-
-++"g"++ ++"z"++ ++"z"++ toggle new (frozen) cursors at point. Frozen cursors stay in position until mirroring switched on or switching to insert mode
-
-++"g"++ ++"z"++ ++"t"++ toggle mirroring on and off
-
-With visual select:
-
-++"g"++ ++"z"++ ++i++ to create curors at start of visual selection region
-
-++"g"++ ++"z"++ ++a++ to create curors at end (append) of visual selection region
-
-Remove multiple cursors:
-
-++"g"++ ++"z"++ ++"q"++ to cancel all cursors
 
 
 ## Format tools
 
-NOTE: rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.
+!!! INFO "Use LSP formatting where supported"
+    The Doom Emacs Format module is to be rewritten as it curr so using LSP servers for languages that support them should avoid rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.
 
 Install markdownlint package for local format tool, although this tool is not used by Doom Emacs (as far as I can tell)
 
-#+begin_src shell
+```shell
 sudo npm install markdownlint
-#+end_src
+```
 
 Prettier.io was evaluated but does not allow for customisation of the linting rules, so was not adopted.
 
 
 ## Whitespace cleanup
 
-++spc++ ++"c"++ ++"w" to remove whitespace from end of lines and additional blank lines from the end of the file.
+++spc++ ++"c"++ ++"w"++ to remove whitespace from end of lines and additional blank lines from the end of the file.
 
-> TODO: automate white space clean up (may require external format or LSP tooling)
-
+> NOTE: automating white space clean up may require external format or LSP tooling
 
 
 ## references
