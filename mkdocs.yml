@@ -35,6 +35,8 @@ nav:
       - Evil Reference: basics/vim-quick-reference.md
       - Evil Tools: basics/evil-tools.md
       - Snippets: basics/snippets.md
+  - Clojure Workflow:
+      - clojure-workflow/index.md
 
 # Theme and styling
 theme:
