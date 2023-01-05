@@ -30,7 +30,7 @@ A workspace is automatically created (and switched to) when you:
 
 ## Session persistence
 
-++spc++ ++"q"++ ++"s"++ to save the current session, including open workspaces and buffers 
+++spc++ ++"q"++ ++"s"++ to save the current session, including open workspaces and buffers, to , `~/.config/emacs/.local/etc/workspaces/autosave`. ++spc++ ++"q"++ ++"s"++ to choose a different file to save the session.
 
 ++spc++ ++"q"++ ++"L"++ (~+workspace/load-session~) to load a previous session
 
@@ -40,7 +40,7 @@ You can supply either a name to load a specific session to replace your current 
 
 ++spc++ ++"l"++ ++"s"++ (~+workspace/save~) to save the current workspace to a file.  If workspaces are already saved to file, a prompt appears to confirm keeping the other saved workspaces.
 
-++spc++ ++"l"++ ++"l"++ (~+workspace/load~) to load workspaces from the persisted workspace file
+++spc++ ++"l"++ ++"l"++ (~+workspace/load~) to load workspaces from the persisted workspace file, `~/.config/emacs/.local/etc/workspaces/autosave`
 
 ++spc++ ++"l"++ ++"L"++ to load a workspace that was previously created in the current session but was not loaded automatically
 
