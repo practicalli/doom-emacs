@@ -30,7 +30,7 @@ nav:
       - basics/index.md
       - Projects: basics/projects.md
       - Snippets: basics/snippets.md
-
+      - Workspaces: basics/workspaces.md
 
 # Theme and styling
 theme:
