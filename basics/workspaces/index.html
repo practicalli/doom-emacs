@@ -7,13 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/introduction/spacemacs-or-doom/" rel="canonical"/>
-<link href="../why-doom-emacs/" rel="prev"/>
-<link href="../contributing/" rel="next"/>
+<link href="https://practical.li/doom-emacs/basics/workspaces/" rel="canonical"/>
+<link href="../snippets/" rel="prev"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
-<title>Spacemacs Or Doom - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
+<title>Workspaces - Practicalli Doom Emacs</title>
+<link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -21,17 +20,17 @@
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Spacemacs Or Doom - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Workspaces - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/introduction/spacemacs-or-doom.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/basics/workspaces.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/introduction/spacemacs-or-doom/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/basics/workspaces/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Spacemacs Or Doom - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Workspaces - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/introduction/spacemacs-or-doom.png" name="twitter:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/basics/workspaces.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -50,7 +49,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#spacemacs-or-emacs-doom">
+<a class="md-skip" href="#using-workspaces">
           Skip to content
         </a>
 </div>
@@ -74,7 +73,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Spacemacs Or Doom
+              Workspaces
             
           </span>
 </div>
@@ -156,8 +155,8 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../..">Overview</a>
 <label for="__nav_1">
@@ -171,50 +170,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../repl-workflow/">
+<a class="md-nav__link" href="../../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-doom-emacs/">
+<a class="md-nav__link" href="../../introduction/why-doom-emacs/">
         Why Doom Emacs
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Spacemacs Or Doom
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/spacemacs-or-doom.md">
         Spacemacs Or Doom
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#common-features">
-    Common features
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is-doom-faster-than-other-emacs-configurations">
-    Is Doom faster than other Emacs configurations
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../contributing/">
+<a class="md-nav__link" href="../../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing-tips/">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -253,10 +229,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../basics/">Doom Basics</a>
+<a href="../">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -268,14 +244,61 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../basics/projects/">
+<a class="md-nav__link" href="../projects/">
         Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../basics/snippets/">
+<a class="md-nav__link" href="../snippets/">
         Snippets
       </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Workspaces
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Workspaces
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isolated-buffer-list">
+    Isolated buffer-list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-workspaces">
+    Automatic workspaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-persistence">
+    Session persistence
+  </a>
+<nav aria-label="Session persistence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-persistence">
+    Workspace persistence
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+    Commands
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -295,13 +318,32 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#common-features">
-    Common features
+<a class="md-nav__link" href="#isolated-buffer-list">
+    Isolated buffer-list
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is-doom-faster-than-other-emacs-configurations">
-    Is Doom faster than other Emacs configurations
+<a class="md-nav__link" href="#automatic-workspaces">
+    Automatic workspaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-persistence">
+    Session persistence
+  </a>
+<nav aria-label="Session persistence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-persistence">
+    Workspace persistence
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+    Commands
   </a>
 </li>
 </ul>
@@ -311,29 +353,96 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="spacemacs-or-emacs-doom">Spacemacs or Emacs Doom<a class="headerlink" href="#spacemacs-or-emacs-doom" title="Permanent link">λ︎</a></h1>
-<p>Spacemacs and Doom Emacs are both open source projects that provide a large amount of common configuration in an easy to use way (typically with little or no Emacs Lisp knowledge required).</p>
-<h2 id="common-features">Common features<a class="headerlink" href="#common-features" title="Permanent link">λ︎</a></h2>
+<h1 id="using-workspaces">Using Workspaces<a class="headerlink" href="#using-workspaces" title="Permanent link">λ︎</a></h1>
+<p>Multiple workspaces are a convienient way to manage working with different projects.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> is the workspace menu from practicalli/doom-emacs-config (<span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> in Doom Emacs)</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>p</kbd></span> and selecting a project will open the project within a workspace</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> lists existing workflows</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> jumps to the last open workspace (use to toggle between two projects)</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>d</kbd></span> displays existing workflows as tabs at the bottom of the frame</p>
+<h2 id="isolated-buffer-list">Isolated buffer-list<a class="headerlink" href="#isolated-buffer-list" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>b</kbd></span> is workspace-restricted, showing open buffers only from the scope of the current workspace (projeect). </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd class="key-b">B</kbd></span> shows the global list of buffers, along with any typically hidden buffers, e.g. <code>*messages*</code> </p>
+<h2 id="automatic-workspaces">Automatic workspaces<a class="headerlink" href="#automatic-workspaces" title="Permanent link">λ︎</a></h2>
+<p>A workspace is automatically created (and switched to) when you:</p>
 <ul>
-<li>helm or ivy - both completion frameworks availalable (defaults: Spacemacs uses Helm, Doom uses Ivy)</li>
-<li>projectile project management</li>
-<li>layers rather than individual packages</li>
-<li>package manager (Spacemacs: packages.el, Doom: straight.el)</li>
-<li>modelines, themes and anything else you can think of probably</li>
+<li>Create a new frame with <code>make-frame</code></li>
+<li>Switch to a project using <code>projectile-switch-project</code></li>
 </ul>
-<h2 id="is-doom-faster-than-other-emacs-configurations">Is Doom faster than other Emacs configurations<a class="headerlink" href="#is-doom-faster-than-other-emacs-configurations" title="Permanent link">λ︎</a></h2>
-<p>The most noticable difference between Doom and other Emacs configurations is that Doom uses Ivy by default, which typically uses less resources than Helm, as Ivy does not have the comprehensive level of features that Helm provides.</p>
-<p>Otherwise Practicalli hasnt experienced a noticable performance difference with Doom, as the vast majority of code is in the shared packages that are used by Doom and other projects.</p>
-<p>Emacs packages do most of the work, so try a different package (e.g. Ivy instead of Helm).  Doom, Spacemacs and Prelude are all running on Emacs, so if you find something is running slow, try a different packaging of Emacs for your operating system and make sure you are on Emacs 27.1 or greater.</p>
-<p>Doom Emacs has very few features enabled by default, so the startup time after install is initially very fast (of little importance if you have Emacs open for weeks or running as a server / deamon).</p>
-<p>Personally I find Doom slower to use as it does not provide a full set of mnemonic key bindings and are therefore less intuitive to used compared to Spacemacs.  See the <a href="https://github.com/hlissner/doom-emacs/blob/develop/modules/lang/clojure/README.org">Clojure module key bindings</a> for example.  This could be fixed by re-binding most of the default key bindings to be mnemonic in your own personal configuration.</p>
-<p>In the end the slowest part of the equation is the person operating Emacs.  If you are slow to tell Emacs what to do, it doesnt matter how fast it does it...</p>
+<h2 id="session-persistence">Session persistence<a class="headerlink" href="#session-persistence" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>s</kbd></span> to save the current session, including open workspaces and buffers </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>L</kbd></span> (~+workspace/load-session~) to load a previous session</p>
+<p>You can supply either a name to load a specific session to replace your current one.</p>
+<h3 id="workspace-persistence">Workspace persistence<a class="headerlink" href="#workspace-persistence" title="Permanent link">λ︎</a></h3>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>s</kbd></span> (~+workspace/save~) to save the current workspace to a file.  If workspaces are already saved to file, a prompt appears to confirm keeping the other saved workspaces.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> (~+workspace/load~) to load workspaces from the persisted workspace file</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>L</kbd></span> to load a workspace that was previously created in the current session but was not loaded automatically</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">λ︎</a></h2>
+<p>Default keybindings (defined in <code>/config/default/+evil-bindings.el</code></p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~+workspace/new~</td>
+<td>Create a new, blank workspace</td>
+</tr>
+<tr>
+<td>~+workspace/display~</td>
+<td>Display open workspaces in the mode-line</td>
+</tr>
+<tr>
+<td>~+workspace/load~</td>
+<td>Load a saved workspace into the current session</td>
+</tr>
+<tr>
+<td>~+workspace/restore-last-session~</td>
+<td>Restore last session</td>
+</tr>
+<tr>
+<td>~+workspace/rename~</td>
+<td>Rename the current workspace</td>
+</tr>
+<tr>
+<td>~+workspace/save~</td>
+<td>Save the current workspace to a file</td>
+</tr>
+<tr>
+<td>~+workspace/switch-to~</td>
+<td>Switch to an open workspace</td>
+</tr>
+<tr>
+<td>~+workspace/other~</td>
+<td>Switch to last workspace</td>
+</tr>
+<tr>
+<td>~+workspace/switch-left~</td>
+<td>Switch to previous workspace</td>
+</tr>
+<tr>
+<td>~+workspace/switch-right~</td>
+<td>Switch to next workspace</td>
+</tr>
+<tr>
+<td>~+workspace/delete~</td>
+<td>Delete the current workspace</td>
+</tr>
+<tr>
+<td>~+workspace/kill-session~</td>
+<td>Clears the current session (kills all windows and buffers)</td>
+</tr>
+</tbody>
+</table>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
 </small>
 </div>
 </article>

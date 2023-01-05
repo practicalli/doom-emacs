@@ -9,11 +9,11 @@
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/doom-emacs/introduction/why-doom-emacs/" rel="canonical"/>
 <link href="../repl-workflow/" rel="prev"/>
-<link href="../spacemacs-or-doom/" rel="next"/>
+<link href="../contributing/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
 <title>Why Doom Emacs - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -191,25 +191,25 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#spacemacs-or-emacs-doom-configuations">
+    Spacemacs or Emacs Doom Configuations
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#migrating-from-spacemacs">
     Migrating from Spacemacs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#irelevant-aspects">
-    Irelevant aspects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-startup-speed-a-few-seconds-to-start-up-emacs-is-perfectly-fine-for-the-practicalli-workflow-where-emacs-typically-stays-running-for-weeks-or-months">
-    - Startup speed - a few seconds to start up Emacs is perfectly fine for the Practicalli workflow, where Emacs typically stays running for weeks or months
+<a class="md-nav__link" href="#is-doom-faster-than-other-emacs-configurations">
+    Is Doom faster than other Emacs configurations
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-or-doom/">
+<a class="md-nav__link" href="../spacemacs-or-doom.md">
         Spacemacs Or Doom
       </a>
 </li>
@@ -282,6 +282,11 @@
         Snippets
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/workspaces/">
+        Workspaces
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -300,18 +305,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#spacemacs-or-emacs-doom-configuations">
+    Spacemacs or Emacs Doom Configuations
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#migrating-from-spacemacs">
     Migrating from Spacemacs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#irelevant-aspects">
-    Irelevant aspects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-startup-speed-a-few-seconds-to-start-up-emacs-is-perfectly-fine-for-the-practicalli-workflow-where-emacs-typically-stays-running-for-weeks-or-months">
-    - Startup speed - a few seconds to start up Emacs is perfectly fine for the Practicalli workflow, where Emacs typically stays running for weeks or months
+<a class="md-nav__link" href="#is-doom-faster-than-other-emacs-configurations">
+    Is Doom faster than other Emacs configurations
   </a>
 </li>
 </ul>
@@ -323,26 +328,50 @@
 <article class="md-content__inner md-typeset">
 <h1 id="why-doom-emacs">Why Doom Emacs<a class="headerlink" href="#why-doom-emacs" title="Permanent link">λ︎</a></h1>
 <p>Practicalli is evaluating Doom Emacs after many years of using Spacemacs (which is still the main Emacs configuration used)</p>
-<p>Potential reasons to use Doom as an alternative</p>
+<p>Reasons to select doom to date:</p>
 <ul>
-<li>package mangager pins specific versions of packages</li>
-<li>more comprehensive support for Clojure LSP UI elements compared to Spacemacs (docs, etc7)</li>
-<li>Vim-style editing even more prevelent in Doom (as it doesnt have some of the features of Spacemacs), so may help with adoption of Neovim &amp; Conjure</li>
+<li>Experience feels closer to using Neovim, so may be more of a bridge between Emacs and Neovim (help with adoption od Conjure)</li>
+<li>Vertico completion seems comparible to the features regularly used in other tools (Helm, Ivy)</li>
+<li>Package mangager pins specific versions of packages, so potentially more stability.  Managing versions of packages seems a litle simpler in Doom, although its only a small difference</li>
+<li>Minimal set of features and an optomised dashboard (similar to Neovim), so perception of faster start up, although saved session needs to be restored after startup.</li>
+<li>Startup speed - a few seconds to start up Emacs is perfectly fine for the Practicalli workflow, where Emacs typically stays running for weeks or months</li>
+</ul>
+<h2 id="spacemacs-or-emacs-doom-configuations">Spacemacs or Emacs Doom Configuations<a class="headerlink" href="#spacemacs-or-emacs-doom-configuations" title="Permanent link">λ︎</a></h2>
+<p>Spacemacs and Doom Emacs are both open source projects that provide a large amount of common configuration in an easy to use way (typically with little or no Emacs Lisp knowledge required).</p>
+<p>Spacemacs includes far greater number of commands in its default install (via Emacs packages) and has far greater depth to its documentation.</p>
+<p>Doom Emacs contains only the essentials and documentation can be quite sparse in many places, so more searching and help from the community may be required.  Additional Emacs Lisp seems to be more prevelant in Doom Emacs.</p>
+<p>There are a nuber of common features between the two configurations:</p>
+<ul>
+<li>completion frameworks: Spacemacs uses Helm and Doom Emacs uses Vertico to achieve a common set of features (Helm has a greater number of feactures although they share common core)</li>
+<li>projectile project management</li>
+<li>Package abstraction: Spacemacs layers and Doom modules are used over individual Emacs packages</li>
+<li>package manager (Spacemacs: packages.el, Doom: straight.el)</li>
+<li>modelines and themes: Practicalli uses the same modeline and theme for Spacemacs and Doom Emacs</li>
 </ul>
 <h2 id="migrating-from-spacemacs">Migrating from Spacemacs<a class="headerlink" href="#migrating-from-spacemacs" title="Permanent link">λ︎</a></h2>
-<p>The two challenging areas are percieved to be </p>
+<p>Challenging areas when adopting Doom Emacs initially</p>
 <ol>
-<li>key bindings (mnemonic and consistent key bindings used in Spacemacs are not consistent in Doom)</li>
-<li>Features available (modules in Doom) - Doom is advertised as quite minimal</li>
+<li>key bindings (mnemonic and consistent key bindings used in Spacemacs are not consistent in Doom, although <a href="https://github.com/practicalli/doom-emacs-config">practicalli/doom-emacs-config</a> adds back many of the most common Spacemacs key bindings.</li>
+<li>minimla features by default - Doom Emacs is minimal by design although contains modules (comparable to Spacemacs layers) that are easily added to greatly increase features</li>
+<li>learning the different tools that come with Doom (vertico, multiedit, etc) - similar features are provided by different modules and therefore different Emacs packages</li>
+<li>Documentation is sparse - built-in docs are good where they have been added, although many modules are undocumented and require investigation of the underlying package documentation</li>
 </ol>
-<h2 id="irelevant-aspects">Irelevant aspects<a class="headerlink" href="#irelevant-aspects" title="Permanent link">λ︎</a></h2>
-<h2 id="-startup-speed-a-few-seconds-to-start-up-emacs-is-perfectly-fine-for-the-practicalli-workflow-where-emacs-typically-stays-running-for-weeks-or-months">- Startup speed - a few seconds to start up Emacs is perfectly fine for the Practicalli workflow, where Emacs typically stays running for weeks or months<a class="headerlink" href="#-startup-speed-a-few-seconds-to-start-up-emacs-is-perfectly-fine-for-the-practicalli-workflow-where-emacs-typically-stays-running-for-weeks-or-months" title="Permanent link">λ︎</a></h2>
+<h2 id="is-doom-faster-than-other-emacs-configurations">Is Doom faster than other Emacs configurations<a class="headerlink" href="#is-doom-faster-than-other-emacs-configurations" title="Permanent link">λ︎</a></h2>
+<p>Startup time was specifically optomised in Doom Emacs and it only opens a minimal dashboard buffer, giving an experience comparable to Neovim.  Session state is not loaded by default when starting Emacs, although there is a command on the dashboard to restore the session.</p>
+<p>Factor in the restor of state in startup time, there is very little difference between a default install of Doom Emacs or Spacemacs.</p>
+<p>Practicalli hasnt experienced a noticable performance difference with Doom, as the vast majority of code is in the shared packages that are used by Doom and other projects.</p>
+<p>Any configuration that is adopted will be slow to use initially, especially if it is unfamiliar.  Before changing the key bindings I found Doom slower to use as it does not provide a full set of mnemonic key bindings I was used to and was therefore less intuitive to used compared to Spacemacs.</p>
+<p>The <a href="https://github.com/hlissner/doom-emacs/blob/develop/modules/lang/clojure/README.org">Doom Emacs Clojure module key bindings</a> have been reboud in by Practicalli to extend the commands available.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The slowest part of the workflow is the person operating the tool.  When interation with a tool doesnt flow smoothly, the speed of the tool becomes largely irrelevant - John Stevenson</p>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
 </small>
 </div>
 </article>
