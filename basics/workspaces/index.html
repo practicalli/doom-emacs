@@ -405,12 +405,12 @@
 <li>Switch to a project using <code>projectile-switch-project</code></li>
 </ul>
 <h2 id="session-persistence">Session persistence<a class="headerlink" href="#session-persistence" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>s</kbd></span> to save the current session, including open workspaces and buffers </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>s</kbd></span> to save the current session, including open workspaces and buffers, to , <code>~/.config/emacs/.local/etc/workspaces/autosave</code>. <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>s</kbd></span> to choose a different file to save the session.</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>L</kbd></span> (~+workspace/load-session~) to load a previous session</p>
 <p>You can supply either a name to load a specific session to replace your current one.</p>
 <h3 id="workspace-persistence">Workspace persistence<a class="headerlink" href="#workspace-persistence" title="Permanent link">λ︎</a></h3>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>s</kbd></span> (~+workspace/save~) to save the current workspace to a file.  If workspaces are already saved to file, a prompt appears to confirm keeping the other saved workspaces.</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> (~+workspace/load~) to load workspaces from the persisted workspace file</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> (~+workspace/load~) to load workspaces from the persisted workspace file, <code>~/.config/emacs/.local/etc/workspaces/autosave</code></p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>L</kbd></span> to load a workspace that was previously created in the current session but was not loaded automatically</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">λ︎</a></h2>
 <p>Default keybindings (defined in <code>/config/default/+evil-bindings.el</code></p>
