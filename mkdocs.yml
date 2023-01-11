@@ -12,32 +12,6 @@ edit_uri: https://github.com/practicalli/doom-emacs/edit/main/docs/
 # remote_name: origin
 remote_branch: gh-pages # deployment branch
 
-# Navigation
-nav:
-  - Overview:
-      - index.md
-      - REPL Workflow: introduction/repl-workflow.md
-      - Why Doom Emacs: introduction/why-doom-emacs.md
-      - Spacemacs Or Doom: introduction/spacemacs-or-doom.md
-      - Contributing: introduction/contributing.md
-      - Writing Tips: introduction/writing-tips.md
-  - Pre-install: install/pre-install.md
-  - Install:
-      - install/index.md
-      - Doom Config: install/doom-configuration.md
-      - Clojure: install/clojure-configuration.md
-  - Doom Basics:
-      - basics/index.md
-      - Projects: basics/projects.md
-      - Workspaces: basics/workspaces.md
-      - Evil Editing: basics/evil-editing.md
-      - Speaking Evil: basics/speaking-evil.md
-      - Evil Reference: basics/vim-quick-reference.md
-      - Evil Tools: basics/evil-tools.md
-      - Snippets: basics/snippets.md
-  - Clojure Workflow:
-      - clojure-workflow/index.md
-
 # Theme and styling
 theme:
   name: material
@@ -142,3 +116,34 @@ extra:
       link: https://github.com/practicalli
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/practicalli
+
+# Navigation
+nav:
+  - Overview:
+      - index.md
+      - REPL Workflow: introduction/repl-workflow.md
+      - Why Doom Emacs: introduction/why-doom-emacs.md
+      - Spacemacs Or Doom: introduction/spacemacs-or-doom.md
+      - Contributing: introduction/contributing.md
+      - Writing Tips: introduction/writing-tips.md
+  - Pre-install: install/pre-install.md
+  - Install:
+      - install/index.md
+      - Doom Config: install/doom-configuration.md
+      - Clojure: install/clojure-configuration.md
+      # - Bindings: install/bindings.md
+      # - Completion: install/completion.md
+      # - Terminal: install/eshell.md
+      # - Evil: install/evil-configuration.md
+      # - Troubleshooting: install/troubleshooting.md
+  - Doom Basics:
+      - basics/index.md
+      - Projects: basics/projects.md
+      - Workspaces: basics/workspaces.md
+      - Evil Editing: basics/evil-editing.md
+      - Speaking Evil: basics/speaking-evil.md
+      - Evil Reference: basics/vim-quick-reference.md
+      - Evil Tools: basics/evil-tools.md
+      - Snippets: basics/snippets.md
+  - Clojure Workflow:
+      - clojure-workflow/index.md
