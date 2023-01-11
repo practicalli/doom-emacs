@@ -1,20 +1,21 @@
 # Vim Quick Reference
-A reference of the most common keybindings available in Vim Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
+A reference of the most common keybindings available in Vim Normal mode.
 
-`.` repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
+++period++ repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
 
 ## Moving around
 
 In **normal** mode you can keep your fingers resting on the main row of your keyboard to move around.
 
-| Key | action                          |
-|-----|---------------------------------|
-| `j` | move cursor down one line       |
-| `k` | move cursor up one line         |
-| `l` | move cursor right one character |
-| `h` | move cursor left one character  |
+| Key     | action                          |
+|---------|---------------------------------|
+| ++"h"++ | move cursor left one character  |
+| ++"j"++ | move cursor down one line       |
+| ++"k"++ | move cursor up one line         |
+| ++"l"++ | move cursor right one character |
 
-In menus such as helm you can move around using `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
+++ctrl++ ++"k"++ / ++"j"++ to move the cursor up or down in a menu.
+
 
 ### Navigating the current line
 
@@ -65,13 +66,18 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 
 ## Searching
 
-Searching buffers and projects with `helm-swoop` is recommended.
+++slash++ for a basic search for the current buffer
 
-`SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
+++spc++ ++"s"++ ++"b"++ for a buffer search with popup results that can be navigated with ++ctrl++ ++"j"++ / ++"k"++
 
-`SPC s p` for a project wide search.
+++spc++ ++slash++ to search across the current project.  Matches are listed in a popup buffer.
 
-`\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
+* ++ctrl+"c"++ ++ctrl+"e"++ opens the search results in an editable buffer.
+* ++ctrl+"c"++ ++ctrl+"c"++ to commit changes
+* ++ctrl+"c"++ ++ctrl+"k"++ to cancel changes.
+
+!!! HINT "Boundary for search pattern"
+    `\b` defines a boundary around the search term, limiting the matches to full word. For example `search\b` will match search, but not searching.
 
 
 | Key | Action                                        |
@@ -83,10 +89,6 @@ Searching buffers and projects with `helm-swoop` is recommended.
 | `n` | once searching: find forward                  |
 | `N` | once searching: find backwards                |
 
-> #### Hint::Ensure `RET` is pressed after `/` search
-> Using `/` to search should be completed by pressing `RET` or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.
->
-> Use `SPC s s` for helm swoop rather than `/`
 
 
 ## Text Editing
@@ -105,18 +107,21 @@ The following commands put you into the Evil Insert state
 
 ## Return to Normal state
 
-Regularly switch between **normal** and **insert** states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to **normal** state.
-c
-Switching from **insert** to **normal** state:
+**normal** should be the state used most of the time, except when adding new text in **insert**  state. As soon as typing new text is done, form a habit of switching back to **normal** state.
 
-`ESC` or press `f d` keys in extremely quick succession.
+++escape++ or press ++"f"++ ++"d"++ keys in extremely quick succession, to switching from **insert** to **normal** state.
 
 
-> ####Hint::
-> Using `f d` together is low risk as if you dont get it right it will either add the characters or try find the next `d` character (as `f` moves to the next character).
-> Keep trying this key combination as once in normal state you can use `u` to undo any `f d` characters inserted.
->
-> The character sequence can be [customized](http://spacemacs.org/doc/DOCUMENTATION.html#commands) or deactivated by adding `evil-escape` to `dotspacemacs-excluded-packages` in the `~/.spacemacs` configuration file.
+??? Hint "fd - Evil Escape shortcut"
+    practicalli/doom-emacs-config sets evil escape key binding to `fd`
+
+    ```emacs title=".config/doom/+bindings.el
+    (after! evil-escape
+      (setq evil-escape-key-sequence "fd"))
+    ```
+    ++"f"++ ++"d"++ in rapid succession is low risk alternative to pressing ++escape++ as if not typed correctly then either the next `d` character is searched for on the current line (as `f` moves to the next character), or nothing happens.
+
+    ++"u"++ to undo any unwanted results
 
 
 ## Copy, cut, paste, undo, redo
@@ -132,30 +137,29 @@ Switching from **insert** to **normal** state:
 | `u`      | undo                                               |
 | `Ctrl-r` | redo                                               |
 
-> ####Hint:: Undo tips
-> Undo will revert the last action in normal mode or all the changes you made in **insert** state
+!!! Hint "Undo tips"
+    Undo reverts the last action in normal mode or all the changes made in **insert** state
 
 
 ## Replace and changing text
 
-| Key            | Action                                  |
-|----------------|-----------------------------------------|
-| `r`            | replace the character under cursor      |
-| `R`            | replace multiple characters until `ESC` |
-| `cw`           | change word from cursor to end          |
-| `4 c w`        | change 4 words                          |
-| `v (select) c` | change region                           |
-| `SPC v c`      | change current word/region              |
-| `SPC v d`      | delete current word/region              |
-| `d w`          | delete from cursor to end of word       |
-| `C`            | change from cursor to end of line       |
-| `D`            | delete from cursor to end of line       |
-| `d $`          | delete from cursor to end of line       |
+| Key       | Action                                       |
+|-----------|----------------------------------------------|
+| `r`       | replace the character under cursor           |
+| `R`       | replace multiple characters until `ESC`      |
+| `cw`      | change word from cursor to end               |
+| `4 c w`   | change 4 words                               |
+| `v e`     | select from cursor to end of word            |
+| `v i w`   | select current word anywhere within the word |
+| `v i w c` | change current word/region                   |
+| `v i w d` | delete current word/region                   |
+| `d e`     | delete from cursor to end of word            |
+| `d w`     | delete from cursor to start of next word     |
+| `C`       | change from cursor to end of line            |
+| `D`       | delete from cursor to end of line            |
+| `d $`     | delete from cursor to end of line            |
 
-Combine d | c | v | r with avy-goto
 
-> #### Hint::Search and replace
->
 
 ## Delete commands
 
