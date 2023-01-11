@@ -56,8 +56,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep orange
-      accent: orange
+      primary: red
+      accent: amber
       extra_css:
         - stylesheets/extra.css
       toggle:
@@ -67,7 +67,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep orange
+      primary: red
       accent: amber
       toggle:
         icon: material/brightness-4
