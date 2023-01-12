@@ -7,31 +7,32 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/" rel="canonical"/>
-<link href="introduction/repl-workflow/" rel="next"/>
-<link href="assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/doom-emacs/version-control/" rel="canonical"/>
+<link href="../clojure-workflow/" rel="prev"/>
+<link href="magit/" rel="next"/>
+<link href="../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
-<title>Practicalli Doom Emacs - Practicalli Doom Emacs</title>
-<link href="assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Version Control - Practicalli Doom Emacs</title>
+<link href="../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Practicalli Doom Emacs - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Version Control - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/index.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/version-control/index.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/version-control/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Practicalli Doom Emacs - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Version Control - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/index.png" name="twitter:image"/>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/doom-emacs/assets/images/social/version-control/index.png" name="twitter:image"/>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -42,14 +43,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="amber" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#practicalli-doom-emacs">
+<a class="md-skip" href="#version-control">
           Skip to content
         </a>
 </div>
@@ -57,8 +58,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href="." title="Practicalli Doom Emacs">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
+<img alt="logo" src="../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -73,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Practicalli Doom Emacs
+              Version Control
             
           </span>
 </div>
@@ -139,8 +140,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href="." title="Practicalli Doom Emacs">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
+<img alt="logo" src="../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Doom Emacs
   </label>
@@ -155,10 +156,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href=".">Overview</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -170,27 +171,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/repl-workflow/">
+<a class="md-nav__link" href="../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/why-doom-emacs/">
+<a class="md-nav__link" href="../introduction/why-doom-emacs/">
         Why Doom Emacs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/spacemacs-or-doom.md">
+<a class="md-nav__link" href="../introduction/spacemacs-or-doom.md">
         Spacemacs Or Doom
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/contributing/">
+<a class="md-nav__link" href="../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/writing-tips/">
+<a class="md-nav__link" href="../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -198,14 +199,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="install/pre-install/">
+<a class="md-nav__link" href="../install/pre-install/">
         Pre-install
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="install/">Install</a>
+<a href="../install/">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -217,17 +218,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="install/doom-configuration/">
+<a class="md-nav__link" href="../install/doom-configuration/">
         Doom Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="install/clojure-configuration/">
+<a class="md-nav__link" href="../install/clojure-configuration/">
         Clojure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="install/bindings/">
+<a class="md-nav__link" href="../install/bindings/">
         Bindings
       </a>
 </li>
@@ -237,7 +238,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="basics/">Doom Basics</a>
+<a href="../basics/">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -249,37 +250,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/projects/">
+<a class="md-nav__link" href="../basics/projects/">
         Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/workspaces/">
+<a class="md-nav__link" href="../basics/workspaces/">
         Workspaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/evil-editing/">
+<a class="md-nav__link" href="../basics/evil-editing/">
         Evil Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/speaking-evil/">
+<a class="md-nav__link" href="../basics/speaking-evil/">
         Speaking Evil
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/vim-quick-reference/">
+<a class="md-nav__link" href="../basics/vim-quick-reference/">
         Evil Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/evil-tools/">
+<a class="md-nav__link" href="../basics/evil-tools/">
         Evil Tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="basics/snippets/">
+<a class="md-nav__link" href="../basics/snippets/">
         Snippets
       </a>
 </li>
@@ -289,7 +290,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="clojure-workflow/">Clojure Workflow</a>
+<a href="../clojure-workflow/">Clojure Workflow</a>
 </div>
 <nav aria-label="Clojure Workflow" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -300,10 +301,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="version-control/">Version Control</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Version Control</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -315,7 +316,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="version-control/magit/">
+<a class="md-nav__link" href="magit/">
         Magit Git Client
       </a>
 </li>
@@ -337,33 +338,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#practicalli-doom-emacs-configuration">
-    Practicalli Doom Emacs configuration
+<a class="md-nav__link" href="#setup-git-client">
+    Setup Git Client
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#repl-driven-development">
-    REPL Driven Development
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resources">
-    Resources
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#discussions-and-feedback">
-    Discussions and feedback
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sponsor-my-work">
-    Sponsor my work
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creative-commons-license">
-    Creative commons license
+<a class="md-nav__link" href="#authenticated-api-access">
+    Authenticated API access
   </a>
 </li>
 </ul>
@@ -373,63 +354,17 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="practicalli-doom-emacs">Practicalli Doom Emacs<a class="headerlink" href="#practicalli-doom-emacs" title="Permanent link">λ︎</a></h1>
-<p>Practicalli Doom Emacs is a guide to Clojure REPL Driven Development with Doom Emacs configuration and Practicalli customization.</p>
-<p>Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more depth).  There is limited official documentation, although there is a healthy community support.</p>
-<details class="info">
-<summary>Looking for a batteries included approach?</summary>
-<p><a href="https://practical.li/spacemacs">Practicalli Spacemacs</a> and <a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> provide all the Emacs features needed for Clojure, with just two Git clone commands.  Spacemacs is a community configuration for Emacs with a very large community and very detailed documentation.</p>
-</details>
-<details class="warning">
-<summary>New Book - content published as learned</summary>
-<p>Practicalli Doom Emacs was started in December 2022 with little knowledge of Doom Emacs, so is mostly a journal of things that have been learned as Practicalli tries to create an effective development workflow, especially with Clojure.  Content will be added as new things are discovered to aid in the learning and effective use of Doom Emacs.</p>
-</details>
-<h2 id="practicalli-doom-emacs-configuration">Practicalli Doom Emacs configuration<a class="headerlink" href="#practicalli-doom-emacs-configuration" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config repository</a> contains a customised configuration for Clojure development and supporting tools. <a href="https://github.com/practicalli/doom-emacs-config" target="_blank">Browse the repository online</a> or fork / clone the repository</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Free Desktop XDG Config</label><label for="__tabbed_1_2">Classic Config</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config.git<span class="w"> </span><span class="nv">$XDG_CONFIG_HOME</span>/doom<span class="sb">`</span>
-</code></pre></div>
-The Practicalli configuration should replace the <code>~/.config/doom/</code> directory created by the <code>doom install</code> command.</p>
-</div>
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/doom-emacs-config.git<span class="w"> </span><span class="nv">$HOME</span>/.doom.d<span class="sb">`</span>
-</code></pre></div>
-The Practicalli configuration should replace the <code>~/.doom.d/</code> directory created by the <code>doom install</code> command.</p>
-</div>
-</div>
-</input></input></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png"><img alt="Emacs Doom" src="https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png"/></a></p>
-<h2 id="repl-driven-development">REPL Driven Development<a class="headerlink" href="#repl-driven-development" title="Permanent link">λ︎</a></h2>
-<p><a href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png"><img alt="Clojure repl driven development using Clojure aware editor" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png"/></a></p>
-<p>The REPL is the <a href="introduction/repl-workflow/">Clojure interactive environment</a> used to create an run all code.  You will quickly get a feel for Clojure by evaluating, breaking, fixing and extending code in the REPL, all the while getting instant feedback on what your code is doing.</p>
-<p>As we work through code we will discuss the concepts behind Clojure, including functional programming, "pure" functions and a stateless approach with persistent data structures, changing state safely, Java interoperability and tooling around Clojure.</p>
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">λ︎</a></h2>
-<ul>
-<li><a href="https://practical.li/clojure">Practicalli Clojure</a> for a practical introduction learning Clojure and provides <a href="https://github.com/practialli/clojure-deps-edn">practicalli/clojure-deps-edn configuration</a> to add community tools and common aliases to Clojure CLI.</li>
-<li><a href="https://youtube.com/practicalli">Practicalli YouTube channel</a> - 100+ hours of Clojure related videos</li>
-<li><a href="https://practical.li/">Practicalli website</a> blog, books and videos to support your journey into Clojure</li>
-</ul>
-<h2 id="discussions-and-feedback">Discussions and feedback<a class="headerlink" href="#discussions-and-feedback" title="Permanent link">λ︎</a></h2>
-<p><a href="introduction/contributing/">Contributions are welcome via GitHub issues and pull requests</a>, or discuss the book on the Clojurians Slack community.</p>
-<p><a class="md-button" href="https://clojurians.slack.com/messages/practicalli" target="_blank">practicalli channel - Clojurians Slack Community</a></p>
-<p><a class="md-button" href="https://clojurians.net/" target="_blank">Free Clojurians slack community account</a></p>
-<h2 id="sponsor-my-work">Sponsor my work<a class="headerlink" href="#sponsor-my-work" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/sponsors/practicalli-john/"><img align="left" alt="Sponsor practicalli-john" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png"/></a></p>
-<p>The majority of my work is now focused on the <a href="https://practical.li/" target="_blank">Practicalli series of books and videos</a> and an advisory role with several communities</p>
-<p>Thank you to <a href="https://www.cognitect.com/" target="_blank">Cognitect</a>, <a href="https://nubank.com.br/" target="_blank">Nubank</a> and a wide range of other <a href="https://github.com/sponsors/practicalli-john#sponsors" target="_blank">sponsors</a> from the Clojure community for your continued support</p>
-<h2 id="creative-commons-license">Creative commons license<a class="headerlink" href="#creative-commons-license" title="Permanent link">λ︎</a></h2>
-<div style="width:95%; margin:auto;">
-<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" style="border-width:0"/></a>
-This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images &amp; stylesheets).
-</div>
+<h1 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">λ︎</a></h1>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> to open Magit Status, providing a buffer to stage changes, create commits, add remotes, push changes.</p>
+<p><code>@</code> Forge menu in Magit Status manages images and pull requests</p>
+<h2 id="setup-git-client">Setup Git Client<a class="headerlink" href="#setup-git-client" title="Permanent link">λ︎</a></h2>
+<h2 id="authenticated-api-access">Authenticated API access<a class="headerlink" href="#authenticated-api-access" title="Permanent link">λ︎</a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2023</span>
 </small>
 </div>
 </article>
@@ -479,7 +414,7 @@ This work is licensed under a Creative Commons Attribution 4.0 ShareAlike Licens
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/basics/speaking-evil/" rel="canonical"/>
-<link href="../evil-editing/" rel="prev"/>
-<link href="../vim-quick-reference/" rel="next"/>
+<link href="https://practical.li/doom-emacs/install/bindings/" rel="canonical"/>
+<link href="../clojure-configuration/" rel="prev"/>
+<link href="../../basics/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
-<title>Speaking Evil - Practicalli Doom Emacs</title>
+<title>Bindings - Practicalli Doom Emacs</title>
 <link href="../../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,17 +21,17 @@
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Speaking Evil - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Bindings - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/speaking-evil.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/install/bindings.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/basics/speaking-evil/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/install/bindings/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Speaking Evil - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Bindings - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/basics/speaking-evil.png" name="twitter:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/install/bindings.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -50,7 +50,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#speaking-evil">
+<a class="md-skip" href="#key-bindings">
           Skip to content
         </a>
 </div>
@@ -74,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Speaking Evil
+              Bindings
             
           </span>
 </div>
@@ -199,14 +199,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/pre-install/">
+<a class="md-nav__link" href="../pre-install/">
         Pre-install
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../install/">Install</a>
+<a href="../">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -218,27 +218,55 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/doom-configuration/">
+<a class="md-nav__link" href="../doom-configuration/">
         Doom Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../install/clojure-configuration/">
+<a class="md-nav__link" href="../clojure-configuration/">
         Clojure
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../install/bindings/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Bindings
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Bindings
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#leader-local-leader">
+    Leader / Local leader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#m-x-emacs-command-list">
+    M-x Emacs command list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evil-escape">
+    Evil escape
+  </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Doom Basics</a>
+<a href="../../basics/">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -250,55 +278,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../projects/">
+<a class="md-nav__link" href="../../basics/projects/">
         Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../workspaces/">
+<a class="md-nav__link" href="../../basics/workspaces/">
         Workspaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evil-editing/">
+<a class="md-nav__link" href="../../basics/evil-editing/">
         Evil Editing
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Speaking Evil
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../basics/speaking-evil/">
         Speaking Evil
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples-of-speaking-evil">
-    Examples of speaking Evil
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../vim-quick-reference/">
+<a class="md-nav__link" href="../../basics/vim-quick-reference/">
         Evil Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evil-tools/">
+<a class="md-nav__link" href="../../basics/evil-tools/">
         Evil Tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/">
+<a class="md-nav__link" href="../../basics/snippets/">
         Snippets
       </a>
 </li>
@@ -356,8 +366,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#examples-of-speaking-evil">
-    Examples of speaking Evil
+<a class="md-nav__link" href="#leader-local-leader">
+    Leader / Local leader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#m-x-emacs-command-list">
+    M-x Emacs command list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evil-escape">
+    Evil escape
   </a>
 </li>
 </ul>
@@ -367,110 +387,92 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="speaking-evil">Speaking Evil<a class="headerlink" href="#speaking-evil" title="Permanent link">λ︎</a></h1>
-<p>Evil is easier to learn if you learn to speak commands as sentences.</p>
-<p>First learn some verbs:</p>
-<p><code>c</code> (change), <code>d</code> (delete), <code>g</code> go, <code>v</code> visual (select), <code>y</code> yank (copy)</p>
-<p>Then use those verbs with some modifiers (motions)</p>
-<p><code>'</code> mark, <code>{ }</code> beginning/end of paragraph, <code>a</code> around, <code>f</code> find (includes character), <code>i</code> inside, <code>s</code> surround, <code>t</code> till (just before a character)</p>
-<p>Then learn the text objects you can apply verbs and modifiers too</p>
-<p><code>b</code> block/parentheses, <code>p</code> paragraph, <code>s</code> sentence  <code>t</code> tag - html/xml, <code>w</code> word</p>
-<h2 id="examples-of-speaking-evil">Examples of speaking Evil<a class="headerlink" href="#examples-of-speaking-evil" title="Permanent link">λ︎</a></h2>
-<p>Practice speaking evil with these examples</p>
-<table>
-<thead>
-<tr>
-<th>Keybinding</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>c i s</code></td>
-<td>change inside current sentence (change the whole sentence)</td>
-</tr>
-<tr>
-<td><code>c i "</code></td>
-<td>change inside double quotes</td>
-</tr>
-<tr>
-<td><code>c f )</code></td>
-<td>change from cursor to next <code>)</code> character</td>
-</tr>
-<tr>
-<td><code>c s ' "</code></td>
-<td>change by the surrounding single quotes with double quotes</td>
-</tr>
-<tr>
-<td><code>c t X</code></td>
-<td>change till the character <code>X</code> (not including <code>X</code>)</td>
-</tr>
-<tr>
-<td><code>c /foo</code></td>
-<td>change until the first search result of ‘foo’</td>
-</tr>
-<tr>
-<td><code>d d</code></td>
-<td>delete current line</td>
-</tr>
-<tr>
-<td><code>d i w</code></td>
-<td>delete inside the current word (delete word)</td>
-</tr>
-<tr>
-<td><code>v t SPC</code></td>
-<td>visual select till the next <code>Space</code> character</td>
-</tr>
-<tr>
-<td><code>v s ]</code></td>
-<td>visually select and surround with <code>[]</code> without spaces</td>
-</tr>
-<tr>
-<td><code>v s [</code></td>
-<td>as above with <code>[ ]</code> with spaces between parens and content</td>
-</tr>
-<tr>
-<td><code>g v</code></td>
-<td>go to last visual selection (select last visual selection)</td>
-</tr>
-<tr>
-<td><code>v a p</code></td>
-<td>visually select around current paragraph</td>
-</tr>
-<tr>
-<td><code>SPC v s "</code></td>
-<td>visually select current work and surround with <code>""</code></td>
-</tr>
-<tr>
-<td><code>v i w s "</code></td>
-<td>visually select, insert around current word, and surround with quotes</td>
-</tr>
-<tr>
-<td><code>y y</code></td>
-<td>yank (copy) current line</td>
-</tr>
-<tr>
-<td><code>y w</code></td>
-<td>yank (copy) current word</td>
-</tr>
-<tr>
-<td><code>y @ a</code></td>
-<td>yank (copy) to mark <code>a</code> (<code>m a</code> creates a mark called <code>a</code>)</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition hint">
-<p class="admonition-title">Evil Reference and Tips</p>
-<p><a href="../vim-quick-reference/">Evil quick reference guide</a>
-<a href="vim-tips-for-developers.md">Evil tips for developers</a>
-<a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118" target="_blank">Speaking Vim</a></p>
-</div>
+<h1 id="key-bindings">Key Bindings<a class="headerlink" href="#key-bindings" title="Permanent link">λ︎</a></h1>
+<p><a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a> replaces many of the default Doom key bindings as well as adding more key bindings</p>
+<p><code>map!</code> Doom macro is used to define new key bindings.  Existing Doom key bindings are replaced by first setting the binding to <code>nil</code> then adding a new definition.</p>
+<p>Most Practicalli key bindings are defined in the <code>~/.config/doom/+bindings.el</code> configuration file, or in a major mode specific file e.g. <code>~/.config/doom/+clojure.el</code></p>
+<h2 id="leader-local-leader">Leader / Local leader<a class="headerlink" href="#leader-local-leader" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> is the leader key that opens the which-key menu, driving many of the menu based commands.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> replaces the Doom local leader, <code>SPC m</code> which is considered a major mode menu entry under the leader key so not really a shortcut to access the major mode context specific menu.</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-localleader-key</span><span class="w"> </span><span class="s">","</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="m-x-emacs-command-list">M-x Emacs command list<a class="headerlink" href="#m-x-emacs-command-list" title="Permanent link">λ︎</a></h2>
+<p><code>SPC :</code> is probably a good key binding for those very familiar with Vim, as it alighs with the <code>:</code> character used to issue vim commands</p>
+<p><code>SPC SPC</code> is M-x in Spacemacs, so override the existing key binding that Doom defines to open a file, which is also provided by <code>SPC f f</code></p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">      </span><span class="s">"SPC"</span><span class="w"> </span><span class="no">nil</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">      </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"M-x"</span><span class="w"> </span><span class="s">"SPC"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">execute-extended-command</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p><code>SPC :</code> key binding is kept to allow for migration to the Doom key binding.</p>
+</blockquote>
+<h2 id="evil-escape">Evil escape<a class="headerlink" href="#evil-escape" title="Permanent link">λ︎</a></h2>
+<p><code>fd</code> is used for Evil Escape to provide an alternative to the <span class="keys"><kbd class="key-escape">Esc</kbd></span> key that keeps fingers on the home row of the keyboard</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="nv">after!</span><span class="w"> </span><span class="nv">evil-escape</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">evil-escape-key-sequence</span><span class="w"> </span><span class="s">"fd"</span><span class="p">))</span>
+</code></pre></div>
+<h1 id="buffers">Buffers<a class="headerlink" href="#buffers" title="Permanent link">λ︎</a></h1>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> switches to last open buffer, providing a convenient way to toggle between two buffers.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> added to help discovery of this toggle approach</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">         </span><span class="s">"TAB"</span><span class="w"> </span><span class="no">nil</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Last Buffer"</span><span class="w"> </span><span class="s">"TAB"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">evil-switch-to-windows-last-buffer</span><span class="p">)</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">       </span><span class="p">(</span><span class="nb">:prefix</span><span class="w"> </span><span class="s">"b"</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Dashboard"</span><span class="w"> </span><span class="s">"h"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+doom-dashboard/open</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Toggle Last"</span><span class="w"> </span><span class="s">"TAB"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">evil-switch-to-windows-last-buffer</span><span class="p">))</span>
+</code></pre></div>
+<blockquote>
+<p>Replaces Doom <code>SPC TAB</code> used for the workspaces menu, which is also replaced by <code>SPC l</code></p>
+</blockquote>
+<h2 id="workspaces">Workspaces<a class="headerlink" href="#workspaces" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> replaces Doom <code>SPC TAB</code> to open the workspaces menu to align with Spacemacs (layout) approach. This frees <code>SPC TAB</code> to jump to the last open buffer, as in Spacemacs.</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">       </span><span class="p">(</span><span class="nb">:prefix-map</span><span class="w"> </span><span class="p">(</span><span class="s">"TAB"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="no">nil</span><span class="p">))</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">       </span><span class="p">(</span><span class="nb">:prefix</span><span class="w"> </span><span class="p">(</span><span class="s">"l"</span><span class="o">.</span><span class="w"> </span><span class="s">"Layouts"</span><span class="p">)</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Last Layout"</span><span class="w"> </span><span class="s">"&lt;tab&gt;"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/other</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Display Tabs"</span><span class="w"> </span><span class="s">"d"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/display</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Delete layout"</span><span class="w"> </span><span class="s">"D"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/delete</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Layout list"</span><span class="w"> </span><span class="s">"l"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Load Layout"</span><span class="w"> </span><span class="s">"L"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/load</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"New Layout"</span><span class="w"> </span><span class="s">"n"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/new</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Rename Layout"</span><span class="w"> </span><span class="s">"r"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/rename</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Restore session"</span><span class="w"> </span><span class="s">"R"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/restore-last-session</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Save Layout"</span><span class="w"> </span><span class="s">"s"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/save</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Kill Session"</span><span class="w"> </span><span class="s">"x"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/kill-session</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 0"</span><span class="w"> </span><span class="s">"0"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-0</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 1"</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-1</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 2"</span><span class="w"> </span><span class="s">"2"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-2</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 3"</span><span class="w"> </span><span class="s">"3"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-3</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 4"</span><span class="w"> </span><span class="s">"4"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-4</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 5"</span><span class="w"> </span><span class="s">"5"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-5</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 6"</span><span class="w"> </span><span class="s">"6"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-6</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 7"</span><span class="w"> </span><span class="s">"7"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-7</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 8"</span><span class="w"> </span><span class="s">"8"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-8</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Switch to 9"</span><span class="w"> </span><span class="s">"9"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+workspace/switch-to-9</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="treemacs">Treemacs<a class="headerlink" href="#treemacs" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>t</kbd></span> toggles treemacs project browser from project menu</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">      </span><span class="p">(</span><span class="nb">:prefix</span><span class="w"> </span><span class="s">"p"</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">         </span><span class="s">"t"</span><span class="w"> </span><span class="no">nil</span><span class="w">  </span><span class="c1">; disable project todos key binding</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">         </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Project browser"</span><span class="w"> </span><span class="s">"t"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">+treemacs/toggle</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> to call Magit Status, rather than the Doom binding to stage hunk at point</p>
+<p>Practicalli always uses Magit status menu to manage changes, so adopting the Spacemacs binding.</p>
+<div class="highlight"><span class="filename">.config/doom/+bindings.el</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">(</span><span class="nv">map!</span><span class="w"> </span><span class="nb">:leader</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">      </span><span class="p">(</span><span class="nb">:prefix</span><span class="w"> </span><span class="s">"g"</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="nb">:desc</span><span class="w"> </span><span class="s">""</span><span class="w"> </span><span class="s">"s"</span><span class="w"> </span><span class="no">nil</span><span class="w">  </span><span class="c1">; remove existing binding</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="nb">:desc</span><span class="w"> </span><span class="s">"Magit Status"</span><span class="w"> </span><span class="s">"s"</span><span class="w"> </span><span class="nf">#'</span><span class="nv">magit-status</span><span class="p">))</span>
+</code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
 </small>
 </div>
 </article>

@@ -11,9 +11,9 @@
 <link href="../speaking-evil/" rel="prev"/>
 <link href="../evil-tools/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
 <title>Evil Reference - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -44,7 +44,7 @@
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="orange" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="amber" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -81,11 +81,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="orange" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="deep-orange" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="red" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="deep-orange" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -227,6 +227,11 @@
         Clojure
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install/bindings/">
+        Bindings
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -302,15 +307,6 @@
 <a class="md-nav__link" href="#searching">
     Searching
   </a>
-<nav aria-label="Searching" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintensure-ret-is-pressed-after-search">
-    Hint::Ensure RET is pressed after / search
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#text-editing">
@@ -321,43 +317,16 @@
 <a class="md-nav__link" href="#return-to-normal-state">
     Return to Normal state
   </a>
-<nav aria-label="Return to Normal state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint">
-    Hint::
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#copy-cut-paste-undo-redo">
     Copy, cut, paste, undo, redo
   </a>
-<nav aria-label="Copy, cut, paste, undo, redo" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint-undo-tips">
-    Hint:: Undo tips
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#replace-and-changing-text">
     Replace and changing text
   </a>
-<nav aria-label="Replace and changing text" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintsearch-and-replace">
-    Hint::Search and replace
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#delete-commands">
@@ -486,6 +455,28 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../version-control/">Version Control</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Version Control" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Version Control
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../version-control/magit/">
+        Magit Git Client
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -523,15 +514,6 @@
 <a class="md-nav__link" href="#searching">
     Searching
   </a>
-<nav aria-label="Searching" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintensure-ret-is-pressed-after-search">
-    Hint::Ensure RET is pressed after / search
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#text-editing">
@@ -542,43 +524,16 @@
 <a class="md-nav__link" href="#return-to-normal-state">
     Return to Normal state
   </a>
-<nav aria-label="Return to Normal state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint">
-    Hint::
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#copy-cut-paste-undo-redo">
     Copy, cut, paste, undo, redo
   </a>
-<nav aria-label="Copy, cut, paste, undo, redo" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint-undo-tips">
-    Hint:: Undo tips
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#replace-and-changing-text">
     Replace and changing text
   </a>
-<nav aria-label="Replace and changing text" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintsearch-and-replace">
-    Hint::Search and replace
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#delete-commands">
@@ -685,8 +640,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="vim-quick-reference">Vim Quick Reference<a class="headerlink" href="#vim-quick-reference" title="Permanent link">λ︎</a></h1>
-<p>A reference of the most common keybindings available in Vim Normal mode. <a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings">Spacemacs DOCUMENTATION key bindings section</a> contains full details</p>
-<p><code>.</code> repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.</p>
+<p>A reference of the most common keybindings available in Vim Normal mode.</p>
+<p><span class="keys"><kbd class="key-period">.</kbd></span> repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.</p>
 <h2 id="moving-around">Moving around<a class="headerlink" href="#moving-around" title="Permanent link">λ︎</a></h2>
 <p>In <strong>normal</strong> mode you can keep your fingers resting on the main row of your keyboard to move around.</p>
 <table>
@@ -698,24 +653,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>j</code></td>
+<td><span class="keys"><kbd>h</kbd></span></td>
+<td>move cursor left one character</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd>j</kbd></span></td>
 <td>move cursor down one line</td>
 </tr>
 <tr>
-<td><code>k</code></td>
+<td><span class="keys"><kbd>k</kbd></span></td>
 <td>move cursor up one line</td>
 </tr>
 <tr>
-<td><code>l</code></td>
+<td><span class="keys"><kbd>l</kbd></span></td>
 <td>move cursor right one character</td>
-</tr>
-<tr>
-<td><code>h</code></td>
-<td>move cursor left one character</td>
 </tr>
 </tbody>
 </table>
-<p>In menus such as helm you can move around using <code>Ctrl</code> and these keybindings.  So <code>C-j</code> will move the cursor down one item in a menu.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd>k</kbd></span> / <span class="keys"><kbd>j</kbd></span> to move the cursor up or down in a menu.</p>
 <h3 id="navigating-the-current-line">Navigating the current line<a class="headerlink" href="#navigating-the-current-line" title="Permanent link">λ︎</a></h3>
 <table>
 <thead>
@@ -875,10 +830,18 @@
 </tbody>
 </table>
 <h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">λ︎</a></h2>
-<p>Searching buffers and projects with <code>helm-swoop</code> is recommended.</p>
-<p><code>SPC s s</code> - helm-swoop - shows a buffer with all search results, <code>C-j</code> and <code>C-k</code> navigates through results.</p>
-<p><code>SPC s p</code> for a project wide search.</p>
-<p><code>\b</code> defines a boundary around the search term. For example <code>search\b</code> will match search, but not searching.</p>
+<p><span class="keys"><kbd class="key-slash">/</kbd></span> for a basic search for the current buffer</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>b</kbd></span> for a buffer search with popup results that can be navigated with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd>j</kbd></span> / <span class="keys"><kbd>k</kbd></span></p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-slash">/</kbd></span> to search across the current project.  Matches are listed in a popup buffer.</p>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>e</kbd></span> opens the search results in an editable buffer.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> to commit changes</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>k</kbd></span> to cancel changes.</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Boundary for search pattern</p>
+<p><code>\b</code> defines a boundary around the search term, limiting the matches to full word. For example <code>search\b</code> will match search, but not searching.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -913,11 +876,6 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<h4 id="hintensure-ret-is-pressed-after-search">Hint::Ensure <code>RET</code> is pressed after <code>/</code> search<a class="headerlink" href="#hintensure-ret-is-pressed-after-search" title="Permanent link">λ︎</a></h4>
-<p>Using <code>/</code> to search should be completed by pressing <code>RET</code> or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.</p>
-<p>Use <code>SPC s s</code> for helm swoop rather than <code>/</code></p>
-</blockquote>
 <h2 id="text-editing">Text Editing<a class="headerlink" href="#text-editing" title="Permanent link">λ︎</a></h2>
 <p>The following commands put you into the Evil Insert state</p>
 <table>
@@ -955,16 +913,17 @@
 </tbody>
 </table>
 <h2 id="return-to-normal-state">Return to Normal state<a class="headerlink" href="#return-to-normal-state" title="Permanent link">λ︎</a></h2>
-<p>Regularly switch between <strong>normal</strong> and <strong>insert</strong> states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to <strong>normal</strong> state.
-c
-Switching from <strong>insert</strong> to <strong>normal</strong> state:</p>
-<p><code>ESC</code> or press <code>f d</code> keys in extremely quick succession.</p>
-<blockquote>
-<h4 id="hint">Hint::<a class="headerlink" href="#hint" title="Permanent link">λ︎</a></h4>
-<p>Using <code>f d</code> together is low risk as if you dont get it right it will either add the characters or try find the next <code>d</code> character (as <code>f</code> moves to the next character).
-Keep trying this key combination as once in normal state you can use <code>u</code> to undo any <code>f d</code> characters inserted.</p>
-<p>The character sequence can be <a href="http://spacemacs.org/doc/DOCUMENTATION.html#commands">customized</a> or deactivated by adding <code>evil-escape</code> to <code>dotspacemacs-excluded-packages</code> in the <code>~/.spacemacs</code> configuration file.</p>
-</blockquote>
+<p><strong>normal</strong> should be the state used most of the time, except when adding new text in <strong>insert</strong>  state. As soon as typing new text is done, form a habit of switching back to <strong>normal</strong> state.</p>
+<p><span class="keys"><kbd class="key-escape">Esc</kbd></span> or press <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>d</kbd></span> keys in extremely quick succession, to switching from <strong>insert</strong> to <strong>normal</strong> state.</p>
+<details class="hint">
+<summary>fd - Evil Escape shortcut</summary>
+<p>practicalli/doom-emacs-config sets evil escape key binding to <code>fd</code></p>
+<p><code>emacs title=".config/doom/+bindings.el
+(after! evil-escape
+  (setq evil-escape-key-sequence "fd"))</code>
+<span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>d</kbd></span> in rapid succession is low risk alternative to pressing <span class="keys"><kbd class="key-escape">Esc</kbd></span> as if not typed correctly then either the next <code>d</code> character is searched for on the current line (as <code>f</code> moves to the next character), or nothing happens.</p>
+<p><span class="keys"><kbd>u</kbd></span> to undo any unwanted results</p>
+</details>
 <h2 id="copy-cut-paste-undo-redo">Copy, cut, paste, undo, redo<a class="headerlink" href="#copy-cut-paste-undo-redo" title="Permanent link">λ︎</a></h2>
 <p><code>v</code> in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.</p>
 <table>
@@ -1001,10 +960,10 @@ Keep trying this key combination as once in normal state you can use <code>u</co
 </tr>
 </tbody>
 </table>
-<blockquote>
-<h4 id="hint-undo-tips">Hint:: Undo tips<a class="headerlink" href="#hint-undo-tips" title="Permanent link">λ︎</a></h4>
-<p>Undo will revert the last action in normal mode or all the changes you made in <strong>insert</strong> state</p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Undo tips</p>
+<p>Undo reverts the last action in normal mode or all the changes made in <strong>insert</strong> state</p>
+</div>
 <h2 id="replace-and-changing-text">Replace and changing text<a class="headerlink" href="#replace-and-changing-text" title="Permanent link">λ︎</a></h2>
 <table>
 <thead>
@@ -1031,20 +990,28 @@ Keep trying this key combination as once in normal state you can use <code>u</co
 <td>change 4 words</td>
 </tr>
 <tr>
-<td><code>v (select) c</code></td>
-<td>change region</td>
+<td><code>v e</code></td>
+<td>select from cursor to end of word</td>
 </tr>
 <tr>
-<td><code>SPC v c</code></td>
+<td><code>v i w</code></td>
+<td>select current word anywhere within the word</td>
+</tr>
+<tr>
+<td><code>v i w c</code></td>
 <td>change current word/region</td>
 </tr>
 <tr>
-<td><code>SPC v d</code></td>
+<td><code>v i w d</code></td>
 <td>delete current word/region</td>
 </tr>
 <tr>
-<td><code>d w</code></td>
+<td><code>d e</code></td>
 <td>delete from cursor to end of word</td>
+</tr>
+<tr>
+<td><code>d w</code></td>
+<td>delete from cursor to start of next word</td>
 </tr>
 <tr>
 <td><code>C</code></td>
@@ -1060,10 +1027,6 @@ Keep trying this key combination as once in normal state you can use <code>u</co
 </tr>
 </tbody>
 </table>
-<p>Combine d | c | v | r with avy-goto</p>
-<blockquote>
-<h4 id="hintsearch-and-replace">Hint::Search and replace<a class="headerlink" href="#hintsearch-and-replace" title="Permanent link">λ︎</a></h4>
-</blockquote>
 <h2 id="delete-commands">Delete commands<a class="headerlink" href="#delete-commands" title="Permanent link">λ︎</a></h2>
 <table>
 <thead>
@@ -1361,7 +1324,7 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
 </small>
 </div>
 </article>
@@ -1411,7 +1374,7 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
