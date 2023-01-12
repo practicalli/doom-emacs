@@ -147,3 +147,6 @@ nav:
       - Snippets: basics/snippets.md
   - Clojure Workflow:
       - clojure-workflow/index.md
+  - Version Control:
+      - version-control/index.md
+      - Magit Git Client: version-control/magit.md
