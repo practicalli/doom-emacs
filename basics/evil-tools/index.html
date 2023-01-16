@@ -11,9 +11,9 @@
 <link href="../vim-quick-reference/" rel="prev"/>
 <link href="../snippets/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
 <title>Evil Tools - Practicalli Doom Emacs</title>
-<link href="../../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -114,7 +114,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -384,7 +384,8 @@
 </ul>
 <h2 id="multiedit">Multiedit<a class="headerlink" href="#multiedit" title="Permanent link">λ︎</a></h2>
 <h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
-<p>Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential. Changes are made to multiple lines or places in the text where the same editing opperation is desired.</p>
+<p>Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential.</p>
+<p>Line based Evil commands work with multiple cursors, e.g. ++dollar++ to move to end of line, <span class="keys"><kbd>f</kbd></span> / <span class="keys"><kbd>F</kbd></span> to move forward / backward to a character,</p>
 <p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> menu for mutliple cursor menu</p>
 <p>When changes are vertically aligined, create multiple cursors with vim-style movements:</p>
 <p><span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> adds a cursor to the next 24 lines</p>
@@ -401,7 +402,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
 </small>
 </div>
 </article>
@@ -452,6 +453,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
