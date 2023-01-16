@@ -27,18 +27,20 @@ Magit Status buffer shows the status of the local and remote repository (when a 
 
 ## Stash changes
 
-!!! BUG "Evil key binding shadows Magit z stash menu"
-    `z` in magit status buffer shows the Evil `z` menu rather than Magit stash menu.
+++"Z"++ to open the stash menu 
 
-    `?` to open magit-dispatch, showing the Magit top level menu. `z` now calls the Magit stash menu
+??? WARNING "Evil key binding shadows Magit z stash menu"
+    `z` in magit status buffer shows the Evil `z` menu rather than Magit stash menu, although there are some magit relevant commands in that menu.
 
-`z z` to stash all the staged and unstaged changes, prompting for a meaningful name for the stash (to help remember what is inside the stash)
+    ++question++ to open magit-dispatch, showing the Magit top level menu. ++"z"++ now calls the Magit stash menu.  Or use ++"Z"++ 
 
-`z a` applies (copies) the contents of the stash into the working directory, adding back staged and unstaged changes.  If the working copy has been modified since the stash, merge conflicts may occur and be highlighted in the magit status buffer.
+++"Z"++ ++"z"++ to stash all the staged and unstaged changes, prompting for a meaningful name for the stash (to help remember what is inside the stash)
 
-`z p` as with apply but deletes the slash (unless there is a merge conflict and the stash is kept)
+++"Z"++ ++"a"++ applies (copies) the contents of the stash into the working directory, adding back staged and unstaged changes.  If the working copy has been modified since the stash, merge conflicts may occur and be highlighted in the magit status buffer.
 
-`x` delected the current stash (under the cursor)
+++"Z"++ ++"a"++ as with apply but deletes the slash (unless there is a merge conflict and the stash is kept)
+
+++"Z"++ ++"a"++ delected the current stash (under the cursor)
 
 
 ## Commits
@@ -58,7 +60,6 @@ Magit Status buffer shows the status of the local and remote repository (when a 
 ++"Z"++ ++"Q"++ to abort the commit message
 
 ++enter++ on a commit, e.g. in recent commit section, opens the commit details that shows the commit message, meta data and the changes (diff)
-
 
 
 ## Changing History
