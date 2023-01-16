@@ -30,14 +30,18 @@ A project is automatically assigned a [workspace](workspaces.md) when opened. ++
 
 ++spc++ ++"p"++ ++"f"++ to list all files in the current project / workspace. Use this when you know the name of the project but not the path or to avoid navigating to the correct path.
 
-
-
 ??? WARNING "Project Cache Outdated"
     ++spc++ ++"p"++ ++"i"++ to udate the project cache moving directories and files, otherwise Doom will open a buffer for the old location
 
     ++spc++ ++"u"++ before a file command will also clear the cache and allow correct selection of files, e.g.
 
     ++spc++ ++"u"++ ++spc++ ++"f"++ ++"f"++
+
+### File diffs
+
+++spc++ ++"f"++ ++"e"++ runs ediff to compare 2 files, prompting to select each file in turn. ++"j"++ ++"k"++ to navigate the differences between each file. ++"a"++ to copy change from first file to second. ++"b"++ to copy change from second file to first.
+
+++spc++ ++"f"++ ++"3"++ runs ediff to compare 3 files.
 
 
 ## Windows
