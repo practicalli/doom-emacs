@@ -7,32 +7,32 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/doom-emacs/clojure-workflow/" rel="canonical"/>
-<link href="../basics/snippets/" rel="prev"/>
-<link href="../version-control/" rel="next"/>
-<link href="../assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/doom-emacs/introduction/spacemacs-to-doom/" rel="canonical"/>
+<link href="../why-doom-emacs/" rel="prev"/>
+<link href="../contributing/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
-<title>Clojure Developmement Workflow - Practicalli Doom Emacs</title>
-<link href="../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Spacemacs To Doom - Practicalli Doom Emacs</title>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Clojure Developmement Workflow - Practicalli Doom Emacs" property="og:title"/>
+<meta content="Spacemacs To Doom - Practicalli Doom Emacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" property="og:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/clojure-workflow/index.png" property="og:image"/>
+<meta content="https://practical.li/doom-emacs/assets/images/social/introduction/spacemacs-to-doom.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/doom-emacs/clojure-workflow/" property="og:url"/>
+<meta content="https://practical.li/doom-emacs/introduction/spacemacs-to-doom/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Clojure Developmement Workflow - Practicalli Doom Emacs" name="twitter:title"/>
+<meta content="Spacemacs To Doom - Practicalli Doom Emacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Doom Emacs" name="twitter:description"/>
-<meta content="https://practical.li/doom-emacs/assets/images/social/clojure-workflow/index.png" name="twitter:image"/>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/doom-emacs/assets/images/social/introduction/spacemacs-to-doom.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -43,14 +43,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="amber" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#clojure-developmement-workflow">
+<a class="md-skip" href="#migrate-from-spacemacs-to-doom-emacs">
           Skip to content
         </a>
 </div>
@@ -58,8 +58,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -74,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Clojure Developmement Workflow
+              Spacemacs To Doom
             
           </span>
 </div>
@@ -140,8 +140,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Doom Emacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Doom Emacs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Doom Emacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Doom Emacs
   </label>
@@ -156,10 +156,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Overview</a>
+<a href="../..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -171,27 +171,83 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/repl-workflow/">
+<a class="md-nav__link" href="../repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/why-doom-emacs/">
+<a class="md-nav__link" href="../why-doom-emacs/">
         Why Doom Emacs
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/spacemacs-to-doom/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Spacemacs To Doom
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Spacemacs To Doom
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-bindings">
+    Key bindings
+  </a>
+<nav aria-label="Key bindings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#major-changes">
+    Major changes
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/contributing/">
+<a class="md-nav__link" href="#magit-status">
+    Magit Status
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spacemacs-added-touches">
+    Spacemacs added touches
+  </a>
+<nav aria-label="Spacemacs added touches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visual-select">
+    Visual select
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paste">
+    Paste
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whitespace-clean-up">
+    Whitespace clean up
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/writing-tips/">
+<a class="md-nav__link" href="../writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -199,14 +255,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install/pre-install/">
+<a class="md-nav__link" href="../../install/pre-install/">
         Pre-install
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../install/">Install</a>
+<a href="../../install/">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -218,17 +274,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install/doom-configuration/">
+<a class="md-nav__link" href="../../install/doom-configuration/">
         Doom Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install/clojure-configuration/">
+<a class="md-nav__link" href="../../install/clojure-configuration/">
         Clojure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install/bindings/">
+<a class="md-nav__link" href="../../install/bindings/">
         Bindings
       </a>
 </li>
@@ -238,7 +294,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../basics/">Doom Basics</a>
+<a href="../../basics/">Doom Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -250,47 +306,47 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/projects/">
+<a class="md-nav__link" href="../../basics/projects/">
         Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/workspaces/">
+<a class="md-nav__link" href="../../basics/workspaces/">
         Workspaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/evil-editing/">
+<a class="md-nav__link" href="../../basics/evil-editing/">
         Evil Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/speaking-evil/">
+<a class="md-nav__link" href="../../basics/speaking-evil/">
         Speaking Evil
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/vim-quick-reference/">
+<a class="md-nav__link" href="../../basics/vim-quick-reference/">
         Evil Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/evil-tools/">
+<a class="md-nav__link" href="../../basics/evil-tools/">
         Evil Tools
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basics/snippets/">
+<a class="md-nav__link" href="../../basics/snippets/">
         Snippets
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Clojure Workflow</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clojure-workflow/">Clojure Workflow</a>
 </div>
 <nav aria-label="Clojure Workflow" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -304,7 +360,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../version-control/">Version Control</a>
+<a href="../../version-control/">Version Control</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -316,7 +372,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version-control/magit/">
+<a class="md-nav__link" href="../../version-control/magit/">
         Magit Git Client
       </a>
 </li>
@@ -338,18 +394,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#start-clojure-repl">
-    Start Clojure REPL
+<a class="md-nav__link" href="#key-bindings">
+    Key bindings
+  </a>
+<nav aria-label="Key bindings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#major-changes">
+    Major changes
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#evaluate-code">
-    Evaluate code
+<a class="md-nav__link" href="#magit-status">
+    Magit Status
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spacemacs-added-touches">
+    Spacemacs added touches
+  </a>
+<nav aria-label="Spacemacs added touches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visual-select">
+    Visual select
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paste">
+    Paste
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#snippets">
-    Snippets
+<a class="md-nav__link" href="#whitespace-clean-up">
+    Whitespace clean up
   </a>
 </li>
 </ul>
@@ -359,47 +443,55 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="clojure-developmement-workflow">Clojure Developmement Workflow<a class="headerlink" href="#clojure-developmement-workflow" title="Permanent link">λ︎</a></h1>
-<details class="info">
-<summary>Aliases used in examples are defined in practicalli/clojure-deps-edn</summary>
-<p><a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a> contains a wide range of aliases and community tools for Clojure CLI projects.</p>
-<p><code>:env/dev</code> adds <code>dev</code> directory to the class path, used to load <code>dev/user.clj</code> file and run development tools on REPL startup</p>
-<p><code>:env/test</code> adds <code>test</code> directory to include unit tests and common testing libraries</p>
-<p><code>:repl/rebel</code> runs a rich terminal UI and an nREPL server to allow connection from <a href="https://practical.li/clojure/clojure-editors/">Clojure aware editors</a></p>
-</details>
-<h2 id="start-clojure-repl">Start Clojure REPL<a class="headerlink" href="#start-clojure-repl" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Command Line</label><label for="__tabbed_1_2">Doom Emacs</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Start a REPL in a terminal window with a rich REPL UI prompt, with auto-completion, syntax highlighting, multi-line editing and documentation.
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>clojure<span class="w"> </span>-M:env/dev:env/test:repl/rebel
-</code></pre></div></p>
-<p>Or start a headless REPL if only using the REPL via the editor
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>clojure<span class="w"> </span>-M:env/dev:env/test:repl/headless
-</code></pre></div></p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>c</kbd></span> to connect to an existing Clojure REPL and follow the prompts to connect to <code>localhost</code></p>
-</div>
-<div class="tabbed-block">
-<p>Doom Emacs can launch a REPL process and connect to that process without leaving Emacs. External tools (Clojure CLI, Leiningen) are used to actually start the REPL process and CIDER manages the connection and communication with the REPL process from within Doom Emacs.</p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-single-quote">'</kbd></span> to start a Clojure REPL using <code>cider-jack-in</code></p>
-<p>Include a <code>.dir-locals.el</code> file in the root of the Clojure project to include Clojure CLI aliases
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">              </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">":env/dev:env/test"</span><span class="p">))))</span>
-</code></pre></div></p>
-</div>
-</div>
-</input></input></div>
-<h2 id="evaluate-code">Evaluate code<a class="headerlink" href="#evaluate-code" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> opens the evaluation menu</p>
-<h2 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">λ︎</a></h2>
-<p>Snippets from Yasnippets appear when typing matches the name of the snippet defined in the major mode.</p>
-<p>Clojure also has snippets defined from Clojure LSP.</p>
+<h1 id="migrate-from-spacemacs-to-doom-emacs">Migrate from Spacemacs to Doom Emacs<a class="headerlink" href="#migrate-from-spacemacs-to-doom-emacs" title="Permanent link">λ︎</a></h1>
+<p>The major differences between Spacemacs and Doom Emacs</p>
+<ul>
+<li>Key bindings</li>
+<li>Completion framework (vertico rather than helm)</li>
+<li>Spacemacs added touches (Doom has a minimal approach)</li>
+</ul>
+<h2 id="key-bindings">Key bindings<a class="headerlink" href="#key-bindings" title="Permanent link">λ︎</a></h2>
+<p><a class="md-button" href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a></p>
+<p><a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a> changes many Doom Emacs key bindings to Spacemacs bindings to easy usability of Doom Emacs.  The more familiar the key binding experience, the simpler it is to adopt Doom Emacs.</p>
+<p>Not all key bindings have been changed and some of the Doom Emacs defaults are adopted (either because they feel easy to adopt or it is not clear how to change them effectively)</p>
+<h3 id="major-changes">Major changes<a class="headerlink" href="#major-changes" title="Permanent link">λ︎</a></h3>
+<p>The <a href="https://github.com/practicalli/doom-emacs-config/blob/main/%2Bbindings.el">+bindings.el configuration file</a> makes changes to the general use of Doom Emacs</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> is mapped as the local leader, <span class="keys"><kbd class="key-space">Space</kbd></span> remains the leader key (common to both Doom and Spacemacs)</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> bound to toggle to last buffer</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> replaces <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> as the workspace menu, <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> added to toggle to last workspace</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>h</kbd></span> added to jump to home buffer</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> used as <span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd>x</kbd></span> although the default <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-colon">:</kbd></span> Doom Emacs binding is kept</p>
+<h3 id="magit-status">Magit Status<a class="headerlink" href="#magit-status" title="Permanent link">λ︎</a></h3>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> remaped to Magit Status buffer, although Doom default binding <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> is kept</p>
+<p>Doom bindings that are different to Spacemacs and have not been changed in <a href="https://github.com/practicalli/doom-emacs-config" target="_blank">practicalli/doom-emacs-config</a></p>
+<p><code>ZZ</code> to close and commit message and create a commit (Spaceamcs <code>,,</code>)</p>
+<p><code>ZQ</code> to cancel the commit message (Spaceamcs <code>,k</code>)</p>
+<h2 id="spacemacs-added-touches">Spacemacs added touches<a class="headerlink" href="#spacemacs-added-touches" title="Permanent link">λ︎</a></h2>
+<p>Things added in Spacemacs not available (or not the same) in Doom Emacs</p>
+<h3 id="visual-select">Visual select<a class="headerlink" href="#visual-select" title="Permanent link">λ︎</a></h3>
+<p>Spacemacs:</p>
+<p><code>SPC v</code> to select and additional <code>v</code> to grow selection, <code>V</code> to shrink selection</p>
+<p>Doom:
+Use <code>o</code> to toggle between ends of selection and grow using vim motions
+TODO: discover other options and identify if there is a similar approach to Spacemacs <code>SPC v</code></p>
+<h2 id="paste">Paste<a class="headerlink" href="#paste" title="Permanent link">λ︎</a></h2>
+<p>Spacemacs:</p>
+<p><code>p</code> shows the paste transient state menu, allowing for cycling the kill ring and pasting different values</p>
+<p>Doom:
+<code>p M-y</code> will paste the current value and use yank-pop to cycle through the kill ring</p>
+<p><code>SPC i y</code> inserts a value from the kill ring, showing a popup list of the history</p>
+<h2 id="whitespace-clean-up">Whitespace clean up<a class="headerlink" href="#whitespace-clean-up" title="Permanent link">λ︎</a></h2>
+<p>Spacemacs can be configured to automattically remove extra whitespace when saving a file.</p>
+<p>Doom: <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>w</kbd></span> key binding removes extra whitespace</p>
+<blockquote>
+<p>TODO: automate whitespace removal on file save</p>
+</blockquote>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
 </small>
 </div>
 </article>
@@ -449,7 +541,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

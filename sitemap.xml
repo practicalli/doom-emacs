@@ -91,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/doom-emacs/introduction/spacemacs-to-doom/</loc>
+         <lastmod>2023-01-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/doom-emacs/introduction/why-doom-emacs/</loc>
          <lastmod>2023-01-16</lastmod>
          <changefreq>daily</changefreq>
