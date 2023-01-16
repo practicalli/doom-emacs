@@ -25,6 +25,22 @@ Magit Status buffer shows the status of the local and remote repository (when a 
 ++"v"++ ++"j"++ / ++"k"++ to select one or more lines within a hunk
 
 
+## Stash changes
+
+!!! BUG "Evil key binding shadows Magit z stash menu"
+    `z` in magit status buffer shows the Evil `z` menu rather than Magit stash menu.
+
+    `?` to open magit-dispatch, showing the Magit top level menu. `z` now calls the Magit stash menu
+
+`z z` to stash all the staged and unstaged changes, prompting for a meaningful name for the stash (to help remember what is inside the stash)
+
+`z a` applies (copies) the contents of the stash into the working directory, adding back staged and unstaged changes.  If the working copy has been modified since the stash, merge conflicts may occur and be highlighted in the magit status buffer.
+
+`z p` as with apply but deletes the slash (unless there is a merge conflict and the stash is kept)
+
+`x` delected the current stash (under the cursor)
+
+
 ## Commits
 
 ++"c"++ opens the commit menu
