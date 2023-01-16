@@ -1,4 +1,4 @@
-# Evil Editing tools 
+# Evil Editing tools
 
 
 * Multiedit - multiple match and replace
@@ -12,7 +12,9 @@
 
 ## Multiple cursors
 
-Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential. Changes are made to multiple lines or places in the text where the same editing opperation is desired.
+Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential.
+
+Line based Evil commands work with multiple cursors, e.g. ++dollar++ to move to end of line, ++"f"++ / ++"F"++ to move forward / backward to a character,
 
 ++"g"++ ++"z"++ menu for mutliple cursor menu
 
@@ -35,6 +37,3 @@ With visual select:
 Remove multiple cursors:
 
 ++"g"++ ++"z"++ ++"q"++ to cancel all cursors
-
-
-
