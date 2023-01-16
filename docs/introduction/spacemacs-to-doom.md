@@ -41,7 +41,6 @@ Doom bindings that are different to Spacemacs and have not been changed in [prac
 `ZQ` to cancel the commit message (Spaceamcs `,k`)
 
 
-
 ## Spacemacs added touches
 
 Things added in Spacemacs not available (or not the same) in Doom Emacs
@@ -55,7 +54,8 @@ Spacemacs:
 
 Doom:
 Use `o` to toggle between ends of selection and grow using vim motions
-TODO: discover other options and identify if there is a similar approach to Spacemacs `SPC v`
+
+> TODO: discover other options and identify if there is a similar approach to Spacemacs `SPC v`
 
 
 ## Paste
@@ -76,4 +76,5 @@ Doom:
 Spacemacs can be configured to automattically remove extra whitespace when saving a file.
 
 Doom: ++spc++ ++"c"++ ++"w"++ key binding removes extra whitespace
+
 > TODO: automate whitespace removal on file save
