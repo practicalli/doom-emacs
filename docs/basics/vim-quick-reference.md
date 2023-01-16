@@ -128,14 +128,16 @@ The following commands put you into the Evil Insert state
 
 `v` in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.
 
-| Key      | Action                                             |
-|----------|----------------------------------------------------|
-| `y`      | copy (yank) selection and add to kill ring         |
-| `x`      | delete character at point and add to kill ring     |
-| `X`      | delete character before point and add to kill ring |
-| `p`      | paste (put)                                        |
-| `u`      | undo                                               |
-| `Ctrl-r` | redo                                               |
+| Key                     | Action                                             |
+|-------------------------|----------------------------------------------------|
+| ++"y"++                 | copy (yank) selection and add to kill ring         |
+| ++"x"++                 | delete character at point and add to kill ring     |
+| ++"X"++                 | delete character before point and add to kill ring |
+| ++"p"++                 | paste last entry from kill ring                    |
+| ++"p"++ ++meta+"y"++    | paste with kill-ring history menu                  |
+| ++"u"++                 | undo                                               |
+| ++ctrl+"r"++            | redo                                               |
+| ++spc++ ++"i"++ ++"y"++ | insert value from kill ring history                |
 
 !!! Hint "Undo tips"
     Undo reverts the last action in normal mode or all the changes made in **insert** state
