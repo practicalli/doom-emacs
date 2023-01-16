@@ -459,15 +459,16 @@
 <p><span class="keys"><kbd>u</kbd></span> to unstage a file, hunk or visual selection, <span class="keys"><kbd>U</kbd></span> to unstage all staged changes.</p>
 <p><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>j</kbd></span> / <span class="keys"><kbd>k</kbd></span> to select one or more lines within a hunk</p>
 <h2 id="stash-changes">Stash changes<a class="headerlink" href="#stash-changes" title="Permanent link">λ︎</a></h2>
-<div class="admonition bug">
-<p class="admonition-title">Evil key binding shadows Magit z stash menu</p>
-<p><code>z</code> in magit status buffer shows the Evil <code>z</code> menu rather than Magit stash menu.</p>
-<p><code>?</code> to open magit-dispatch, showing the Magit top level menu. <code>z</code> now calls the Magit stash menu</p>
-</div>
-<p><code>z z</code> to stash all the staged and unstaged changes, prompting for a meaningful name for the stash (to help remember what is inside the stash)</p>
-<p><code>z a</code> applies (copies) the contents of the stash into the working directory, adding back staged and unstaged changes.  If the working copy has been modified since the stash, merge conflicts may occur and be highlighted in the magit status buffer.</p>
-<p><code>z p</code> as with apply but deletes the slash (unless there is a merge conflict and the stash is kept)</p>
-<p><code>x</code> delected the current stash (under the cursor)</p>
+<p><span class="keys"><kbd>Z</kbd></span> to open the stash menu </p>
+<details class="warning">
+<summary>Evil key binding shadows Magit z stash menu</summary>
+<p><code>z</code> in magit status buffer shows the Evil <code>z</code> menu rather than Magit stash menu, although there are some magit relevant commands in that menu.</p>
+<p><span class="keys"><kbd class="key-question">?</kbd></span> to open magit-dispatch, showing the Magit top level menu. <span class="keys"><kbd>z</kbd></span> now calls the Magit stash menu.  Or use <span class="keys"><kbd>Z</kbd></span> </p>
+</details>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>z</kbd></span> to stash all the staged and unstaged changes, prompting for a meaningful name for the stash (to help remember what is inside the stash)</p>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>a</kbd></span> applies (copies) the contents of the stash into the working directory, adding back staged and unstaged changes.  If the working copy has been modified since the stash, merge conflicts may occur and be highlighted in the magit status buffer.</p>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>a</kbd></span> as with apply but deletes the slash (unless there is a merge conflict and the stash is kept)</p>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>a</kbd></span> delected the current stash (under the cursor)</p>
 <h2 id="commits">Commits<a class="headerlink" href="#commits" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd>c</kbd></span> opens the commit menu</p>
 <ul>
