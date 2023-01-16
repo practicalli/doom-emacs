@@ -29,6 +29,14 @@ The [+bindings.el configuration file](https://github.com/practicalli/doom-emacs-
 
 ++spc++ ++spc++ used as ++meta+"x"++ although the default ++spc++ ++colon++ Doom Emacs binding is kept
 
+### File diff
+
+`SPC D` is the Spacemacs diff menu
+
+Doom has no menu for diff that I can find, although there are a few Emacs key bindings
+
+`SPC d` menu provides key bindings for diff, ediff, ediff3, vc-root-diff and vc-diff.  Menu included in [practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config){target=_blank}
+
 
 ### Magit Status
 
