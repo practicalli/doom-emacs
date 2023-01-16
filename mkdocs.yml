@@ -123,7 +123,7 @@ nav:
       - index.md
       - REPL Workflow: introduction/repl-workflow.md
       - Why Doom Emacs: introduction/why-doom-emacs.md
-      - Spacemacs Or Doom: introduction/spacemacs-or-doom.md
+      - Spacemacs To Doom: introduction/spacemacs-to-doom.md
       - Contributing: introduction/contributing.md
       - Writing Tips: introduction/writing-tips.md
   - Pre-install: install/pre-install.md
