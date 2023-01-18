@@ -15,6 +15,17 @@ The major differences between Spacemacs and Doom Emacs
 
 Not all key bindings have been changed and some of the Doom Emacs defaults are adopted (either because they feel easy to adopt or it is not clear how to change them effectively)
 
+## Doom Vim-style bindings
+
+Doom key bindings tend to follow vim-style movement for the basic operation of Emacs
+
+++spc++ ++colon++ for `M-x` to show a list of alll Emacs commands
+
+++spc++ ++"w"++ ++"s"++ / ++"v"++ to split a window horizontally / vertical split
+
+++spc++ ++"w"++ ++"h"++ / ++"j"++ / ++"k"++ / ++"l"++ to move cursor to window left, down, up right (with captial versions moving the window rather than cursor)
+
+
 ### Major changes
 
 The [+bindings.el configuration file](https://github.com/practicalli/doom-emacs-config/blob/main/%2Bbindings.el) makes changes to the general use of Doom Emacs
