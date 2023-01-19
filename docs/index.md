@@ -28,7 +28,8 @@ Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more d
     The Practicalli configuration should replace the `~/.doom.d/` directory created by the `doom install` command.
 
 
-![Emacs Doom](https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png)
+![Emacs Doom with Practicalli customisations](https://raw.githubusercontent.com/practicalli/graphic-design/live/doom-emacs/doom-emacs-practicalli-dark.png#only-dark)
+![Emacs Doom with Practicalli customisations](https://raw.githubusercontent.com/practicalli/graphic-design/live/doom-emacs/doom-emacs-practicalli-light.png#only-light)
 
 
 ## REPL Driven Development
