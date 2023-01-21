@@ -120,6 +120,11 @@ sudo npm install --global vscode-json-languageserver dockerfile-language-server-
 
 Or install a language server for the specific language
 
+=== "Clojure"
+    [clojure-lsp.io](https://clojure-lsp.io/) provides the language server implementation for Clojure.  Follow the [relevant operating system install guide](https://clojure-lsp.io/installation/)
+
+    On Linux machines, Practicalli recommends installing the [latest clojure-lsp release](https://github.com/clojure-lsp/clojure-lsp/releases) to `~/.local/bin/`
+
 === "JSON"
     Add `(json +lsp)` doom module in `.config/doom/init.el` and install the JSON language server
     ```
