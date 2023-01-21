@@ -11,7 +11,7 @@
 <link href="pre-install/" rel="prev"/>
 <link href="doom-configuration/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Install Doom Emacs - Practicalli Doom Emacs</title>
 <link href="../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -477,8 +477,12 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo npm install --global vscode-json-languageserver dockerfile-language-server-nodejs vscode-html-languageservice vscode-css-languageservice yaml-language-server
 </code></pre></div>
 <p>Or install a language server for the specific language</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">JSON</label><label for="__tabbed_4_2">Docker</label><label for="__tabbed_4_3">Web</label><label for="__tabbed_4_4">YAML</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><input id="__tabbed_4_5" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Clojure</label><label for="__tabbed_4_2">JSON</label><label for="__tabbed_4_3">Docker</label><label for="__tabbed_4_4">Web</label><label for="__tabbed_4_5">YAML</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="https://clojure-lsp.io/">clojure-lsp.io</a> provides the language server implementation for Clojure.  Follow the <a href="https://clojure-lsp.io/installation/">relevant operating system install guide</a></p>
+<p>On Linux machines, Practicalli recommends installing the <a href="https://github.com/clojure-lsp/clojure-lsp/releases">latest clojure-lsp release</a> to <code>~/.local/bin/</code></p>
+</div>
 <div class="tabbed-block">
 <p>Add <code>(json +lsp)</code> doom module in <code>.config/doom/init.el</code> and install the JSON language server
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo npm install --global yaml-language-server
@@ -515,7 +519,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
 </small>
 </div>
 </article>
