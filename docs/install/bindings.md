@@ -6,6 +6,9 @@
 
 Most Practicalli key bindings are defined in the `~/.config/doom/+bindings.el` configuration file, or in a major mode specific file e.g. `~/.config/doom/+clojure.el`
 
+??? INFO "Doom - basic guide to rebinding keys"
+    [How to rebind keys](https://discourse.doomemacs.org/t/how-to-re-bind-keys/) - Doom Emacs discord
+
 
 ## Leader / Local leader
 
