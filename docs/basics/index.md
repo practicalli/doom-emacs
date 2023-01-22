@@ -65,16 +65,14 @@ Alternatively the text in a specific buffer can be scalled, although this does n
 
 ## Format tools
 
-!!! INFO "Use LSP formatting where supported"
-    The Doom Emacs Format module is to be rewritten as it curr so using LSP servers for languages that support them should avoid rely on LSP server implementations to format code where possible.  Doom Emacs requires external code formatting tools to be installed.
+++comma++ ++double-quote++ is typically the default format menu if available for a language major mode, calling tools specific to each language.
 
-Install markdownlint package for local format tool, although this tool is not used by Doom Emacs (as far as I can tell)
+Automatic formatting whilst typing is supported when a language module includes the `+lsp` feature and a suitable LSP language server has been installed.
 
-```shell
-sudo npm install markdownlint
-```
+[LSP Language Server install](/doom-emacs/install/#language-servers){ .md-button }
 
-Prettier.io was evaluated but does not allow for customisation of the linting rules, so was not adopted.
+??? INFO "Doom format module to be redeveloped"
+    LSP language servers are the most effective way to support formatting in Doom Emacs, as the Doom Emacs Format module is to be rewritten.
 
 
 ## Whitespace cleanup
