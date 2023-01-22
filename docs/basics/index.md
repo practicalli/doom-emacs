@@ -79,10 +79,19 @@ Automatic formatting whilst typing is supported when a language module includes 
 
 ++spc++ ++"c"++ ++"w"++ to remove whitespace from end of lines and additional blank lines from the end of the file.
 
-> NOTE: automating white space clean up may require external format or LSP tooling
+`ws-buttler-mode` is enabled by default and removes additional whitespace from changed lines.
+
+??? HINT "Markdown exclued from ws-buttler"
+    ws-buttler excludes markdow mode from ws-buttler mode (there is a rare case where additional whitespace at the end of lines are used as a visual break)
+
+    [practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config){target=_blank} includes Markdown mode in ws-buttler
+    ```emacs title=".config/doom/config.el"
+    ;; Delete whitespace on save, including in markdow-mode
+    (setq ws-butler-global-exempt-modes '(special-mode comint-mode term-mode eshell-mode diff-mode))
+    ```
 
 
-## references
+## References
 
 * [Keybind reference sheet](https://discourse.doomemacs.org/t/keybind-reference-sheet/49) - doom discourse
 * [Doom Getting Started Guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org)
