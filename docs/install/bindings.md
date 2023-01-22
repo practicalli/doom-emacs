@@ -23,9 +23,9 @@ Most Practicalli key bindings are defined in the `~/.config/doom/+bindings.el` c
 
 ## M-x Emacs command list
 
-`SPC :` is probably a good key binding for those very familiar with Vim, as it alighs with the `:` character used to issue vim commands
+++spc++ ++colon++ is the Doom default to list Emacs commands (`M-x`), aligning with the `:` character used to issue vim commands
 
-`SPC SPC` is M-x in Spacemacs, so override the existing key binding that Doom defines to open a file, which is also provided by `SPC f f`
+++spc++ ++spc++ is `M-x` in Spacemacs, so [practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config){target=_blank} replaces the existing key binding that Doom defines to open a file (provided by `SPC f f`)
 
 
 ```emacs title=".config/doom/+bindings.el"
