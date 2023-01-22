@@ -138,6 +138,7 @@ nav:
       # - Troubleshooting: install/troubleshooting.md
   - Doom Basics:
       - basics/index.md
+      - Getting Help: basics/getting-help.md
       - Projects: basics/projects.md
       - Workspaces: basics/workspaces.md
       - Evil Editing: basics/evil-editing.md
