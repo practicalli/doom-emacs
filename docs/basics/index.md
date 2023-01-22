@@ -25,6 +25,33 @@
     Doom prompts to confirm if elisp should be run if included in a theme.  A theme can be marked as safe, so further confirmation is not required.
 
 
+## Zoom Frame and text
+
+++spc++ ++"t"++ ++"b"++ to toggle Doom Big mode which applies `doom-big-font` to text across all buffers, essentailly scaling the Emacs frame.
+
+Leaving Doom Big mode resets the text size to `doom-font`.  This is the recommended approach to scaling Doom Emacs.
+
+??? INFO "Set Doom font sizes in config.el"
+    Set a standard size font for general use and a big font for demos, screencasts, pairing, etc.  The following configuration is used in [practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config){target=_blank}
+
+    ```emacs title="~/.config/doom/config.el"
+    ;; See 'C-h v doom-font' for documentation and more examples of what they accept. For example:
+    ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
+    ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+
+    (setq doom-font (font-spec :family "Fira Code" :size 14)
+          doom-big-font (font-spec :family "Fira Code" :size 24)
+          doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16))
+    ```
+
+Alternatively the text in a specific buffer can be scalled, although this does not scale the mini-buffer and its affects are not applied to any other buffer.
+
+++ctrl+"x"++ ++ctrl+plus++ to increase the size of text in the current buffer
+
+++ctrl+"x"++ ++ctrl+minus++ to decrease the size of text in the current buffer
+
+++ctrl+"x"++ ++ctrl+0++ to reest the size of text in the current buffer to the default `doom-font` size
+
 
 ## Files
 
