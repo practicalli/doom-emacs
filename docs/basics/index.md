@@ -57,10 +57,10 @@ Alternatively the text in a specific buffer can be scalled, although this does n
 
 ++spc++ ++"f"++ ++"f"++ to list files in current directory or create relative files and directories
 
-> add a space to the end of the name to ensure Emacs creates a new file rather than selecting the existing name... TODO: is this to be expected
-
 ++spc++ ++"p"++ ++"f"++ to list files in current project, providing a quick way to open any file in the project by filtering the list
 
+!!! HINT "Create files and directories"
+    ++spc++ ++"f"++ ++"f"++ and typing a path and file will create the file and intermediate directories if they do not exist
 
 
 ## Format tools
