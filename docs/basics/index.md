@@ -11,6 +11,9 @@
 
 ++comma++ is the localleader key that opens a context specific menu, with commands for the current major mode (clojure, markdown, yaml, etc.)
 
+!!! HINT "Keycast shows key bindings and commands"
+    ++spc++ ++"t"++ ++"k"++ toggles keycast mode which displays the key bindings and associated command in the mode-line
+
 
 ## Line numbers
 
