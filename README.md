@@ -30,7 +30,7 @@ Issues and pull requests are most welcome.  Please detail issues as much as you 
 * [Current Issues](https://github.com/practicalli/doom-emacs/issues)
 * [Current pull requests](https://github.com/practicalli/doom-emacs/pulls)
 
-[practicalli/doom-emacs-config](https://github.com/practicalli/doom-emac-config/)GitHub repository contains the complete Spacemacs configuration used in this guide and issues and pull requests can also be made there.
+[practicalli/doom-emacs-config](https://github.com/practicalli/doom-emacs-config/) GitHub repository contains the complete Spacemacs configuration used in this guide and issues and pull requests can also be made there.
 
 
 ## Book status
