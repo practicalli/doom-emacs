@@ -93,6 +93,18 @@ Automatic formatting whilst typing is supported when a language module includes 
     (setq ws-butler-global-exempt-modes '(special-mode comint-mode term-mode eshell-mode diff-mode))
     ```
 
+## Format Source Code
+
+Formats source code according to the programming language format:
+
+++equal++ ++equal++ formats the current line
+
+++equal++ formats a selected region
+
+++greater-than++ ++greater-than++ indents the current line
+
+++greater-than++ indents the selected region
+
 
 ## References
 
