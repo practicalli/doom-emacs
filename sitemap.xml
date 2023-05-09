@@ -2,122 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/doom-emacs/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/assets/images/social/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/evil-editing/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/evil-tools/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/getting-help/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/projects/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/snippets/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/speaking-evil/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/vim-quick-reference/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/basics/workspaces/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/clojure-workflow/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/install/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/install/bindings/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/install/clojure-configuration/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/install/doom-configuration/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/install/pre-install/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/introduction/contributing/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/introduction/repl-workflow/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/introduction/spacemacs-to-doom/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/introduction/why-doom-emacs/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/introduction/writing-tips/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/version-control/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/doom-emacs/version-control/magit/</loc>
-         <lastmod>2023-03-26</lastmod>
+         <lastmod>2023-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
