@@ -4,7 +4,7 @@ Practicalli is evaluating Doom Emacs after many years of using Spacemacs (which 
 
 Reasons to select doom to date:
 
-- Experience feels closer to using Neovim, so may be more of a bridge between Emacs and Neovim (help with adoption od Conjure)
+- Experience feels closer to using Neovim, so may be more of a bridge between Emacs and Neovim (help with adoption of Conjure)
 - Vertico completion seems comparible to the features regularly used in other tools (Helm, Ivy)
 - Package mangager pins specific versions of packages, so potentially more stability.  Managing versions of packages seems a litle simpler in Doom, although its only a small difference
 - Minimal set of features and an optomised dashboard (similar to Neovim), so perception of faster start up, although saved session needs to be restored after startup.
