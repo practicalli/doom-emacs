@@ -17,8 +17,6 @@ theme:
   name: material
   logo: assets/images/practicalli-logo.png
   favicon: assets/favicon.svg
-  extra_css:
-    - stylesheets/extra.css
   features:
     - announce.dismiss
     - content.action.edit
@@ -55,7 +53,7 @@ theme:
   # custom_dir: overrides
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 ## Additional styling
 markdown_extensions:
