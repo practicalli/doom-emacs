@@ -9,6 +9,11 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
 ```
 
+## Project on hold
+
+Practicalli is not actively developing this configuration, although it should be useable with current versions of Doom Emacs and Emacs 28 onward.
+
+
 ## Book status
 
 [![MegaLinter](https://github.com/practicalli/doom-emacs/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/doom-emacs/actions/workflows/megalinter.yml)
