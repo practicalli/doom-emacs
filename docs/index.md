@@ -7,8 +7,12 @@ Doom is not aimed at Emacs beginners (unless the aim is to learn Emacs in more d
 ??? INFO "Looking for a batteries included approach?"
     [Practicalli Spacemacs](https://practical.li/spacemacs) and [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) provide all the Emacs features needed for Clojure, with just two Git clone commands.  Spacemacs is a community configuration for Emacs with a very large community and very detailed documentation.
 
-??? WARNING "New Book - content published as learned"
-    Practicalli Doom Emacs was started in December 2022 with little knowledge of Doom Emacs, so is mostly a journal of things that have been learned as Practicalli tries to create an effective development workflow, especially with Clojure.  Content will be added as new things are discovered to aid in the learning and effective use of Doom Emacs.
+??? WARNING "Book development on hold"
+    Practicalli Doom Emacs and its associated configuration project are currently on hold as Doom Emacs is not currently used by Practicalli.
+
+    The book was started in December 2022 with little knowledge of Doom Emacs, so is mostly a journal of things that have been learned as Practicalli tries to create an effective development workflow, especially with Clojure.  
+
+    Should Practicalli use Doom Emacs regularly again then further content will be added as new things are discovered, to aid in the learning and effective use of Doom Emacs.
 
 
 ## Practicalli Doom Emacs configuration
