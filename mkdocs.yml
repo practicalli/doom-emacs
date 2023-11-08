@@ -140,7 +140,7 @@ nav:
       - Doom Config: install/doom-configuration.md
       - Clojure: install/clojure-configuration.md
       - Bindings: install/bindings.md
-      # - Completion: install/completion.md
+      - Completion: install/completion.md
       # - Terminal: install/eshell.md
       # - Evil: install/evil-configuration.md
       # - Troubleshooting: install/troubleshooting.md
