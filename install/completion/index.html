@@ -20,13 +20,13 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/doom-emacs/basics/evil-tools/">
+        <link rel="canonical" href="https://practical.li/doom-emacs/install/completion/">
       
       
-        <link rel="prev" href="../vim-quick-reference/">
+        <link rel="prev" href="../bindings/">
       
       
-        <link rel="next" href="../snippets/">
+        <link rel="next" href="../../basics/">
       
       
       <link rel="icon" href="../../assets/favicon.svg">
@@ -34,7 +34,7 @@
     
     
       
-        <title>Evil Tools - Practicalli Doom Emacs</title>
+        <title>Completion - Practicalli Doom Emacs</title>
       
     
     
@@ -81,11 +81,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Evil Tools - Practicalli Doom Emacs" >
+        <meta  property="og:title"  content="Completion - Practicalli Doom Emacs" >
       
         <meta  property="og:description"  content="Practical guide to Clojure development with Doom Emacs" >
       
-        <meta  property="og:image"  content="https://practical.li/doom-emacs/assets/images/social/basics/evil-tools.png" >
+        <meta  property="og:image"  content="https://practical.li/doom-emacs/assets/images/social/install/completion.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -93,15 +93,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/doom-emacs/basics/evil-tools/" >
+        <meta  property="og:url"  content="https://practical.li/doom-emacs/install/completion/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Evil Tools - Practicalli Doom Emacs" >
+        <meta  name="twitter:title"  content="Completion - Practicalli Doom Emacs" >
       
         <meta  name="twitter:description"  content="Practical guide to Clojure development with Doom Emacs" >
       
-        <meta  name="twitter:image"  content="https://practical.li/doom-emacs/assets/images/social/basics/evil-tools.png" >
+        <meta  name="twitter:image"  content="https://practical.li/doom-emacs/assets/images/social/install/completion.png" >
       
     
     
@@ -138,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#evil-editing-tools" class="md-skip">
+        <a href="#completion-with-vertico" class="md-skip">
           Skip to content
         </a>
       
@@ -208,7 +208,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Evil Tools 
+             Completion 
           </span>
         </div>
       </div>
@@ -557,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../install/pre-install/" class="md-nav__link">
+      <a href="../pre-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,153 +574,6 @@
       
   
   
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../install/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Install
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Install
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/doom-configuration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Doom Config
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/clojure-configuration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Clojure
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/bindings/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bindings
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/completion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Completion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -729,14 +582,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
-        
-      
         
       
         
@@ -756,7 +601,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -765,23 +610,23 @@
               
   
   <span class="md-ellipsis">
-    Doom Basics
+    Install
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Doom Basics
+            Install
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -793,11 +638,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-help/" class="md-nav__link">
+      <a href="../doom-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Getting Help
+    Doom Config
   </span>
   
 
@@ -813,11 +658,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/" class="md-nav__link">
+      <a href="../clojure-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Projects
+    Clojure
   </span>
   
 
@@ -833,71 +678,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../workspaces/" class="md-nav__link">
+      <a href="../bindings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Workspaces
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../evil-editing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evil Editing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../speaking-evil/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Speaking Evil
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vim-quick-reference/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evil Reference
+    Bindings
   </span>
   
 
@@ -926,7 +711,7 @@
           
   
   <span class="md-ellipsis">
-    Evil Tools
+    Completion
   </span>
   
 
@@ -937,7 +722,7 @@
         
   
   <span class="md-ellipsis">
-    Evil Tools
+    Completion
   </span>
   
 
@@ -959,15 +744,98 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#multiedit" class="md-nav__link">
-    Multiedit
+  <a href="#module-flags" class="md-nav__link">
+    Module flags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiple-cursors" class="md-nav__link">
-    Multiple cursors
+  <a href="#vertico-keybindings" class="md-nav__link">
+    Vertico keybindings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump-to-navigation" class="md-nav__link">
+    Jump-to navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-search-replace" class="md-nav__link">
+    Project search &amp; replace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-buffer-searching" class="md-nav__link">
+    In-buffer searching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertico-integration" class="md-nav__link">
+    Vertico integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Vertico integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jump-to-files-buffers-or-projects" class="md-nav__link">
+    Jump to files, buffers or projects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-path-completion" class="md-nav__link">
+    * File Path Completion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consult" class="md-nav__link">
+    Consult
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-search-commands" class="md-nav__link">
+    * Async search commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marginalia" class="md-nav__link">
+    Marginalia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orderless-filtering" class="md-nav__link">
+    Orderless filtering
   </a>
   
 </li>
@@ -981,13 +849,228 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../basics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Doom Basics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Doom Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../snippets/" class="md-nav__link">
+      <a href="../../basics/getting-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/workspaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/evil-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil Editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/speaking-evil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Speaking Evil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/vim-quick-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/evil-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/snippets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,15 +1253,98 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#multiedit" class="md-nav__link">
-    Multiedit
+  <a href="#module-flags" class="md-nav__link">
+    Module flags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiple-cursors" class="md-nav__link">
-    Multiple cursors
+  <a href="#vertico-keybindings" class="md-nav__link">
+    Vertico keybindings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump-to-navigation" class="md-nav__link">
+    Jump-to navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-search-replace" class="md-nav__link">
+    Project search &amp; replace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-buffer-searching" class="md-nav__link">
+    In-buffer searching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertico-integration" class="md-nav__link">
+    Vertico integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Vertico integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jump-to-files-buffers-or-projects" class="md-nav__link">
+    Jump to files, buffers or projects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-path-completion" class="md-nav__link">
+    * File Path Completion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consult" class="md-nav__link">
+    Consult
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-search-commands" class="md-nav__link">
+    * Async search commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marginalia" class="md-nav__link">
+    Marginalia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orderless-filtering" class="md-nav__link">
+    Orderless filtering
   </a>
   
 </li>
@@ -1198,7 +1364,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/doom-emacs/edit/main/docs/basics/evil-tools.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/doom-emacs/edit/main/docs/install/completion.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1207,40 +1373,301 @@
     
       
     
-    <a href="https://github.com/practicalli/doom-emacs/raw/main/docs/basics/evil-tools.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/doom-emacs/raw/main/docs/install/completion.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="evil-editing-tools">Evil Editing tools<a class="headerlink" href="#evil-editing-tools" title="Permanent link">λ︎</a></h1>
+<h1 id="completion-with-vertico">Completion with Vertico<a class="headerlink" href="#completion-with-vertico" title="Permanent link">λ︎</a></h1>
+<p>Vertico module enhances the Emacs search and completion experience, with united interface for project search and replace, powered by <a href="https://github.com/BurntSushi/ripgrep/">ripgrep</a></p>
+<p>The primary packages are:</p>
 <ul>
-<li>Multiedit - multiple match and replace</li>
-<li>Multiple cursors - add cursors and edit in paralell</li>
+<li>Vertico - vertical completion user interface</li>
+<li>Consult - suite of useful commands using ~completing-read~</li>
+<li>Embark - set of minibuffer actions</li>
+<li>Marginalia - annotations to completion candidates</li>
+<li>Orderless - additional filtering methods</li>
 </ul>
-<h2 id="multiedit">Multiedit<a class="headerlink" href="#multiedit" title="Permanent link">λ︎</a></h2>
-<h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
-<p>Multiple cursors is most useful where the same changes are required in multiple lines, especially where those lines may be similar in structure but not idential.</p>
-<p>Line based Evil commands work with multiple cursors, e.g. ++dollar++ to move to end of line, <span class="keys"><kbd>f</kbd></span> / <span class="keys"><kbd>F</kbd></span> to move forward / backward to a character,</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> menu for mutliple cursor menu</p>
-<p>When changes are vertically aligined, create multiple cursors with vim-style movements:</p>
-<p><span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> adds a cursor to the next 24 lines</p>
-<p>Changes in more random positions benefit from creating 'frozen' cursors in any position that only take key input once switched to mirroring or activated by Evil Insert mode</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>z</kbd></span> toggle new (frozen) cursors at point. Frozen cursors stay in position until mirroring switched on or switching to insert mode</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>t</kbd></span> toggle mirroring on and off</p>
-<p>With visual select:</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-i">I</kbd></span> to create curors at start of visual selection region</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> to create curors at end (append) of visual selection region</p>
-<p>Remove multiple cursors:</p>
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>q</kbd></span> to cancel all cursors</p>
+<p>Consult can use several external tools which must be installed to use their features</p>
+<ul>
+<li><a href="https://github.com/junegunn/fzf">fzf</a> </li>
+<li><a href="https://kapeli.com/dash">Dash docsets</a> </li>
+<li><a href="https://www.passwordstore.org/">pass</a> </li>
+</ul>
+<h2 id="module-flags">Module flags<a class="headerlink" href="#module-flags" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>
+<p>+childframe
+  Display completion candidates in a <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Child-Frames.html">child frame</a> rather than an overlay or tooltip. <em>Requires GUI Emacs.</em></p>
+</li>
+<li>
+<p>+icons ::
+  Add icons to =file= and =buffer= category completion selections.</p>
+</li>
+</ul>
+<h2 id="vertico-keybindings">Vertico keybindings<a class="headerlink" href="#vertico-keybindings" title="Permanent link">λ︎</a></h2>
+<p>When in an active Vertico completion session, the following doom added keybindings are available:</p>
+<table>
+<thead>
+<tr>
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>k</kbd></span></td>
+<td>(evil) Go to previous candidate</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>j</kbd></span></td>
+<td>(evil) Go to next candidate</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-meta">Meta</kbd><span>+</span><kbd>k</kbd></span></td>
+<td>(evil) Go to previous group</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-meta">Meta</kbd><span>+</span><kbd>j</kbd></span></td>
+<td>(evil) Go to next group</td>
+</tr>
+<tr>
+<td>++ctrl+semi-colon++ or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>a</kbd></span></td>
+<td>Open an ~embark-act~ menu to chose a useful action</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> ++ctrl+semi-colon++</td>
+<td>export the current candidate list to a buffer</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>l</kbd></span></td>
+<td>~embark-collect~ the current candidate list (collect verbatim)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span></td>
+<td>Preview the current candidate</td>
+</tr>
+</tbody>
+</table>
+<p><code>embark-act</code> will prompt you with a =which-key= menu with useful commands on the selected candidate or candidate list, depending on the completion category.</p>
+<div class="admonition hint">
+<p class="admonition-title">Marginalia annotaions on help menu</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>h</kbd></span> shows a help menu of options with a Vertico buffer showing more detailed descriptions from Marginalia annotations</p>
+</div>
+<h2 id="jump-to-navigation">Jump-to navigation<a class="headerlink" href="#jump-to-navigation" title="Permanent link">λ︎</a></h2>
+<p>Navigate within a project using projectile</p>
+<p><a href="https://assets.doomemacs.org/completion/vertico/projectile.png">https://assets.doomemacs.org/completion/vertico/projectile.png</a></p>
+<table>
+<thead>
+<tr>
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span></td>
+<td>Jump to file in project</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></td>
+<td>Jump to file from current directory</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>i</kbd></span></td>
+<td>Jump to symbol in file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="project-search-replace">Project search &amp; replace<a class="headerlink" href="#project-search-replace" title="Permanent link">λ︎</a></h2>
+<p>This module provides interactive text search and replace using ripgrep.</p>
+<table>
+<thead>
+<tr>
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>p</kbd></span></td>
+<td>Search project</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>P</kbd></span></td>
+<td>Search another project</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>d</kbd></span></td>
+<td>Search this directory</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>D</kbd></span></td>
+<td>Search another directory</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://assets.doomemacs.org/completion/vertico/search.png">https://assets.doomemacs.org/completion/vertico/search.png</a></p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> universal argument prefix to commands instructs the search tool to include ignored file patterns.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>e</kbd></span> to send the search results to an editable buffer</p>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Z</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> to commit changes</p>
+<p><span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Q</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>k</kbd></span> to abort changes</p>
+<p><a href="https://assets.doomemacs.org/completion/vertico/search-replace.png">https://assets.doomemacs.org/completion/vertico/search-replace.png</a></p>
+<h2 id="in-buffer-searching">In-buffer searching<a class="headerlink" href="#in-buffer-searching" title="Permanent link">λ︎</a></h2>
+<p>This module provides some in buffer searching bindings:</p>
+<ul>
+<li>[[kbd:][spc s s]] (~isearch~)</li>
+<li>[[kbd:][spc s S]] (~+vertico/search-symbol-at-point~ via ~consult-line~)</li>
+<li>[[kbd:][spc s b]] (~consult-line~)</li>
+</ul>
+<p><a href="https://assets.doomemacs.org/completion/vertico/buffer-search.png">https://assets.doomemacs.org/completion/vertico/buffer-search.png</a></p>
+<p>An ~occur-edit~ buffer can be opened from ~consult-line~ with [[kbd:][C-c C-e]].</p>
+<h2 id="vertico-integration">Vertico integration<a class="headerlink" href="#vertico-integration" title="Permanent link">λ︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd>M</kbd></span> <span class="keys"><kbd>x</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-colon">:</kbd></span></td>
+<td>Enhanced M-x</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> ++quote++</td>
+<td>Resume last Vertico session</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jump-to-files-buffers-or-projects">Jump to files, buffers or projects<a class="headerlink" href="#jump-to-files-buffers-or-projects" title="Permanent link">λ︎</a></h3>
+<table>
+<thead>
+<tr>
+<th>Keybind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+<td>Find bookmark</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
+<td>Browse from current directory</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span></td>
+<td>Find file in project</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span></td>
+<td>Find recently opened file</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span></td>
+<td>Open another project</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>b</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span></td>
+<td>Switch to buffer in current workspace</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>B</kbd></span> or   <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-less">&lt;</kbd></span></td>
+<td>Switch to buffer</td>
+</tr>
+</tbody>
+</table>
+<p>[[kbd:][spc b b]] and [[kbd:][spc ,]] support changing the workspace you're selecting a buffer from
+via [[<a href="https://github.com/minad/consult#narrowing-and-grouping][Consult">https://github.com/minad/consult#narrowing-and-grouping][Consult</a> narrowing]], e.g. if you're on the first workspace, you can switch to
+selecting a buffer from the third workspace by typing [[kbd:][3 spc]] into the prompt, or
+the last workspace by typing [[kbd:][0 spc]].</p>
+<p>[[kbd:][spc f f]] and [[kbd:][spc .]] support exporting to a [[kbd:][wdired]] buffer using [[kbd:][C-c C-e]].</p>
+<h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">λ︎</a></h2>
+<p>| Keybind | Description                               |
+|---------+-------------------------------------------|
+| [[kbd:][spc p t]] | List all TODO/FIXMEs in project           |
+| [[kbd:][spc s b]] | Search the current buffer                 |
+| [[kbd:][spc s d]] | Search this directory                     |
+| [[kbd:][spc s D]] | Search another directory                  |
+| [[kbd:][spc s i]] | Search for symbol in current buffer       |
+| [[kbd:][spc s p]] | Search project                            |
+| [[kbd:][spc s P]] | Search another project                    |
+| [[kbd:][spc s s]] | Search the current buffer (incrementally) |</p>
+<h2 id="file-path-completion">* File Path Completion<a class="headerlink" href="#file-path-completion" title="Permanent link">λ︎</a></h2>
+<p>Note that Emacs allows you to switch directories with shadow paths, for example
+starting at =/foo/bar/baz=, typing =/foo/bar/baz/~/= will switch the searched
+path to the home directory. For more information see ~substitute-in-file-name~
+and ~file-name-shadow-mode~. This module will erase the "shadowed" portion of
+the path from the minibuffer, so in the previous example the path will be reset
+to =~/=.</p>
+<h2 id="consult">Consult<a class="headerlink" href="#consult" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>Multiple candidate search
+This module modifies the default keybindings used in
+~consult-completing-read-multiple~:
+| Keybind | Description                                                 |
+|---------+-------------------------------------------------------------|
+| [[kbd:][TAB]]     | Select or deselect current candidate                        |
+| [[kbd:][RET]]     | Enters selected candidates (also toggles current candidate) |</li>
+</ul>
+<h2 id="async-search-commands">* Async search commands<a class="headerlink" href="#async-search-commands" title="Permanent link">λ︎</a></h2>
+<p>:PROPERTIES:
+:ID:       4ab16bf0-f9e8-4798-8632-ee7b13d2291e
+:END:
+Consult async commands (e.g. ~consult-ripgrep~) will have a preceding separator
+character (usually ~#~) before the search input. This is known as the =perl=
+splitting style. Input typed after the separator will be fed to the async
+command until you type a second seperator, afterwhich the candidate list will be
+filtered with Emacs instead (and can be filtered using [[doom-package:orderless]], for example).
+The specific seperator character can be changed by editing it, and might be
+different if the initial input already contains =#=.</p>
+<p>Note that grep-like async commands translate the input (between the first and
+second =#=) to an Orderless-light expression: space separated inputs are all
+matched in any order. If the grep backend does not support PCRE lookahead, it'll
+only accept 3 space separated inputs to prevent long lookup times, and further
+filtering should be done after a second =#=.</p>
+<p>For more information [[<a href="https://github.com/minad/consult#asynchronous-search][see">https://github.com/minad/consult#asynchronous-search][see</a> here]].</p>
+<h2 id="marginalia">Marginalia<a class="headerlink" href="#marginalia" title="Permanent link">λ︎</a></h2>
+<p>| Keybind | Description                     |
+|---------+---------------------------------|
+| [[kbd:][M-A]]     | Cycle between annotation levels |</p>
+<p>Marginalia annotations for symbols (e.g. [[kbd:][spc h f]] and [[kbd:][spc h v]]) come with extra
+information the nature of the symbol. For the meaning of the annotations see
+~marginalia--symbol-class~.</p>
+<h2 id="orderless-filtering">Orderless filtering<a class="headerlink" href="#orderless-filtering" title="Permanent link">λ︎</a></h2>
+<p>When using orderless to filter through candidates, the default behaviour is for
+each space separated input to match the candidate as a regular expression or
+literally.</p>
+<p>Note that due to this style of matching, pressing tab does not expand the input
+to the longest matching prefix (like shell completion), but rather uses the
+first matched candidate as input. Filtering further is instead achieved by
+pressing space and entering another input. In essence, when trying to match
+=foobar.org=, instead of option 1., use option 2.:</p>
+<ol>
+<li>(BAD) Enter ~foo TAB~, completes to =foobar.=, enter ~org RET~</li>
+<li>(GOOD) Enter ~foo spc org RET~</li>
+</ol>
+<p>Doom has some builtin [[<a href="https://github.com/oantolin/orderless#style-dispatchers][style">https://github.com/oantolin/orderless#style-dispatchers][style</a> dispatchers]] for more fine-grained filtering, which
+you can use to further specify each space separated input in the following ways:
+| Input        | Description                              |
+|--------------+------------------------------------------|
+| ~!foo~         | match without literal input =foo=          |
+| ~%foo~ or ~foo%~ | perform ~char-fold-to-regexp~ on input =foo= |
+| ~<code>foo~ or ~foo</code>~ | match input =foo= as an initialism         |
+| ~=foo~ or ~foo=~ | match only with literal input =foo=        |
+| ~~foo~ or ~foo~~ | match input =foo= with fuzzy/flex matching |</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 8, 2023</span>
       
     
   </small>
@@ -1276,7 +1703,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../vim-quick-reference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evil Reference">
+          <a href="../bindings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bindings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1286,20 +1713,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Evil Reference
+                Bindings
               </div>
             </div>
           </a>
         
         
           
-          <a href="../snippets/" class="md-footer__link md-footer__link--next" aria-label="Next: Snippets">
+          <a href="../../basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic usage">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Snippets
+                Basic usage
               </div>
             </div>
             <div class="md-footer__button md-icon">
