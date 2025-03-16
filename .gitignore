@@ -1,6 +1,25 @@
-_book
-node_modules
-*.log
-book.pdf
-book.mobi
-book.epub
+# Exclude all files from root directory
+/*
+
+# ------------------------
+# Common project files
+!CHANGELOG.md
+!README.md
+!LICENSE
+
+# ------------------------
+# Include MkDocs files
+!docs/
+!includes/
+!overrides/
+!mkdocs.yml
+
+# ------------------------
+# Project automation
+!Makefile
+
+# ------------------------
+# Version Control
+!.gitignore
+!.github/
+

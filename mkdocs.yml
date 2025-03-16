@@ -36,8 +36,6 @@ theme:
       scheme: default
       primary: red
       accent: amber
-      extra_css:
-        - stylesheets/extra.css
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -65,8 +63,8 @@ markdown_extensions:
   - md_in_html # Grids
   - footnotes # footnotes and abbreviations
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -114,6 +112,8 @@ extra:
     provider: google
     property: G-2YBWRFKXPS
   social:
+    - icon: material/web
+      link: https://practical.li/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jr0cket/
     - icon: fontawesome/brands/slack
